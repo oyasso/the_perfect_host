@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3 uid="uid://chr01qu7qw7wy"]
+
+[ext_resource type="Texture2D" uid="uid://dja5uujk2n1gm" path="res://Dialogue/text_box.png" id="1_atyk4"]
+[ext_resource type="Texture2D" uid="uid://4h3fsp2trpav" path="res://Dialogue/Kiyoshi_Pixel_Sprite.png" id="2_s3xy2"]
+[ext_resource type="Script" uid="uid://jj0qyxn35re" path="res://Scripts/dialogue.gd" id="3_vdh8g"]
+[ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="4_r5bdp"]
+[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="5_8wwfb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdh8g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nghhh"]
+font = ExtResource("4_r5bdp")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="DialogueUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdh8g")
+
+[node name="TextBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 56.000004
+offset_right = 1513.0
+offset_bottom = 2343.0
+scale = Vector2(0.61684114, 0.37599105)
+texture = ExtResource("1_atyk4")
+expand_mode = 1
+
+[node name="TextureCharacter" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 62.0
+offset_top = 353.0
+offset_right = 362.0
+offset_bottom = 653.0
+texture = ExtResource("2_s3xy2")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 454.0
+offset_right = 958.0
+offset_bottom = 624.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vdh8g")
+
+[node name="SpeakerLabel" type="Label" parent="DialogueBox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Mother"
+label_settings = SubResource("LabelSettings_nghhh")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 655.0
+offset_bottom = 129.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_8wwfb")
+theme_override_font_sizes/normal_font_size = 24
+text = "Where have you been? You're unbelievably late."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="ChoiceBox" type="VBoxContainer" parent="DialogueBox"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 94.0
+offset_right = 649.0
+offset_bottom = 174.0
+
+[node name="Option1" type="Button" parent="DialogueBox/ChoiceBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8wwfb")
+theme_override_font_sizes/font_size = 24
+text = "I was getting ready"
+alignment = 0
+
+[node name="Option2" type="Button" parent="DialogueBox/ChoiceBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8wwfb")
+theme_override_font_sizes/font_size = 24
+text = "..."
+alignment = 0
+
+[node name="NextButton" type="Button" parent="DialogueBox"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 135.0
+offset_right = 649.0
+offset_bottom = 173.0
+theme_override_fonts/font = ExtResource("5_8wwfb")
+theme_override_font_sizes/font_size = 24
+text = "Next"
+alignment = 0
+
+[node name="End" type="Button" parent="DialogueBox"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 143.0
+offset_right = 649.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("5_8wwfb")
+theme_override_font_sizes/font_size = 20
+text = "End"
+alignment = 0
+
+[connection signal="pressed" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="DialogueBox/ChoiceBox/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="DialogueBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="DialogueBox/End" to="." method="_on_end_pressed"]

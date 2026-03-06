@@ -1,0 +1,80 @@
+[
+  {
+	"where": {
+	  "character": "Mother",
+	  "text": "Where have you been? You're unbelievably late.",
+	  "options": [
+		"I was just getting ready.",
+        "..."
+	  ],
+	  "go to": [
+		"ready",
+        "silence"
+	  ]
+	},
+	"ready": {
+	  "character": "Kiyoshi",
+	  "text": "I was just getting ready. Marcelle was helping me chose an outfit.",
+	  "go to": "ready2"
+	},
+	"ready2": {
+	  "character": "Mother",
+	  "text": "Well it looks atrocious. Your hair is still out of control. Do I have to hire a new butler? What is he even good at.",
+	  "go to": "ready3"
+	},
+	"ready3": {
+	  "character": "Kiyoshi",
+	  "text": "I think he did a good job with the outfit. I mean, I like it.",
+	  "go to": "ready4"
+	},
+	"ready4": {
+	  "character": "Mother",
+	  "text": "Quiet you! You are already on thin ice. You must be perfect tonight. Your Father and I will be watching you."
+	},
+	"silence": {
+	  "character": "Kiyoshi",
+	  "text": "...",
+	  "go to": "silence2"
+	},
+	"silence2": {
+	  "character": "Mother",
+	  "text": "On top of this, you look terrible. What a mess. Did you even try taming your hair?",
+	  "options": [
+		"Let her fix your hair.",
+        "Defend"
+	  ],
+	  "go to": [
+		"fix",
+        "defend"
+	  ]
+	},
+	"fix": {
+	  "character": "Mother",
+	  "text": "*Fixes hair* There. That is much better. Now you look like the civilized man should be. Isn't that right. Honey?",
+	  "go to": "fix2"
+	},
+	"fix2": {
+	  "character": "Father",
+	  "text": "I agree, my darling. Much more refined. Perfect for his job tonight.",
+	  "go to": "fix3"
+	},
+	"fix3": {
+	  "character": "Kiyoshi",
+	  "text": "What?",
+	  "go to": "fix4"
+	},
+	"fix4": {
+	  "character": "Mother",
+	  "text": "I have decided that you are hosting at tonight's gala. After yesterday's... fiasco, you must be on the your best behavior. Your Father and I will be watching you."
+	},
+	"defend": {
+	  "character": "Kiyoshi",
+	  "text": "I think it looks nice. It looks like me.",
+	  "go to": "defend2"
+	},
+	"defend2": {
+	  "character": "Mother",
+	  "text": "It most certainly does not."
+	}
+  }
+]

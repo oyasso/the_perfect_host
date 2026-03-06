@@ -1,0 +1,432 @@
+[
+  {
+	"where": {
+	  "character": "Mother",
+	  "text": "Where have you been? You're unbelievably late.",
+	  "options": [
+		"I was just getting ready.",
+        "..."
+	  ],
+	  "go to": [
+		"ready",
+        "silence"
+	  ]
+	},
+	"ready": {
+	  "character": "Kiyoshi",
+	  "text": "I was just getting ready. Marcelle was helping me chose an outfit.",
+	  "go to": "ready2"
+	},
+	"ready2": {
+	  "character": "Mother",
+	  "text": "Well it looks atrocious. Your hair is still out of control. Do I have to hire a new butler? What is he even good at.",
+	  "go to": "ready3"
+	},
+	"ready3": {
+	  "character": "Kiyoshi",
+	  "text": "I think he did a good job with the outfit. I mean, I like it.",
+	  "go to": "ready4"
+	},
+	"ready4": {
+	  "character": "Mother",
+	  "text": "Quiet you! You are already on thin ice. You must be perfect tonight. Your Father and I will be watching you."
+	},
+	"silence": {
+	  "character": "Kiyoshi",
+	  "text": "...",
+	  "go to": "silence2"
+	},
+	"silence2": {
+	  "character": "Mother",
+	  "text": "On top of this, you look terrible. What a mess. Did you even try taming your hair?",
+	  "options": [
+		"Let her fix your hair.",
+        "Defend"
+	  ],
+	  "go to": [
+		"fix",
+        "defend"
+	  ]
+	},
+	"fix": {
+	  "character": "Mother",
+	  "text": "*Fixes hair* There. That is much better. Now you look like the civilized man should be. Isn't that right. Honey?",
+	  "go to": "fix2"
+	},
+	"fix2": {
+	  "character": "Father",
+	  "text": "I agree, my darling. Much more refined. Perfect for his job tonight.",
+	  "go to": "fix3"
+	},
+	"fix3": {
+	  "character": "Kiyoshi",
+	  "text": "What?",
+	  "go to": "fix4"
+	},
+	"fix4": {
+	  "character": "Mother",
+	  "text": "I have decided that you are hosting at tonight's gala. After yesterday's... fiasco, you must be on the your best behavior. Your Father and I will be watching you."
+	},
+	"defend": {
+	  "character": "Kiyoshi",
+	  "text": "I think it looks nice. It looks like me.",
+	  "go to": "defend2"
+	},
+	"defend2": {
+	  "character": "Mother",
+	  "text": "It most certainly does not."
+	},
+	"hair": {
+	  "character": "Uncle",
+	  "text": "Your Mother commented on your hair again?",
+	  "go to": "hair2"
+	},
+	"hair2": {
+	  "character": "Kiyoshi",
+	  "text": "Yeah I- Yes, she did.",
+	  "go to": "hair3"
+	},
+	"hair3": {
+	  "character": "Uncle",
+	  "text": "Are you okay, kiddo?",
+	  "options": [
+		"Tell the truth.",
+        "Lie."
+	  ],
+	  "go to": [
+		"truth",
+        "lie"
+	  ]
+	},
+	"truth": {
+	  "character": "Kiyoshi",
+	  "text": "Do you think my parents hate me?",
+	  "go to": "truth2"
+	},
+	"truth2": {
+	  "character": "Uncle",
+	  "text": "No. They-they don't. They're just hard on you because they want you to succeed.",
+	  "go to": "truth3"
+	},
+	"truth3": {
+	  "character": "Kiyoshi",
+	  "text": "I just want to make them proud. They said I had to host tonight.",
+	  "go to": "truth4"
+	},
+	"truth4": {
+	  "character": "Uncle",
+	  "text": "Well, I have a few ideas. I used to host back in my day too, you know.",
+	  "go to": "truth5"
+	},
+	"truth5": {
+	  "character": "Kiyoshi",
+	  "text": "Really?",
+	  "go to": "truth6"
+	},
+	"truth6": {
+	  "character": "Uncle",
+	  "text": "Yeah. At your Grandparent's events, I always had to serve the guests. They always said I needed to practice my manners. Unlike you, I was a rebel.",
+	  "go to": "truth7"
+	},
+	"truth7": {
+	  "character": "Kiyoshi",
+	  "text": "Cool.",
+	  "go to": "truth8"
+	},
+	"truth8": {
+	  "character": "Uncle",
+	  "text": "Woah, woah. I'm lucky your parents can't hear you right now. They already think I'm a bad influence.",
+	  "go to": "truth9"
+	},
+	"truth9": {
+	  "character": "Kiyoshi",
+	  "text": "I think you're the best, Uncle.",
+	  "go to": "attentive"
+	},
+	"lie": {
+	  "character": "Uncle",
+	  "text": "Okay, Kiki. If you say so.",
+	  "go to": "lie2"
+	},
+	"lie2": {
+	  "character": "Kiyoshi",
+	  "text": "My parents just asked me to be a host. I'm not sure how to be a host, or what that really is.",
+	  "go to": "lie3"
+	},
+	"lie3": {
+	  "character": "Uncle",
+	  "text": "It's pretty simple, really. I used to do it when I was your age at our family dinners. Your Mother was always the socialite. I tended to get into a lot of trouble. Kind of like you, but cooler.",
+	  "go to": "lie4"
+	},
+	"lie4": {
+	  "character": "Kiyoshi",
+	  "text": "Hey!",
+	  "go to": "lie5"
+	},
+	"lie5": {
+	  "character": "Uncle",
+	  "text": "I'm just yanking on your chain. You're cool to me.",
+	  "go to": "lie6"
+	},
+	"lie6": {
+	  "character": "Kiyoshi",
+	  "text": "You're cool to me too. The coolest.",
+	  "go to": "attentive"
+	},
+	"attentive": {
+	  "character": "Uncle",
+	  "text": "*pauses* Anyway, we're getting off topic. To be the perfect host, you must be attentive.",
+	  "go to": "attentive2"
+	},
+	"attentive2": {
+	  "character": "Kiyoshi",
+	  "text": "What's at-attutive? Attuntive?",
+	  "go to": "attentive3"
+	},
+	"attentive3": {
+	  "character": "Uncle",
+	  "text": "Attentive. It means you have to make sure they guests always have what they need. Bring them food and drinks. How about you go grab that tray on the serving table.",
+	  "go to": "attentive4"
+	},
+	"attentive4": {
+	  "character": "Kiyoshi",
+	  "text": "Okay!"
+	},
+	"notray": {
+	  "character": "Uncle",
+	  "text": "The tray is right over there by on the serving table. Grab that and bring it back to me. Okay, kiddo?"
+	},
+	"tray": {
+	  "character": "Uncle",
+	  "text": "Great! Now that you have the tray, go to the other table and grab a few drinks. Not too many that you can't carry the tray, okay?",
+	  "go to": "tray2"
+	},
+	"tray2": {
+	  "character": "Kiyoshi",
+	  "text": "Okay!"
+	},
+	"nodrinks": {
+	  "character": "Uncle",
+	  "text": "Get the drinks from the other table over there. You got this, Kiki!"
+	},
+	"drinks": {
+	  "character": "Uncle",
+	  "text": "Perfect! Just hand out these drinks to guests. Here, I'll be your first guest. Give me a drink.",
+	  "options": "Hand him the drink.",
+	  "go to": "drinks2"
+	},
+	"drinks2": {
+	  "character": "Kiyoshi",
+	  "text": "Here, sir. It looks like you are in need of a drink.",
+	  "go to": "drinks3"
+	},
+	"drinks3": {
+	  "character": "Uncle",
+	  "text": "Why thank you, young man. This party is better all ready. Now, just do the same for the food.",
+	  "go to": "drinks4"
+	},
+	"drinks4": {
+	  "character": "Kiyoshi",
+	  "text": "Okay! This is easy!",
+	  "go to": "drinks5"
+	},
+	"drinks5": {
+	  "character": "Uncle",
+	  "text": "My final tip, talk to the guests. Make them feel welcome. If you follow these, you'll surely succeed.",
+	  "go to": "drinks6"
+	},
+	"drinks6": {
+	  "character": "Kiyoshi",
+	  "text": "Thank you, Uncle. You're the best.",
+	  "go to": "drinks7"
+	},
+	"drinks7": {
+	  "character": "Uncle",
+	  "text": "Oh! One more thing. Marcelle gave this to me earlier. I'm not sure why he did in retrospect. I think it is from a friend of yours. Here. Now, go knock them dead, Kiki!"
+	},
+	"beverage": {
+	  "character": "Kiyoshi",
+	  "text": "Hello, sir. Would you like a beverage?",
+	  "go to": "beverage2"
+	},
+	"beverage2": {
+	  "character": "Fancy Man",
+	  "text": "Uh, sure. Not everyday the only son of the Percival family hands me a drink at his own \"charity\" gala.",
+	  "go to": "beverage3"
+	},
+	"beverage3": {
+	  "character": "Kiyoshi",
+	  "text": "I'm sorry, sir. What do you mean by that?",
+	  "go to": "beverage4"
+	},
+	"beverage4": {
+	  "character": "Fancy Man",
+	  "text": "This event your family put on. It's all for show.",
+	  "options": [
+		"Defend.",
+        "Question."
+	  ],
+	  "go to": [
+		"charity",
+        "question"
+	  ]
+	},
+	"nobeverage": {
+	  "character": "Kiyoshi",
+	  "text": "Hello, sir. Would you like a beverage?",
+	  "go to": "nobeverage2"
+	},
+	"nobeverage2": {
+	  "character": "Fancy Man",
+	  "text": "What is this? Are your parents playing some kind of joke on me? You do not have refreshments.",
+	  "go to": "nobeverage3"
+	},
+	"nobeverage3": {
+	  "character": "Kiyoshi",
+	  "text": "My deepest apologies, sir. I will go grab some right away."
+	},
+	"charity": {
+	  "character": "Kiyoshi",
+	  "text": "No. This is a charity event for people who cannot afford our services. So that they can get it.",
+	  "go to": "charity2"
+	},
+	"charity2": {
+	  "character": "Fancy Man",
+	  "text": "Is that what your parents told you?",
+	  "go to": "charity3"
+	},
+	"charity3": {
+	  "character": "Kiyoshi",
+	  "text": "Yes and it is the truth.",
+	  "go to": "charity4"
+	},
+	"charity4": {
+	  "character": "Fancy Man",
+	  "text": "I'm sorry, child. This gala is not what your parents say it is. All of the money earned tonight will be lining their pockets. They want to buy another Zeppelin.",
+	  "go to": "charity5"
+	},
+	"charity5": {
+	  "character": "Kiyoshi",
+	  "text": "How do you know this?",
+	  "go to": "charity6"
+	},
+	"charity6": {
+	  "character": "Fancy Man",
+	  "text": "I am their financier. I keep track of their money.",
+	  "go to": "charity7"
+	},
+	"charity7": {
+	  "character": "Kiyoshi",
+	  "text": "Oh.",
+	  "go to": "charity8"
+	},
+	"charity8": {
+	  "character": "Fancy Man",
+	  "text": "Do not tell them I said any of this. I spoke of nothing you understood."
+	},
+	"question": {
+	  "character": "Kiyoshi",
+	  "text": "What do you mean a \"show\"?",
+	  "go to": "question2"
+	},
+	"question2": {
+	  "character": "Fancy Man",
+	  "text": "This is all a front. Your parents are pocketing the money earned. They want it all to themselves.",
+	  "go to": "question3"
+	},
+	"question3": {
+	  "character": "Kiyoshi",
+	  "text": "I don't believe you.",
+	  "go to": "question4"
+	},
+	"question4": {
+	  "character": "Fancy Man",
+	  "text": "Believe what you want for I speak the truth to you. I know your parents well. Now go bother someone else, child."
+	},
+	"food": {
+	  "character": "Kiyoshi",
+	  "text": "Hello, miss. Would you like some Coquilles Saint-Jacques?",
+	  "go to": "food2"
+	},
+	"food2": {
+	  "character": "Fancy Lady",
+	  "text": "That sounds delicious. I will have one. Thank you, sir."
+	},
+	"nofood": {
+	  "character": "Kiyoshi",
+	  "text": "Hello, miss. Would you like some Coquilles Saint-Jacques?",
+	  "go to": "nofood2"
+	},
+	"nofood2": {
+	  "character": "Fancy Lady",
+	  "text": "Sir, you do not have anything on the tray."
+	},
+	"wallet": {
+	  "character": "Kiyoshi",
+	  "text": "A wallet? Someone must have lost it. I must keep it somewhere safe until I find them."
+	},
+	"outfit": {
+	  "character": "Butler",
+	  "text": "I heard that your mother did not like your outfit. I must do better next time.",
+	  "go to": "outfit2"
+	},
+	"outfit2": {
+	  "character": "Kiyoshi",
+	  "text": "I like it, Marcelle.",
+	  "go to": "outfit3"
+	},
+	"outfit3": {
+	  "character": "Butler",
+	  "text": "Thank you, young master. I appreciate your kind words."
+	},
+	"candles": {
+	  "character": "Butler",
+	  "text": "The candles are low. I must go replace them, young master."
+	},
+	"lost": {
+	  "character": "Party-goer",
+	  "text": "Get lost, doltish child."
+	},
+	"leave": {
+	  "character": "Party-goer",
+	  "text": "Leave me alone."
+	},
+	"alcohol": {
+	  "character": "Uncle",
+	  "text": "Did that drink have alcohol in it? Rinka said I could have the tall glasses.",
+	  "go to": "alcohol2"
+	},
+	"alcohol2": {
+	  "character": "Uncle",
+	  "text": "I need another drink.",
+	  "go to": "alcohol3"
+	},
+	"alcohol3": {
+	  "character": "Uncle",
+	  "text": "Go... away...",
+	  "go to": "alcohol4"
+	},
+	"alcohol4": {
+	  "character": "Uncle",
+	  "text": "Another...",
+	  "go to": "alcohol5"
+	},
+	"alcohol5": {
+	  "character": "Uncle",
+	  "text": "I need more...",
+	  "go to": "alcohol6"
+	},
+	"already": {
+	  "character": "Father",
+	  "text": "Your Mother already told you what you should be doing."
+	},
+	"cater": {
+	  "character": "Mother",
+	  "text": "What are you doing? Go cater to our guests."
+	},
+	"goingon": {
+	  "character": "Mother",
+	  "text": "What is going on over there?"
+	}
+  }
+]
