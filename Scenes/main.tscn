@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=16 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="PackedScene" uid="uid://djx1ga685mbi6" path="res://Models/ballroom.blend" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="2_bo1nx"]
@@ -14,11 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://ca378hufkjbiq" path="res://Scenes/tray.tscn" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://o2edts3v34u5" path="res://Scenes/food.tscn" id="13_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://5air06jhlcqq" path="res://Scenes/drinks.tscn" id="14_k12tt"]
+[ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="15_wsu2k"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="ballroom" parent="." instance=ExtResource("1_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00038146973, 0.009192467, 2.003582)
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587914, 0.8942385, 0)
@@ -26,37 +27,40 @@ collision_layer = 2
 collision_mask = 4
 
 [node name="Mother" parent="." instance=ExtResource("3_jjvhh")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -92.72187, 7.2190275, -20.398922)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -108.1088, 6.936431, -20.398922)
 
 [node name="DialogueUI" parent="." instance=ExtResource("3_8gbba")]
 visible = false
 
 [node name="Uncle" parent="." instance=ExtResource("5_kry3j")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -90.09377, 7.106762, 22.842056)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -106.058365, 7.106762, 22.842056)
 
 [node name="Father" parent="." instance=ExtResource("6_d1ilt")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -93.816734, 5.171446, -36.217415)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -99.469574, 5.171446, -30.157)
 
 [node name="FancyLady" parent="." instance=ExtResource("7_6iyac")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -67.347206, 5.781393, -42.43074)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -67.347206, 5.781393, -29.60952)
 
 [node name="FancyMan" parent="." instance=ExtResource("8_fdnlq")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -64.64787, 4.0582123, 39.68085)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -42.547108, 4.0582123, 14.10235)
 
 [node name="PartyGoer" parent="." instance=ExtResource("9_jkdf5")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -41.098835, 5.5548553, 16.66254)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -26.134722, 5.5548553, 16.66254)
 
 [node name="Wallet" parent="." instance=ExtResource("10_wsu2k")]
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -62.90307, 5.5629396, 0.8142481)
 
 [node name="Butler" parent="." instance=ExtResource("11_k12tt")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -43.626938, 6.2276363, -33.316235)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -43.626938, 6.2276363, -31.626446)
 
 [node name="Tray" parent="." instance=ExtResource("12_jkdf5")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -66.432236, 6.4487624, 49.775032)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -88.13921, 7.321791, 32.64717)
 
 [node name="Food" parent="." instance=ExtResource("13_wsu2k")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -49.8432, 5.5041904, 49.787785)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -77.631775, 7.789263, 31.437344)
 
 [node name="Drinks" parent="." instance=ExtResource("14_k12tt")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -52.308807, 2.4509487, -43.775986)
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -69.2458, 7.635814, 32.304337)
+
+[node name="ballroom2" parent="." instance=ExtResource("15_wsu2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.515217, 0, 0)
