@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgjhvndts04u5"]
+
+[ext_resource type="PackedScene" uid="uid://b38cyrn7g2dvl" path="res://Models/ballroom2.blend" id="1_n6x8u"]
+
+[node name="ballroom2" instance=ExtResource("1_n6x8u")]
