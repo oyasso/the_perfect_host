@@ -1,7 +1,7 @@
 extends Node
 
 var debug = true
-var debug_line = "hair"
+var debug_line = "where"
 
 # Path to JSON
 var json_file = "res://Dialogue/perfect_host_dialogue3.json"
