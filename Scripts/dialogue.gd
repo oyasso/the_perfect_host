@@ -1,6 +1,6 @@
 extends Node
 
-var debug = true
+var debug = false
 var debug_line = "where"
 
 # Path to JSON
@@ -70,6 +70,8 @@ func _on_next_button_pressed() -> void:
 func _on_end_pressed() -> void:
 	dialogue_ui.hide()
 	is_talking = false
+	if !debug:
+		player.can_move = true
 	
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
@@ -94,8 +96,6 @@ func on_tween_finished(id):
 	else:
 		end_button.show()
 		next_button.hide()
-		if !debug:
-			player.can_move = true
 
 func hide_continue_buttons():
 	choice_box.hide()

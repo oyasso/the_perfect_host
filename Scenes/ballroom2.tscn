@@ -1464,3 +1464,15 @@ mesh = SubResource("ArrayMesh_eedo6")
 
 [node name="rug" parent="." index="16"]
 mesh = SubResource("ArrayMesh_jekmv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.539532, 34.709698, 0)
+light_color = Color(1, 0.84313726, 0.45882353, 1)
+light_energy = 16.0
+omni_range = 49.003506
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." index="28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.31375, 24.042194, -0.9140978)
+light_color = Color(1, 0.84313726, 0.45882353, 1)
+light_energy = 16.0
+omni_range = 51.827045

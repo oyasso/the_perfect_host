@@ -3,7 +3,7 @@ extends MeshInstance3D
 @onready var dialogue = $"../DialogueUI"
 @onready var mother = $"../Mother"
 @onready var player = $"../Player"
-var first_talk = false
+var first_talk = true
 var talk_ready = false
 var drinks_counter = 0
 var tray_talk = false

@@ -2,7 +2,7 @@ extends MeshInstance3D
 
 @onready var dialogue = $"../DialogueUI"
 @onready var uncle_script = $"../Uncle"
-var talked_count = 1
+var talked_count = 0
 var talk_ready = false
 
 func _process(_delta: float) -> void:
