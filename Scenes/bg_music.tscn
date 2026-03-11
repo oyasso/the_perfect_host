@@ -7,3 +7,4 @@
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_wrh0v")
 autoplay = true
+parameters/looping = true
