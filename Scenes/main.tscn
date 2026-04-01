@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=20 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="PackedScene" uid="uid://djx1ga685mbi6" path="res://Models/ballroom.blend" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="2_bo1nx"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://c0ha83tcxby71" path="res://Scenes/bg_music.tscn" id="16_k12tt"]
 [ext_resource type="PackedScene" uid="uid://bvb5ypbvwdfm" path="res://Models/ballroom/ballroom.glb" id="17_b3802"]
 [ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="17_h1bgf"]
+[ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="18_b3802"]
+[ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
 
 [node name="Main" type="Node3D"]
 
@@ -24,7 +26,7 @@
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587914, 0.8942385, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587914, -0.9189539, 0)
 collision_layer = 2
 collision_mask = 4
 
@@ -66,8 +68,14 @@ transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -69.2
 
 [node name="BGMusic" parent="." instance=ExtResource("16_k12tt")]
 
-[node name="extras drinking wine" parent="." instance=ExtResource("17_h1bgf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.798805, -9.536743e-07, 4.148824)
-
 [node name="ballroom2" parent="." instance=ExtResource("17_b3802")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.09646, -1.775219, 2.0516686)
+
+[node name="extra_wine" parent="." instance=ExtResource("17_h1bgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.175644, 0, 2.2639763)
+
+[node name="extra_eating" parent="." instance=ExtResource("18_b3802")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.25918, 0, -6.93212)
+
+[node name="extra_tall_glass" parent="." instance=ExtResource("19_fevyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.368362, 0, -2.6692924)
