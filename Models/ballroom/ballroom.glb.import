@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bvb5ypbvwdfm"
-path="res://.godot/imported/ballroom.glb-f2af3f9bc1a2f0d2d5ae67c42ecec5f1.scn"
+path="res://.godot/imported/ballroom.glb-08b372ccbffbfcd7431b21dfb30f3aed.scn"
 
 [deps]
 
-source_file="res://Models/ballroom.glb"
-dest_files=["res://.godot/imported/ballroom.glb-f2af3f9bc1a2f0d2d5ae67c42ecec5f1.scn"]
+source_file="res://Models/ballroom/ballroom.glb"
+dest_files=["res://.godot/imported/ballroom.glb-08b372ccbffbfcd7431b21dfb30f3aed.scn"]
 
 [params]
 

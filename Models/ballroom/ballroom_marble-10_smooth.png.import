@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://df2ib3hhru5fi"
-path.s3tc="res://.godot/imported/ballroom_marble-10_smooth.png-7ab7254d3e02a9b9773e293bdd3a8dc6.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_marble-10_smooth.png-30cebdf7d57410be2fe73b8bca31030e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_marble-10_smooth.png"
-dest_files=["res://.godot/imported/ballroom_marble-10_smooth.png-7ab7254d3e02a9b9773e293bdd3a8dc6.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_marble-10_smooth.png"
+dest_files=["res://.godot/imported/ballroom_marble-10_smooth.png-30cebdf7d57410be2fe73b8bca31030e.s3tc.ctex"]
 
 [params]
 

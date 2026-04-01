@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqcp06rw5k4oq"
-path.s3tc="res://.godot/imported/ballroom_b_lace_tablecloth.png-273d2f1b5e3da2ef2a26796de279a10e.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_b_lace_tablecloth.png-daa45c9c2d86f247637a1e91af66ee86.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_b_lace_tablecloth.png"
-dest_files=["res://.godot/imported/ballroom_b_lace_tablecloth.png-273d2f1b5e3da2ef2a26796de279a10e.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_b_lace_tablecloth.png"
+dest_files=["res://.godot/imported/ballroom_b_lace_tablecloth.png-daa45c9c2d86f247637a1e91af66ee86.s3tc.ctex"]
 
 [params]
 

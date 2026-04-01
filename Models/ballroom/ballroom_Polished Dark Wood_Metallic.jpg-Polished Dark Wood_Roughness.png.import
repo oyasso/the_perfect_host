@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqymov7d8jopx"
-path.s3tc="res://.godot/imported/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png-b453844579c259be5cb0fa9894bf882c.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png-827431409dd53cac62dcee7a29373d50.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png"
-dest_files=["res://.godot/imported/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png-b453844579c259be5cb0fa9894bf882c.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png"
+dest_files=["res://.godot/imported/ballroom_Polished Dark Wood_Metallic.jpg-Polished Dark Wood_Roughness.png-827431409dd53cac62dcee7a29373d50.s3tc.ctex"]
 
 [params]
 

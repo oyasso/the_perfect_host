@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpq127lamap5r"
-path.s3tc="res://.godot/imported/ballroom_SP_2K_Roughness_32.png-a650432b73d2d7553f6828ff3d8e47f7.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_SP_2K_Roughness_32.png-065f33cb6a86abeb469a88d5d83fda7f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_SP_2K_Roughness_32.png"
-dest_files=["res://.godot/imported/ballroom_SP_2K_Roughness_32.png-a650432b73d2d7553f6828ff3d8e47f7.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_SP_2K_Roughness_32.png"
+dest_files=["res://.godot/imported/ballroom_SP_2K_Roughness_32.png-065f33cb6a86abeb469a88d5d83fda7f.s3tc.ctex"]
 
 [params]
 

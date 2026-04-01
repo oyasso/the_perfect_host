@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch1ihbaeiqer8"
-path.s3tc="res://.godot/imported/ballroom_Metal048C_4K-JPG_Displacement.jpg-b3a8574eaeafabf6c0d0996c14887c5e.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_Metal048C_4K-JPG_Displacement.jpg-e82fe0af69fa6953f76529a4b30ddbf9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_Metal048C_4K-JPG_Displacement.jpg"
-dest_files=["res://.godot/imported/ballroom_Metal048C_4K-JPG_Displacement.jpg-b3a8574eaeafabf6c0d0996c14887c5e.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_Metal048C_4K-JPG_Displacement.jpg"
+dest_files=["res://.godot/imported/ballroom_Metal048C_4K-JPG_Displacement.jpg-e82fe0af69fa6953f76529a4b30ddbf9.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0xar4bsf72k1"
-path="res://.godot/imported/ballroom_window_works_06_transmission.jpg-0699e6e2212b01a6ed09562ee2c6b70a.ctex"
+path="res://.godot/imported/ballroom_window_works_06_transmission.jpg-5566f07ba2efd825d5db0d29fc7f8440.ctex"
 metadata={
 "vram_texture": false
 }
@@ -13,8 +13,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_window_works_06_transmission.jpg"
-dest_files=["res://.godot/imported/ballroom_window_works_06_transmission.jpg-0699e6e2212b01a6ed09562ee2c6b70a.ctex"]
+source_file="res://Models/ballroom/ballroom_window_works_06_transmission.jpg"
+dest_files=["res://.godot/imported/ballroom_window_works_06_transmission.jpg-5566f07ba2efd825d5db0d29fc7f8440.ctex"]
 
 [params]
 

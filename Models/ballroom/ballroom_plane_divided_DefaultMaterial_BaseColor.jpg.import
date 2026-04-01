@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlo31qrpeummk"
-path.s3tc="res://.godot/imported/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg-124ce27a7eb798bdd6d2c50ec1a05f20.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg-13c7e3730f981175df1dcc62c8822437.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg"
-dest_files=["res://.godot/imported/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg-124ce27a7eb798bdd6d2c50ec1a05f20.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg"
+dest_files=["res://.godot/imported/ballroom_plane_divided_DefaultMaterial_BaseColor.jpg-13c7e3730f981175df1dcc62c8822437.s3tc.ctex"]
 
 [params]
 

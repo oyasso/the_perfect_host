@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfv1nttfwwtf3"
-path.s3tc="res://.godot/imported/ballroom_Mud 01 bump.jpg-71d192d11611a32b250103c729f8d49c.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_Mud 01 bump.jpg-4231fb24332fbd0d90bd10432cbed358.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_Mud 01 bump.jpg"
-dest_files=["res://.godot/imported/ballroom_Mud 01 bump.jpg-71d192d11611a32b250103c729f8d49c.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_Mud 01 bump.jpg"
+dest_files=["res://.godot/imported/ballroom_Mud 01 bump.jpg-4231fb24332fbd0d90bd10432cbed358.s3tc.ctex"]
 
 [params]
 

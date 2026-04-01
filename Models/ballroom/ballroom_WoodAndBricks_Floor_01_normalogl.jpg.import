@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv2pgsooovuas"
-path.s3tc="res://.godot/imported/ballroom_WoodAndBricks_Floor_01_normalogl.jpg-d6f572fa445dbeec7f6a233e8b43c841.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_WoodAndBricks_Floor_01_normalogl.jpg-5b3c1e1673523327fc48b66df8583881.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_WoodAndBricks_Floor_01_normalogl.jpg"
-dest_files=["res://.godot/imported/ballroom_WoodAndBricks_Floor_01_normalogl.jpg-d6f572fa445dbeec7f6a233e8b43c841.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_WoodAndBricks_Floor_01_normalogl.jpg"
+dest_files=["res://.godot/imported/ballroom_WoodAndBricks_Floor_01_normalogl.jpg-5b3c1e1673523327fc48b66df8583881.s3tc.ctex"]
 
 [params]
 

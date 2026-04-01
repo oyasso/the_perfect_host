@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv6xch6chaact"
-path.s3tc="res://.godot/imported/ballroom_Polished Dark Wood_Emissive.jpg-ae62ba0444aae77e417789b1aa756064.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_Polished Dark Wood_Emissive.jpg-528572d311c0bfa68d8c6661915d65a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_Polished Dark Wood_Emissive.jpg"
-dest_files=["res://.godot/imported/ballroom_Polished Dark Wood_Emissive.jpg-ae62ba0444aae77e417789b1aa756064.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_Polished Dark Wood_Emissive.jpg"
+dest_files=["res://.godot/imported/ballroom_Polished Dark Wood_Emissive.jpg-528572d311c0bfa68d8c6661915d65a8.s3tc.ctex"]
 
 [params]
 

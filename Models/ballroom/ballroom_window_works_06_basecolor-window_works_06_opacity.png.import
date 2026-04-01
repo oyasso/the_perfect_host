@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m2fr8rg5nw7k"
-path.s3tc="res://.godot/imported/ballroom_window_works_06_basecolor-window_works_06_opacity.png-c5f9330fc1f52f888b13bf9afbbacac7.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_window_works_06_basecolor-window_works_06_opacity.png-349cf5c03f9721f89f4c8675c6c32b30.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_window_works_06_basecolor-window_works_06_opacity.png"
-dest_files=["res://.godot/imported/ballroom_window_works_06_basecolor-window_works_06_opacity.png-c5f9330fc1f52f888b13bf9afbbacac7.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_window_works_06_basecolor-window_works_06_opacity.png"
+dest_files=["res://.godot/imported/ballroom_window_works_06_basecolor-window_works_06_opacity.png-349cf5c03f9721f89f4c8675c6c32b30.s3tc.ctex"]
 
 [params]
 

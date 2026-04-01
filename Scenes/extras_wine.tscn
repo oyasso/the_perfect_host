@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://n426nowra7d4"]
+[gd_scene load_steps=8 format=4 uid="uid://n426nowra7d4"]
 
 [ext_resource type="PackedScene" uid="uid://d04yxs8rbnywh" path="res://Models/extras drinking wine.blend" id="1_twj8v"]
+[ext_resource type="Animation" uid="uid://bv4kvm4q2w7ih" path="res://Animations/drinking_glass.res" id="2_vlstr"]
+[ext_resource type="Animation" uid="uid://d3muprl11r4y6" path="res://Animations/drinking.res" id="3_6bli8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twj8v"]
 transparency = 1
@@ -41,6 +43,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_13dhp")
 
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jk3mw"]
+_data = {
+&"drinking": ExtResource("3_6bli8"),
+&"drinking_glass": ExtResource("2_vlstr")
+}
+
 [node name="extras drinking wine" instance=ExtResource("1_twj8v")]
 
 [node name="Skeleton3D" parent="Armature Torso" index="0"]
@@ -55,3 +63,15 @@ bones/15/scale = Vector3(1.0016569, 1.0595027, 1.1640362)
 
 [node name="Wine Glass_002" parent="." index="1"]
 mesh = SubResource("ArrayMesh_q81o3")
+
+[node name="AnimationPerson" type="AnimationPlayer" parent="." index="3"]
+libraries = {
+&"": SubResource("AnimationLibrary_jk3mw")
+}
+autoplay = "drinking"
+
+[node name="AnimationGlass" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+&"": SubResource("AnimationLibrary_jk3mw")
+}
+autoplay = "drinking_glass"

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciwxn3u3bgsqo"
-path="res://.godot/imported/ballroom_specu.jpg-086be8bf4c2df9a8a70a97009c21737b.ctex"
+path="res://.godot/imported/ballroom_specu.jpg-7fac7cd8900f151d77b750ae525304b0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -13,8 +13,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_specu.jpg"
-dest_files=["res://.godot/imported/ballroom_specu.jpg-086be8bf4c2df9a8a70a97009c21737b.ctex"]
+source_file="res://Models/ballroom/ballroom_specu.jpg"
+dest_files=["res://.godot/imported/ballroom_specu.jpg-7fac7cd8900f151d77b750ae525304b0.ctex"]
 
 [params]
 

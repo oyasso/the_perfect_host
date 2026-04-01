@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsu0d3dve60qp"
-path.s3tc="res://.godot/imported/ballroom_Metallic-Rough.png-67f9883db899cc5d8a325bc60926dc6d.s3tc.ctex"
+path.s3tc="res://.godot/imported/ballroom_Metallic-Rough.png-77a3f1e64afd5795e604fde3656d3cce.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/ballroom_Metallic-Rough.png"
-dest_files=["res://.godot/imported/ballroom_Metallic-Rough.png-67f9883db899cc5d8a325bc60926dc6d.s3tc.ctex"]
+source_file="res://Models/ballroom/ballroom_Metallic-Rough.png"
+dest_files=["res://.godot/imported/ballroom_Metallic-Rough.png-77a3f1e64afd5795e604fde3656d3cce.s3tc.ctex"]
 
 [params]
 
