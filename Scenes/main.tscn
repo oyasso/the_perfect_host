@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=19 format=3 uid="uid://e4hkman78d3y"]
 
-[ext_resource type="PackedScene" uid="uid://djx1ga685mbi6" path="res://Models/ballroom.blend" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://chr01qu7qw7wy" path="res://Scenes/dialogue_manager.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://draojb80mdiwx" path="res://Scenes/mother.tscn" id="3_jjvhh"]
@@ -15,16 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://o2edts3v34u5" path="res://Scenes/food.tscn" id="13_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://5air06jhlcqq" path="res://Scenes/drinks.tscn" id="14_k12tt"]
 [ext_resource type="PackedScene" uid="uid://c0ha83tcxby71" path="res://Scenes/bg_music.tscn" id="16_k12tt"]
-[ext_resource type="PackedScene" uid="uid://bvb5ypbvwdfm" path="res://Models/ballroom/ballroom.glb" id="17_b3802"]
 [ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="18_b3802"]
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
 [ext_resource type="PackedScene" uid="uid://cpyppmrynyf2y" path="res://Models/wallet.blend" id="20_hibaj"]
 
 [node name="Main" type="Node3D"]
-
-[node name="ballroom" parent="." instance=ExtResource("1_bo1nx")]
-visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587914, -0.9189539, 0)
@@ -68,9 +63,6 @@ transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -77.6
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -69.2458, 7.635814, 32.304337)
 
 [node name="BGMusic" parent="." instance=ExtResource("16_k12tt")]
-
-[node name="ballroom2" parent="." instance=ExtResource("17_b3802")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.09646, -1.775219, 2.0516686)
 
 [node name="extra_wine" parent="." instance=ExtResource("17_h1bgf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.175644, 0, 2.2639763)
