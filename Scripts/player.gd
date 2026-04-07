@@ -17,11 +17,12 @@ var can_move = true
 @export var got_food = false
 @export var got_wallet = false
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction := Vector3(input_dir.x, 0, input_dir.y).normalized()
 	direction = direction.rotated(Vector3.UP, _camera.global_rotation.y)
 
+	velocity.y -= 9.81 * delta
 	if can_move:
 		if direction != Vector3.ZERO:
 			walking.play("Action_001")

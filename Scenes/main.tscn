@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=20 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://chr01qu7qw7wy" path="res://Scenes/dialogue_manager.tscn" id="3_8gbba"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="18_b3802"]
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
+[ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="19_hibaj"]
 [ext_resource type="PackedScene" uid="uid://cpyppmrynyf2y" path="res://Models/wallet.blend" id="20_hibaj"]
 
 [node name="Main" type="Node3D"]
@@ -75,3 +76,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.368362, 0, -2.6692924)
 
 [node name="wallet" parent="." instance=ExtResource("20_hibaj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.877275, 0, 16.84804)
+
+[node name="ballroom" parent="." instance=ExtResource("19_hibaj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.114494, -1.470211, 1.1495342)

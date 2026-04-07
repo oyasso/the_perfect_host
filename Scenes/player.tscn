@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7yy3somea7s0"]
+[gd_scene load_steps=5 format=3 uid="uid://b7yy3somea7s0"]
 
 [ext_resource type="Script" uid="uid://1psixtlusj02" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="PackedScene" uid="uid://udxj7mq36wq6" path="res://Scenes/kyoshi.tscn" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kkt2s"]
 radius = 1.4101563
-height = 7.6223145
+height = 7.3346653
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_cvnsp"]
+length = 0.67510575
 
 [node name="Player" type="CharacterBody3D"]
+floor_constant_speed = true
+floor_snap_length = 0.5
 script = ExtResource("1_v0iea")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -15,8 +20,12 @@ script = ExtResource("1_v0iea")
 [node name="Kyoshi" parent="Pivot" instance=ExtResource("2_cvnsp")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.707563, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.702516, 0)
 shape = SubResource("CapsuleShape3D_kkt2s")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.18313241, -0.3642606)
+shape = SubResource("SeparationRayShape3D_cvnsp")
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.026498, 0)

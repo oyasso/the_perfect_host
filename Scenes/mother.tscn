@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://draojb80mdiwx"]
+[gd_scene load_steps=6 format=3 uid="uid://draojb80mdiwx"]
 
 [ext_resource type="Script" uid="uid://dl64u7n46lcub" path="res://Scripts/mother.gd" id="1_k6ks7"]
+[ext_resource type="PackedScene" uid="uid://ydpsqw4ipgq4" path="res://Scenes/npc.tscn" id="2_7rpi1"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bo1nx"]
 
@@ -14,6 +15,10 @@ radius = 1.8263971
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_bo1nx")
 script = ExtResource("1_k6ks7")
+
+[node name="npc" parent="." instance=ExtResource("2_7rpi1")]
+transform = Transform3D(0.24, 0, 0, 0, 0.24, 0, 0, 0, 0.24, 0, -0.85296047, 0)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
