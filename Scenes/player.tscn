@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kkt2s"]
 radius = 1.4101563
-height = 6.575483
+height = 5.805808
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_cvnsp"]
 length = 1.6110969
@@ -21,7 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19612837, 0)
 [node name="Kyoshi" parent="Pivot" instance=ExtResource("2_cvnsp")]
 
 [node name="CillinderCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1975975, 4.626405, 0.1945011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1975975, 5.011242, 0.1945011)
 shape = SubResource("CapsuleShape3D_kkt2s")
 
 [node name="RayShape" type="CollisionShape3D" parent="."]
