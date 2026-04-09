@@ -5,7 +5,7 @@ extends MeshInstance3D
 @onready var player = $"../Player"
 var first_talk = false
 var talk_ready = false
-var drinks_counter = 0
+var drinks_counter = 3
 var tray_talk = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

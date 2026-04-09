@@ -18,6 +18,8 @@ var text_animated = false
 var is_talking = false
 
 var show_letter = false # bool for showing the letter
+var change_pos_middle = false
+var change_pos_conflict = false
 
 # references to nodes
 @onready var dialogue_ui : Control = $"."
@@ -56,11 +58,12 @@ func get_dialogue(id: String):
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 
-	print(id)
-
 	if id == "drinks7":
 		show_letter = true
-		change_position_script.change_middle()
+		change_pos_middle = true
+	
+	if id == "goingon":
+		change_pos_conflict = true
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
@@ -86,6 +89,15 @@ func _on_end_pressed() -> void:
 	# show the letter
 	if show_letter:
 		letter.show()
+		show_letter = false
+	
+	if change_pos_middle:
+		change_position_script.change_middle()
+		change_pos_middle = false
+
+	if change_pos_conflict:
+		change_position_script.change_conflict()
+		change_pos_conflict = false
 	
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
