@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://do3djbhi7egrl"]
+[gd_scene load_steps=13 format=4 uid="uid://do3djbhi7egrl"]
 
+[ext_resource type="Script" uid="uid://cv7t6u8qendxd" path="res://Scripts/party_goer.gd" id="1_8wtmp"]
 [ext_resource type="Animation" uid="uid://d3muprl11r4y6" path="res://Animations/drinking.res" id="1_xray2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2a0t5"]
@@ -155,7 +156,15 @@ _data = {
 &"drinking": ExtResource("1_xray2")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_f5bhw"]
+size = Vector3(2.540863, 8.4835205, 2.94133)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nl2mu"]
+height = 8.659912
+radius = 2.7172852
+
 [node name="extra_tall_glass" type="Node3D"]
+script = ExtResource("1_8wtmp")
 
 [node name="Armature Torso" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02823025, 3.9053087, 0.037068814)
@@ -322,3 +331,19 @@ libraries = {
 &"": SubResource("AnimationLibrary_vn3pn")
 }
 autoplay = "Tall glasses_001Action"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5909271, 3.7417603, 0.012519836)
+shape = SubResource("BoxShape3D_f5bhw")
+
+[node name="TalkArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8116155, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.060668945, 0)
+shape = SubResource("CylinderShape3D_nl2mu")
+
+[connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
+[connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

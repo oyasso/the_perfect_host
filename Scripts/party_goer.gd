@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends Node3D
 
 @onready var dialogue = $"../DialogueUI"
 var talk_ready = false
@@ -11,6 +11,7 @@ func _process(_delta: float) -> void:
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true
+	print("area entered")
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false
