@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var dialogue = $"../../DialogueUI"
+@onready var dialogue = $"../../../DialogueUI"
 var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

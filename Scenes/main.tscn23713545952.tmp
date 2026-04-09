@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=20 format=3 uid="uid://e4hkman78d3y"]
 
-[ext_resource type="Script" uid="uid://chts087yiwt3d" path="res://Scripts/position_change.gd" id="1_hibaj"]
 [ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://tf6p8i075uyf" path="res://Scenes/letter.tscn" id="2_fevyy"]
 [ext_resource type="PackedScene" uid="uid://chr01qu7qw7wy" path="res://Scenes/dialogue_manager.tscn" id="3_8gbba"]
@@ -23,9 +22,6 @@
 
 [node name="Main" type="Node3D"]
 
-[node name="change_positions" type="Node3D" parent="."]
-script = ExtResource("1_hibaj")
-
 [node name="DialogueUI" parent="." instance=ExtResource("3_8gbba")]
 visible = false
 
@@ -33,7 +29,7 @@ visible = false
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.351248, 0.74801445, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.983768, 0.74801445, 0)
 collision_layer = 3
 collision_mask = 5
 got_tray = true
@@ -48,13 +44,13 @@ transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 13.576044, 0.4, -12.
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 13.319939, 0.4, -20.104326)
 
 [node name="Uncle" parent="." instance=ExtResource("5_kry3j")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 17.039, 0.4, 18.953)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 17.039423, 0.8544483, 18.953297)
 
 [node name="Butler" parent="." instance=ExtResource("11_k12tt")]
 transform = Transform3D(0.5749999, 0, -0.99592924, 0, 1.15, 0, 0.99592924, 0, 0.5749999, -3.5132446, 0.6892071, -27.773666)
 
 [node name="Fama" parent="." instance=ExtResource("19_pdsj5")]
-transform = Transform3D(1.15, 0, 7.310897e-08, 0, 1.15, 0, -7.310897e-08, 0, 1.15, 12.523502, 0.73605317, 0.025248528)
+transform = Transform3D(-1.15, 0, -1.7364516e-07, 0, 1.15, 0, 1.7364516e-07, 0, -1.15, 25.276892, 0.73605317, 0.025248528)
 
 [node name="FancyLady" parent="." instance=ExtResource("7_6iyac")]
 transform = Transform3D(-0.81317276, 0, 0.81317276, 0, 1.15, 0, -0.81317276, 0, -0.81317276, -4.454015, 0.4, 28.10093)

@@ -17,6 +17,8 @@ var text_speed = 30.0
 var text_animated = false
 var is_talking = false
 
+var show_letter = false # bool for showing the letter
+
 # references to nodes
 @onready var dialogue_ui : Control = $"."
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
@@ -28,6 +30,8 @@ var is_talking = false
 @onready var next_button : Button = $DialogueBox/NextButton
 @onready var end_button : Button = $DialogueBox/End
 @onready var player : CharacterBody3D = $"../Player"
+@onready var letter = $"../Letter"
+@onready var change_position_script = $"../change_positions"
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,6 +56,12 @@ func get_dialogue(id: String):
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 
+	print(id)
+
+	if id == "drinks7":
+		show_letter = true
+		change_position_script.change_middle()
+
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
 	hide_continue_buttons()
@@ -72,6 +82,10 @@ func _on_end_pressed() -> void:
 	is_talking = false
 	if !debug:
 		player.can_move = true
+		
+	# show the letter
+	if show_letter:
+		letter.show()
 	
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI

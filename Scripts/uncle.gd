@@ -3,10 +3,10 @@ extends MeshInstance3D
 @onready var dialogue = $"../DialogueUI"
 @onready var mother = $"../Mother"
 @onready var player = $"../Player"
-var first_talk = true
+var first_talk = false
 var talk_ready = false
 var drinks_counter = 0
-var tray_talk = false
+var tray_talk = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
