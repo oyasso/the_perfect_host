@@ -39,8 +39,11 @@ func _process(_delta: float) -> void:
 				4:
 					dialogue.get_dialogue("fourth")
 					drinks_counter += 1
-				[5, ..]:
+				5:
 					dialogue.get_dialogue("fifth")
+					drinks_counter += 1
+				6:
+					dialogue.get_dialogue("sixth")
 
 		if mother.talked_count > 0 and first_talk:
 			dialogue.get_dialogue("hair")

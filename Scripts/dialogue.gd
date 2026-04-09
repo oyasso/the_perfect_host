@@ -4,7 +4,7 @@ var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue3.json"
+var json_file = "res://Dialogue/perfect_host_dialogue7.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 
@@ -49,8 +49,8 @@ func get_dialogue(id: String):
 	var tween : Tween = create_tween()
 	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
 	tween.connect("finished", on_tween_finished.bind(id))
-	
-	speaker_sprite.texture = load("res://Dialogue/" + json_dict[id]["character"] + "_Pixel_Sprite.png")
+
+	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:

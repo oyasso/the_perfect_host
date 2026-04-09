@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o6thu7hf3muw"
-path="res://.godot/imported/Uncle_Pixel_Sprite.png-8d64ff0e3a420776482d1864aca1e1c0.ctex"
+uid="uid://bk4h3x304i0w6"
+path="res://.godot/imported/Uncle_Drunk_4_Pixel_Sprite.png-83720e914c5734a5ae9f2e50c0792cb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogue/Uncle_Pixel_Sprite.png"
-dest_files=["res://.godot/imported/Uncle_Pixel_Sprite.png-8d64ff0e3a420776482d1864aca1e1c0.ctex"]
+source_file="res://Sprites/Uncle_Drunk_4_Pixel_Sprite.png"
+dest_files=["res://.godot/imported/Uncle_Drunk_4_Pixel_Sprite.png-83720e914c5734a5ae9f2e50c0792cb6.ctex"]
 
 [params]
 

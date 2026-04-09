@@ -22,7 +22,6 @@ func _physics_process(delta):
 	var direction := Vector3(input_dir.x, 0, input_dir.y).normalized()
 	direction = direction.rotated(Vector3.UP, _camera.global_rotation.y)
 
-	velocity.y -= 9.81 * delta
 	if can_move:
 		if direction != Vector3.ZERO:
 			walking.play("Action_001")
@@ -32,6 +31,7 @@ func _physics_process(delta):
 			
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		velocity.y -= 9.81 * delta # adds gravity
 		move_and_slide()
 	
 func _unhandled_input(event):
