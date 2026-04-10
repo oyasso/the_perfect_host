@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var dialogue = $"../DialogueUI"
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
 @onready var walking = $Pivot/Kyoshi/AnimationPlayer
@@ -16,6 +17,9 @@ var can_move = true
 @export var got_drinks = false
 @export var got_food = false
 @export var got_wallet = false
+
+# count occured interactions
+var interactions = 0
 
 func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
@@ -40,3 +44,12 @@ func _unhandled_input(event):
 		# prevent camera from rotating too far up or down
 		_camera_pivot.rotation.x = clampf(_camera_pivot.rotation.x, -tilt_limit, tilt_limit)
 		_camera_pivot.rotation.y += -event.relative.x * mouse_sensitivity
+
+func occured_interaction():
+	interactions += 1
+	
+	if interactions == 2:
+		dialogue.get_dialogue("goingon")
+	
+	if interactions == 3:
+		dialogue.get_dialogue("fake1")

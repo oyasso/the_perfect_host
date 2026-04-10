@@ -2,7 +2,7 @@ extends MeshInstance3D
 
 @onready var dialogue = $"../DialogueUI"
 @onready var uncle_script = $"../Uncle"
-var talked_count = 1
+var talked_count = 0
 var talk_ready = false
 
 func _process(_delta: float) -> void:
@@ -16,8 +16,8 @@ func _process(_delta: float) -> void:
 				dialogue.get_dialogue("cater")
 				talked_count += 1
 
-		if uncle_script.drinks_counter >= 3:
-			dialogue.get_dialogue("goingon")
+		#if uncle_script.drinks_counter >= 3:
+			#dialogue.get_dialogue("goingon")
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	print("area entered")

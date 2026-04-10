@@ -22,7 +22,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 BGMusic="*res://Scenes/bg_music.tscn"
-PositionChange="res://Scripts/position_change.gd"
 
 [display]
 

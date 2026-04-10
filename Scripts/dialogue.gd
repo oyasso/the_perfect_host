@@ -45,7 +45,7 @@ func get_dialogue(id: String):
 	dialogue_ui.show()
 	end_button.hide()
 	if not debug:
-		player.can_move = false
+q		player.can_move = false
 
 	# change the speaker label, dialogue text and speaker sprite
 	speaker_label.text = json_dict[id]["character"]
