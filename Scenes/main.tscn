@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=24 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="Script" uid="uid://chts087yiwt3d" path="res://Scripts/position_change.gd" id="1_hibaj"]
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="1_pdsj5"]
@@ -16,12 +16,13 @@
 [ext_resource type="PackedScene" uid="uid://ca378hufkjbiq" path="res://Scenes/tray.tscn" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://o2edts3v34u5" path="res://Scenes/food.tscn" id="13_wsu2k"]
 [ext_resource type="PackedScene" uid="uid://5air06jhlcqq" path="res://Scenes/drinks.tscn" id="14_k12tt"]
-[ext_resource type="PackedScene" uid="uid://c0ha83tcxby71" path="res://Scenes/bg_music.tscn" id="16_k12tt"]
+[ext_resource type="ArrayMesh" uid="uid://df3e5vyqlajtl" path="res://Mesh/wallet.mesh" id="17_gt3je"]
 [ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="18_b3802"]
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
 [ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="19_hibaj"]
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="22_ee4r6"]
+[ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="23_gt3je"]
 
 [node name="Main" type="Node3D"]
 
@@ -91,6 +92,11 @@ transform = Transform3D(0.70710677, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071
 [node name="Wallet" parent="." instance=ExtResource("10_wsu2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.90307, 0.76840425, 0.21181202)
 
+[node name="WalletHidden" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.87958485, 0.47367877, 0.044260032, -0.46716502, 0.84239465, 0.26856703, 0.08993007, -0.25690416, 0.9622437, -105.4505, 18.098925, 1.9876406)
+visible = false
+mesh = ExtResource("17_gt3je")
+
 [node name="Tray" parent="." instance=ExtResource("12_jkdf5")]
 transform = Transform3D(1.195, 0, 0, 0, 1.195, 0, 0, 0, 1.195, -81.46452, 4.7117434, -24.558878)
 
@@ -106,10 +112,13 @@ transform = Transform3D(12.119, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -47.796192, 4.00
 [node name="Drinks2" parent="." instance=ExtResource("14_k12tt")]
 transform = Transform3D(12.119, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -47.796192, 4.003726, -32.24028)
 
-[node name="BGMusic" parent="." instance=ExtResource("16_k12tt")]
-
 [node name="ballroom" parent="." instance=ExtResource("19_hibaj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
 
 [node name="Statue" parent="." instance=ExtResource("22_ee4r6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_gt3je")
+autoplay = true
+parameters/looping = true

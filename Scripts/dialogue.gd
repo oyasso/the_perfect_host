@@ -20,6 +20,8 @@ var is_talking = false
 var show_letter = false # bool for showing the letter
 var change_pos_middle = false
 var change_pos_conflict = false
+var two_interactions = false
+var three_interactions = false
 
 # references to nodes
 @onready var dialogue_ui : Control = $"."
@@ -95,10 +97,19 @@ func _on_end_pressed() -> void:
 		change_position_script.change_middle()
 		change_pos_middle = false
 
-	if change_pos_conflict:
-		change_position_script.change_conflict()
-		change_pos_conflict = false
+	#if change_pos_conflict:
+		#change_position_script.change_conflict()
+		#change_pos_conflict = false
 	
+	if player.interactions == 2 and not two_interactions:
+		get_dialogue("goingon")
+		two_interactions = true
+	
+	if player.interactions == 3 and not three_interactions:
+		get_dialogue("fake1")
+		change_position_script.change_conflict()
+		three_interactions = true
+
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
 	if "options" in json_dict[id]:

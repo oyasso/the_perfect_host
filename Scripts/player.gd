@@ -19,7 +19,7 @@ var can_move = true
 @export var got_wallet = false
 
 # count occured interactions
-var interactions = 0
+var interactions = 2
 
 func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
@@ -48,8 +48,9 @@ func _unhandled_input(event):
 func occured_interaction():
 	interactions += 1
 	
-	if interactions == 2:
-		dialogue.get_dialogue("goingon")
-	
-	if interactions == 3:
-		dialogue.get_dialogue("fake1")
+	#if can_move:
+		#if interactions == 2:
+			#dialogue.get_dialogue("goingon")
+#
+		#if interactions == 3:
+			#dialogue.get_dialogue("fake1")

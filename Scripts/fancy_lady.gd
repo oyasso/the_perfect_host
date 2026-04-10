@@ -7,12 +7,13 @@ var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("talk") and talk_ready and not dialogue.is_talking:
+	if Input.is_action_just_pressed("talk") and talk_ready and not dialogue.is_talking:
 		match talked_count:
 			0:
 				if player.got_food:
 					dialogue.get_dialogue("food")
 					talked_count += 1
+					player.occured_interaction()
 				else:
 					dialogue.get_dialogue("nofood")
 			1:

@@ -666,31 +666,31 @@
 	  "text": "Hey! Where's my wallet?",
 	  "go to": "fake19"
 	},
-	"fake20": {
+	"fake19": {
 	  "character": "Fancy Man",
 	  "sprite": "Fancy Man",
 	  "text": "I saw Kiyoshi put the wallet in there!",
-	  "go to": "fake21"
+	  "go to": "fake20"
 	},
-	"fake21": {
+	"fake20": {
 	  "character": "Fama",
 	  "sprite": "Fama",
 	  "text": "Ki...ki... Kiki! Pl-please... help....",
-	  "go to": "fake22"
+	  "go to": "fake21"
 	},
-	"fake22": {
+	"fake21": {
 	  "character": "Mother+Father",
 	  "sprite": "Mother_Father",
 	  "text": "And who is this?! ... Is this that freak you've been going off to see?!  The party was completely fine until you came in and ruined it! You always ruin it! Where did I go wrong in raising you?!",
-	  "go to": "fake23"
+	  "go to": "fake22"
 	},
-	"fake23": {
+	"fake22": {
 	  "character": "Kiyoshi",
 	  "sprite": "Kiyoshi",
 	  "text": "Mother I-",
-	  "go to": "fake24"
+	  "go to": "fake23"
 	},
-	"fake24": {
+	"fake23": {
 	  "character": "Mother+Father",
 	  "sprite": "Mother_Father",
 	  "text": "You are the worst child a parent could ever ask for!"
