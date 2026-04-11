@@ -23,6 +23,9 @@ var change_pos_conflict = false
 var two_interactions = false
 var three_interactions = false
 
+var start_boss = false
+var end_game = false
+
 # references to nodes
 @onready var dialogue_ui : Control = $"."
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
@@ -66,6 +69,12 @@ func get_dialogue(id: String):
 	
 	if id == "goingon":
 		change_pos_conflict = true
+	
+	if id == "fake23":
+		start_boss = true
+	
+	if id == "afterfight2":
+		end_game = true
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
@@ -109,6 +118,14 @@ func _on_end_pressed() -> void:
 		get_dialogue("fake1")
 		change_position_script.change_conflict()
 		three_interactions = true
+	
+	if start_boss:
+		get_tree().change_scene_to_file("res://Scenes/boss_battle.tscn")
+		start_boss = false
+	
+	if end_game:
+		get_tree().quit()
+		
 
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI

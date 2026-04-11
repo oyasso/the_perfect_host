@@ -11,6 +11,8 @@ var text_speed = 30.0
 
 var turn_counter = 0
 
+var end_battle = false
+
 var attack_text = "Kiyoshi tries to muster all of his courage, but he cannot fight back."
 var defend_text = ["Kiyoshi cannot look at them.", "Mom, Dad, please! I'm sorry! It was just a mistake!",
 "I can do better! I can better!", "Please, give me another chance!", "Please, I love you! Don't do this."]
@@ -59,12 +61,16 @@ func show_boss_dialogue(text: String):
 	tween.connect("finished", on_tween_boss_finished.bind())
 
 func on_tween_boss_finished():
-	buttons.show()
-	next_button.hide()
+	if turn_counter < 4:
+		buttons.show()
+		next_button.hide()
 
 func _on_next_button_pressed() -> void:
-	show_boss_dialogue(boss_text[turn_counter])
-	turn_counter += 1
+	if turn_counter < 4:
+		show_boss_dialogue(boss_text[turn_counter])
+		turn_counter += 1
+	else:
+		get_tree().change_scene_to_file("res://Scenes/end.tscn")
 
 func _on_attack_button_pressed() -> void:
 	show_player_attack_dialogue()
