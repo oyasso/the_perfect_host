@@ -19,7 +19,7 @@ var is_talking = false
 
 var show_letter = false # bool for showing the letter
 var change_pos_middle = false
-var change_pos_conflict = false
+#var change_conflict_scene = false
 var two_interactions = false
 var three_interactions = false
 
@@ -67,8 +67,8 @@ func get_dialogue(id: String):
 		show_letter = true
 		change_pos_middle = true
 	
-	if id == "goingon":
-		change_pos_conflict = true
+	#if id == "goingon":
+		#change_conflict_scene = true
 	
 	if id == "fake23":
 		start_boss = true
@@ -106,17 +106,16 @@ func _on_end_pressed() -> void:
 		change_position_script.change_middle()
 		change_pos_middle = false
 
-	#if change_pos_conflict:
-		#change_position_script.change_conflict()
-		#change_pos_conflict = false
+	#if change_conflict_scene:
+		#get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
+		#change_conflict_scene = false
 	
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
 	
 	if player.interactions == 3 and not three_interactions:
-		get_dialogue("fake1")
-		change_position_script.change_conflict()
+		get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
 		three_interactions = true
 	
 	if start_boss:

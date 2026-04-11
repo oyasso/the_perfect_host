@@ -1,0 +1,94 @@
+[gd_scene load_steps=19 format=3 uid="uid://3biivye4kmwa"]
+
+[ext_resource type="Script" uid="uid://clfxvfp4ale6n" path="res://Scripts/conflict.gd" id="1_a74b6"]
+[ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="2_nada3"]
+[ext_resource type="PackedScene" uid="uid://chr01qu7qw7wy" path="res://Scenes/dialogue_manager.tscn" id="3_3o2yd"]
+[ext_resource type="PackedScene" uid="uid://b7yy3somea7s0" path="res://Scenes/player.tscn" id="4_gjrrd"]
+[ext_resource type="PackedScene" uid="uid://draojb80mdiwx" path="res://Scenes/mother.tscn" id="5_t6mqk"]
+[ext_resource type="PackedScene" uid="uid://dke5jv1s1jnud" path="res://Scenes/father.tscn" id="6_2rsek"]
+[ext_resource type="PackedScene" uid="uid://dw7nbeuqjxws" path="res://Scenes/uncle.tscn" id="7_5yga7"]
+[ext_resource type="PackedScene" uid="uid://dh38ijkwba3x3" path="res://Scenes/butler.tscn" id="8_ehyu4"]
+[ext_resource type="PackedScene" uid="uid://bysu8os4b7g0u" path="res://Scenes/fama_crawling.tscn" id="9_dises"]
+[ext_resource type="PackedScene" uid="uid://238gvop1ca31" path="res://Scenes/fancy_lady.tscn" id="10_3v3q3"]
+[ext_resource type="PackedScene" uid="uid://u71e222fvdqk" path="res://Scenes/fancy_man.tscn" id="11_y37d2"]
+[ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="12_6wsi0"]
+[ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="13_a4vn8"]
+[ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="14_7e7y2"]
+[ext_resource type="ArrayMesh" uid="uid://df3e5vyqlajtl" path="res://Mesh/wallet.mesh" id="15_ldm1h"]
+[ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="16_ykr5d"]
+[ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="17_srvnt"]
+[ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="18_o6g2o"]
+
+[node name="Conflict" type="Node3D"]
+script = ExtResource("1_a74b6")
+
+[node name="FadeOut" parent="." instance=ExtResource("2_nada3")]
+visible = false
+
+[node name="DialogueUI" parent="." instance=ExtResource("3_3o2yd")]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource("4_gjrrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0.748, 0)
+collision_layer = 3
+collision_mask = 5
+got_wallet = true
+
+[node name="Mother" parent="." instance=ExtResource("5_t6mqk")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -72, 0.4, 4)
+
+[node name="Father" parent="." instance=ExtResource("6_2rsek")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -72, 0.4, -4)
+
+[node name="Uncle" parent="." instance=ExtResource("7_5yga7")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -105, 12.75, -15)
+
+[node name="Butler" parent="." instance=ExtResource("8_ehyu4")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -120, 19.5, 0)
+
+[node name="Fama" parent="." instance=ExtResource("9_dises")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21, 0.791, -0.193)
+
+[node name="FancyLady" parent="." instance=ExtResource("10_3v3q3")]
+transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -66, 0.4, -20)
+
+[node name="FancyMan" parent="." instance=ExtResource("11_y37d2")]
+transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -34.64779, 0.4, -21.417488)
+
+[node name="Extras" type="Node3D" parent="."]
+
+[node name="extra_wine" parent="Extras" instance=ExtResource("12_6wsi0")]
+transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -11.668588, 1, 17.311188)
+
+[node name="extra_wine3" parent="Extras" instance=ExtResource("12_6wsi0")]
+transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, -31.03531, 1, 22.777775)
+
+[node name="extra_wine2" parent="Extras" instance=ExtResource("12_6wsi0")]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, -20.662369, 1, -19.930843)
+
+[node name="extra_eating2" parent="Extras" instance=ExtResource("13_a4vn8")]
+transform = Transform3D(-1.1920929e-07, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -1.1920929e-07, 7.2289333, 0.9999981, 31.653778)
+
+[node name="extra_eating3" parent="Extras" instance=ExtResource("13_a4vn8")]
+transform = Transform3D(-0.5, 0, -0.86602557, 0, 1, 0, 0.86602557, 0, -0.5, 11.489736, 0.9999981, -30.997467)
+
+[node name="extra_tall_glass" parent="Extras" instance=ExtResource("14_7e7y2")]
+transform = Transform3D(0.70710677, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.70710677, 4.0917397, 1, -31.083223)
+
+[node name="extra_tall_glass3" parent="Extras" instance=ExtResource("14_7e7y2")]
+transform = Transform3D(0.70710677, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.70710677, -14.154683, 1, -21.151821)
+
+[node name="WalletHidden" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.87958485, 0.47367877, 0.044260032, -0.46716502, 0.84239465, 0.26856703, 0.08993007, -0.25690416, 0.9622437, -105.4505, 18.098925, 1.9876406)
+mesh = ExtResource("15_ldm1h")
+
+[node name="ballroom" parent="." instance=ExtResource("16_ykr5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
+
+[node name="Statue" parent="." instance=ExtResource("17_srvnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_o6g2o")
+autoplay = true
+parameters/looping = true
