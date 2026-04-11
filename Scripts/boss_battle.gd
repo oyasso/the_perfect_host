@@ -6,6 +6,7 @@ extends Control
 @onready var attack_button : Button = $Buttons/AttackButton
 @onready var defend_button : Button = $Buttons/DefendButton
 @onready var next_button : Button = $DialogueBox/NextButton
+@onready var fade = $Fade
 
 var text_speed = 30.0
 
@@ -32,7 +33,7 @@ func show_player_attack_dialogue():
 func show_player_defend_dialogue(text: String):
 	print(turn_counter)
 	buttons.hide()
-	next_button.show()
+	next_button.hide()
 
 	if turn_counter <= 1:
 		speaker_label.hide()
@@ -54,6 +55,7 @@ func show_boss_dialogue(text: String):
 	speaker_label.show()
 	speaker_label.text = "Mother+Father"
 	text_label.text = text
+	next_button.hide()
 
 	# animate the text
 	var tween : Tween = create_tween()
@@ -64,16 +66,25 @@ func on_tween_boss_finished():
 	if turn_counter < 4:
 		buttons.show()
 		next_button.hide()
+	else:
+		next_button.show()
 
 func _on_next_button_pressed() -> void:
 	if turn_counter < 4:
 		show_boss_dialogue(boss_text[turn_counter])
 		turn_counter += 1
 	else:
-		get_tree().change_scene_to_file("res://Scenes/end.tscn")
+		end_boss_scene()
+		#get_tree().change_scene_to_file("res://Scenes/end.tscn")
 
 func _on_attack_button_pressed() -> void:
 	show_player_attack_dialogue()
 
 func _on_defend_button_pressed() -> void:
 	show_player_defend_dialogue(defend_text[turn_counter])
+	
+func end_boss_scene():
+	fade.show()
+	fade.fade_in(1.5)
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file("res://Scenes/end.tscn")

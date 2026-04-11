@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://lv4x0vpw77q"]
+[gd_scene load_steps=29 format=3 uid="uid://lv4x0vpw77q"]
 
 [ext_resource type="Texture2D" uid="uid://bqfhto6bxky6b" path="res://Animations/boss_battle/frame0000.png" id="1_466ia"]
 [ext_resource type="Script" uid="uid://cmwgt828nak8n" path="res://Scripts/boss_battle.gd" id="1_ji3i5"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://c40hc6iotx0jp" path="res://Animations/boss_battle/frame0016.png" id="17_ipvnc"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="18_oh7a1"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="19_s70no"]
+[ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="21_1q7hp"]
 [ext_resource type="AudioStream" uid="uid://c1e53krxhytpk" path="res://Sounds/Battle Theme Piano Sketch.mp3" id="21_wue74"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yjr8k"]
@@ -125,16 +126,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ji3i5")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="Background" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(1.5, 1.5)
@@ -212,6 +203,9 @@ offset_bottom = 10.962961
 scale = Vector2(82.064255, 35.954784)
 focus_mode = 0
 flat = true
+
+[node name="Fade" parent="." instance=ExtResource("21_1q7hp")]
+visible = false
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_wue74")

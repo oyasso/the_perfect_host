@@ -19,7 +19,7 @@ var can_move = true
 @export var got_wallet = false
 
 # count occured interactions
-var interactions = 2
+var interactions = 3
 
 func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")

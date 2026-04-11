@@ -1,7 +1,14 @@
 extends Node3D
 
 @onready var dialogue = $DialogueUI
+@onready var fade = $FadeOut
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	dialogue.get_dialogue("afterfight")
+
+func end_game():
+	fade.show()
+	fade.fade_in(1.5)
+	await get_tree().create_timer(1.5).timeout
+	get_tree().quit()

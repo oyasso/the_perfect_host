@@ -39,6 +39,9 @@ var end_game = false
 @onready var player : CharacterBody3D = $"../Player"
 @onready var letter = $"../Letter"
 @onready var change_position_script = $"../change_positions"
+@onready var conflict_scene = $".."
+@onready var end_scene = $".."
+@onready var fade = $"../FadeOut"
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -58,7 +61,8 @@ func get_dialogue(id: String):
 	
 	# animate the text
 	var tween : Tween = create_tween()
-	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	#tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
@@ -115,16 +119,18 @@ func _on_end_pressed() -> void:
 		two_interactions = true
 	
 	if player.interactions == 3 and not three_interactions:
+		fade.show()
+		fade.fade_in(1.0)
+		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
 		three_interactions = true
 	
 	if start_boss:
-		get_tree().change_scene_to_file("res://Scenes/boss_battle.tscn")
+		conflict_scene.end_conflict_scene()
 		start_boss = false
 	
 	if end_game:
-		get_tree().quit()
-		
+		end_scene.end_game()
 
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
