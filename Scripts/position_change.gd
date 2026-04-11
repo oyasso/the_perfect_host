@@ -8,9 +8,11 @@ extends Node
 @onready var fancy_lady = $"../FancyLady"
 @onready var fancy_man = $"../FancyMan"
 @onready var player = $"../Player"
-@onready var fade_out = $"../FadeOut"
+@onready var fade = $"../FadeOut"
 
 func change_middle():
+	fade.show()
+	fade.fade_out(1.0)
 	mother.position = Vector3(-74.561, 0.4, -21.257)
 	father.position = Vector3(-74.561, 0.4, -28.887)
 	uncle.position = Vector3(-69, 0.4, 21)
