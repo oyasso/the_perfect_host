@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@export var use_camera := true
+
 @onready var dialogue = $"../DialogueUI"
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
@@ -19,7 +21,13 @@ var can_move = true
 @export var got_wallet = false
 
 # count occured interactions
-var interactions = 3
+var interactions = 0
+
+func _ready():
+	if use_camera:
+		_camera.make_current()
+	else:
+		_camera.current = false
 
 func _physics_process(delta):
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
