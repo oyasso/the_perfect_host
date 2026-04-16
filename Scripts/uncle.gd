@@ -9,6 +9,7 @@ extends MeshInstance3D
 @onready var wallet = $"../Wallet"
 @onready var drinks = [$"../Drinks", $"../Drinks2"]
 @onready var tray = $"../Tray"
+@onready var talk_animation = $AnimationPlayer
 var first_talk = false
 var talk_ready = false
 var drinks_counter = 0
@@ -63,7 +64,9 @@ func _process(_delta: float) -> void:
 			first_talk = true
 			hide_exclamation()
 			tray.show_exclamation()
-		
+	
+	if dialogue.is_talking and dialogue.speaker_label.text == "Uncle":
+		talk_animation.play("Armature TorsoAction")
 	#if first_talk and drinks_counter >= 1:
 		#exclamation.hide()
 	#if not first_talk and mother.talked_count == 1:
