@@ -100,17 +100,21 @@ mesh = ExtResource("17_gt3je")
 [node name="Tray" parent="." instance=ExtResource("12_jkdf5")]
 transform = Transform3D(1.195, 0, 0, 0, 1.195, 0, 0, 0, 1.195, -81.46452, 4.7117434, -24.558878)
 
-[node name="Food" parent="." instance=ExtResource("13_wsu2k")]
-transform = Transform3D(7.609, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -60.467777, 4.9271564, -33.112137)
+[node name="Food" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -60.467777, 4.060643, -33.112137)
+other_food = NodePath("../Food2")
 
-[node name="Food2" parent="." instance=ExtResource("13_wsu2k")]
-transform = Transform3D(7.609, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -60.467777, 4.9271564, 32.68802)
+[node name="Food2" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -60.467777, 4.040247, 32.68802)
+other_food = NodePath("../Food")
 
-[node name="Drinks" parent="." instance=ExtResource("14_k12tt")]
-transform = Transform3D(12.119, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -47.796192, 4.003726, 32.468624)
+[node name="Drinks" parent="." node_paths=PackedStringArray("other_drinks") instance=ExtResource("14_k12tt")]
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -47.98124, 4.003726, 32.468624)
+other_drinks = NodePath("../Drinks2")
 
-[node name="Drinks2" parent="." instance=ExtResource("14_k12tt")]
-transform = Transform3D(12.119, 0, 0, 0, 3.404, 0, 0, 0, 3.404, -47.796192, 4.003726, -32.24028)
+[node name="Drinks2" parent="." node_paths=PackedStringArray("other_drinks") instance=ExtResource("14_k12tt")]
+transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -48.121403, 4.003726, -32.24028)
+other_drinks = NodePath("../Drinks")
 
 [node name="ballroom" parent="." instance=ExtResource("19_hibaj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)

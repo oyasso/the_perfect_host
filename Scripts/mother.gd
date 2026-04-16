@@ -1,7 +1,8 @@
 extends MeshInstance3D
 
 @onready var dialogue = $"../DialogueUI"
-@onready var uncle_script = $"../Uncle"
+@onready var uncle = $"../Uncle"
+@onready var exclamation = $Exclamation
 var talked_count = 0
 var talk_ready = false
 
@@ -11,6 +12,8 @@ func _process(_delta: float) -> void:
 			0:
 				dialogue.get_dialogue("where")
 				talked_count += 1
+				uncle.show_exclamation()
+				hide_exclamation()
 
 			1:
 				dialogue.get_dialogue("cater")
@@ -25,3 +28,9 @@ func _on_talk_area_body_entered(_body: Node3D) -> void:
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false
+
+func show_exclamation():
+	exclamation.show()
+
+func hide_exclamation():
+	exclamation.hide()

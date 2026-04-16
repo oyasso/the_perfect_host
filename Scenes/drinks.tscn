@@ -1,8 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://5air06jhlcqq"]
+[gd_scene load_steps=7 format=3 uid="uid://5air06jhlcqq"]
 
 [ext_resource type="Script" uid="uid://jpkibgw4m5ul" path="res://Scripts/drinks.gd" id="1_ap017"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ap017"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap017"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_e2dn3"]
+material = SubResource("StandardMaterial3D_ap017")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2dn3"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_llt2s"]
+material = SubResource("StandardMaterial3D_e2dn3")
 
 [node name="Drinks" type="MeshInstance3D"]
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0)
@@ -14,6 +26,20 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
 shape = SubResource("BoxShape3D_ap017")
+
+[node name="Exclamation" type="Node3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.8054008, 0)
+visible = false
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.009266734, 0.72446656, 0)
+mesh = SubResource("CapsuleMesh_e2dn3")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.009266734, -0.27784657, 0)
+mesh = SubResource("SphereMesh_llt2s")
+skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

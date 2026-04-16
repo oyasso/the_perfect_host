@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://u71e222fvdqk"]
+[gd_scene load_steps=9 format=3 uid="uid://u71e222fvdqk"]
 
 [ext_resource type="Script" uid="uid://gjbv8hs6q1gb" path="res://Scripts/fancy_man.gd" id="1_3leeg"]
 [ext_resource type="ArrayMesh" uid="uid://byelcusaemfw1" path="res://Mesh/npc.mesh" id="1_c4ygr"]
@@ -8,6 +8,18 @@ data = PackedVector3Array(-0.63269997, 6.6362996, 0.0243, -0.599, 6.875, -0.2877
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jjvhh"]
 radius = 1.8263971
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8kjn2"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_c4ygr"]
+material = SubResource("StandardMaterial3D_8kjn2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_58r7m"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7r3at"]
+material = SubResource("StandardMaterial3D_58r7m")
 
 [node name="FancyMan" type="MeshInstance3D"]
 mesh = ExtResource("1_c4ygr")
@@ -25,6 +37,19 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
 shape = SubResource("SphereShape3D_jjvhh")
+
+[node name="Exclamation" type="Node3D" parent="."]
+visible = false
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.227638, 9.241557, 0)
+mesh = SubResource("CapsuleMesh_c4ygr")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.227638, 8.2392435, 0)
+mesh = SubResource("SphereMesh_7r3at")
+skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

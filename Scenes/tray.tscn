@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ca378hufkjbiq"]
+[gd_scene load_steps=9 format=3 uid="uid://ca378hufkjbiq"]
 
 [ext_resource type="ArrayMesh" uid="uid://bnlrrexbffp6k" path="res://Mesh/tray.mesh" id="1_lxiir"]
 [ext_resource type="Script" uid="uid://dh55wtt2o5l7b" path="res://Scripts/tray.gd" id="1_ua8at"]
@@ -8,6 +8,18 @@ data = PackedVector3Array(-1.0416, 0.0993, 0.5999, -1.1435, 0.1152, 0.3718, -1.1
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jjvhh"]
 radius = 3.762291
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap017"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lxiir"]
+material = SubResource("StandardMaterial3D_ap017")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvcbw"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_74l68"]
+material = SubResource("StandardMaterial3D_pvcbw")
 
 [node name="Tray" type="MeshInstance3D"]
 mesh = ExtResource("1_lxiir")
@@ -25,6 +37,20 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
 transform = Transform3D(0.975, 0, 0, 0, 0.975, 0, 0, 0, 0.975, 0, 0, 0)
 shape = SubResource("SphereShape3D_jjvhh")
+
+[node name="Exclamation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1927481, 0)
+visible = false
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.009266734, 0.72446656, 0)
+mesh = SubResource("CapsuleMesh_lxiir")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.009266734, -0.27784657, 0)
+mesh = SubResource("SphereMesh_74l68")
+skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

@@ -2,6 +2,8 @@ extends MeshInstance3D
 
 @onready var dialogue = $"../DialogueUI"
 @onready var player = $"../Player"
+@onready var exclamation = $Exclamation
+@onready var food = [$"../Food", $"../Food2"]
 var talked_count = 0
 var talk_ready = false
 
@@ -14,8 +16,11 @@ func _process(_delta: float) -> void:
 					dialogue.get_dialogue("food")
 					talked_count += 1
 					player.occured_interaction()
+					hide_exclamation()
 				else:
 					dialogue.get_dialogue("nofood")
+					food[0].show_exclamation()
+					food[1].show_exclamation()
 			1:
 				dialogue.get_dialogue("allergy")
 				talked_count += 1
@@ -30,3 +35,9 @@ func _on_talk_area_body_entered(_body: Node3D) -> void:
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false
+
+func show_exclamation():
+	exclamation.show()
+
+func hide_exclamation():
+	exclamation.hide()

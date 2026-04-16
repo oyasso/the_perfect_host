@@ -1,9 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://o2edts3v34u5"]
+[gd_scene load_steps=7 format=3 uid="uid://o2edts3v34u5"]
 
 [ext_resource type="Script" uid="uid://bpdltok4rgo0s" path="res://Scripts/food.gd" id="1_j4qko"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h4kkx"]
 size = Vector3(1, 1, 0.9871826)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4qko"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j4qko"]
+material = SubResource("StandardMaterial3D_j4qko")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhto3"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fhto3"]
+material = SubResource("StandardMaterial3D_fhto3")
 
 [node name="Food" type="MeshInstance3D"]
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0)
@@ -16,6 +28,20 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
 transform = Transform3D(1.57, 0, 0, 0, 1.57, 0, 0, 0, 1.57, 0, 0, -0.006408691)
 shape = SubResource("BoxShape3D_h4kkx")
+
+[node name="Exclamation" type="Node3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.8054008, 0)
+visible = false
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.009266734, 0.72446656, 0)
+mesh = SubResource("CapsuleMesh_j4qko")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.009266734, -0.27784657, 0)
+mesh = SubResource("SphereMesh_fhto3")
+skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

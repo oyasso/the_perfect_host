@@ -2,6 +2,7 @@ extends MeshInstance3D
 
 @onready var player = $"../Player"
 @onready var dialogue = $"../DialogueUI"
+@onready var exclamation = $Exclamation
 var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -10,6 +11,7 @@ func _process(_delta: float) -> void:
 		if player.got_drinks:
 			dialogue.get_dialogue("beverage")
 			player.occured_interaction()
+			hide_exclamation()
 		else:
 			dialogue.get_dialogue("nobeverage")
 			
@@ -19,3 +21,9 @@ func _on_talk_area_body_entered(_body: Node3D) -> void:
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false
+
+func show_exclamation():
+	exclamation.show()
+
+func hide_exclamation():
+	exclamation.hide()

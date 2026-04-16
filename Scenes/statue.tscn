@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bhrtqnsp0nj0b"]
+[gd_scene load_steps=23 format=4 uid="uid://bhrtqnsp0nj0b"]
 
 [ext_resource type="Script" uid="uid://dqdi75syhmwl2" path="res://Scripts/statue.gd" id="1_3mhwb"]
 [ext_resource type="Texture2D" uid="uid://deky0duc2iryf" path="res://Models/ballroom/ballroom_Mud 01 diffuse.jpg" id="2_hel5t"]
@@ -149,13 +149,25 @@ shadow_mesh = SubResource("ArrayMesh_txjny")
 height = 16.483429
 radius = 13.862793
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap017"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3mhwb"]
+material = SubResource("StandardMaterial3D_ap017")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvcbw"]
+albedo_color = Color(1, 1, 0.59607846, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_hel5t"]
+material = SubResource("StandardMaterial3D_pvcbw")
+
 [node name="Statue" type="Node3D"]
+script = ExtResource("1_3mhwb")
 
 [node name="statue pillar" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.6026474, 0, 0, 0, 0.43364424, 0, 0, 0, 0.6026474, 0.44491577, 4.6863933, -0.1569821)
 mesh = SubResource("ArrayMesh_834a3")
 skeleton = NodePath("")
-script = ExtResource("1_3mhwb")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="statue pillar"]
 
@@ -319,5 +331,19 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.32286, 0)
 shape = SubResource("CylinderShape3D_0k2tg")
 
-[connection signal="body_entered" from="TalkArea" to="statue pillar" method="_on_talk_area_body_entered"]
-[connection signal="body_exited" from="TalkArea" to="statue pillar" method="_on_talk_area_body_exited"]
+[node name="Exclamation" type="Node3D" parent="."]
+transform = Transform3D(2.72, 0, 0, 0, 2.72, 0, 0, 0, 2.72, 1.3334259, 27.167969, -0.2800231)
+visible = false
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.009266734, 0.72446656, 0)
+mesh = SubResource("CapsuleMesh_3mhwb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
+transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.009266734, -0.27784657, 0)
+mesh = SubResource("SphereMesh_hel5t")
+skeleton = NodePath("../..")
+
+[connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
+[connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

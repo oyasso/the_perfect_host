@@ -1,8 +1,9 @@
 extends Node3D
 
-@onready var player = $"../../Player"
-@onready var wallet = $"../../WalletHidden"
-@onready var dialogue = $"../../DialogueUI"
+@onready var player = $"../Player"
+@onready var wallet = $"../WalletHidden"
+@onready var dialogue = $"../DialogueUI"
+@onready var exclamation = $Exclamation
 var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,9 +16,17 @@ func _process(_delta: float) -> void:
 		
 		player.got_wallet = false
 		player.occured_interaction()
+		
+		hide_exclamation()
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false
+
+func show_exclamation():
+	exclamation.show()
+
+func hide_exclamation():
+	exclamation.hide()
