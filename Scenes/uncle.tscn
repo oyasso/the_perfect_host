@@ -197,7 +197,7 @@ tracks/11/keys = PackedFloat32Array(0, 1, 1.0016568, 1.0595027, 1.164036)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_btdpj"]
 _data = {
-&"Armature TorsoAction": SubResource("Animation_a6ebc")
+&"talk": SubResource("Animation_a6ebc")
 }
 
 [node name="Uncle" type="MeshInstance3D"]
@@ -373,7 +373,7 @@ transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.
 mesh = SubResource("SphereMesh_ru3ng")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPerson" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_btdpj")
 }

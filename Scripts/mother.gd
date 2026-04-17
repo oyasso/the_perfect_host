@@ -3,6 +3,7 @@ extends MeshInstance3D
 @onready var dialogue = $"../DialogueUI"
 @onready var uncle = $"../Uncle"
 @onready var exclamation = $Exclamation
+@onready var body_animation = $AnimationPerson
 var talked_count = 0
 var talk_ready = false
 
@@ -18,6 +19,9 @@ func _process(_delta: float) -> void:
 			1:
 				dialogue.get_dialogue("cater")
 				talked_count += 1
+	
+	#if dialogue.is_talking and dialogue.speaker_label.text == "Mother":
+		#talk_animation.play("Armature TorsoAction")
 
 		#if uncle_script.drinks_counter >= 3:
 			#dialogue.get_dialogue("goingon")

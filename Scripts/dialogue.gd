@@ -4,7 +4,7 @@ var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue7.json"
+var json_file = "res://Dialogue/perfect_host_dialogue9.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 
@@ -26,6 +26,9 @@ var three_interactions = false
 var start_boss = false
 var end_game = false
 
+var fancy_man_drink = false
+var fancy_lady_eat = false
+
 # references to nodes
 @onready var dialogue_ui : Control = $"."
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
@@ -42,6 +45,10 @@ var end_game = false
 @onready var conflict_scene = $".."
 @onready var end_scene = $".."
 @onready var fade = $"../FadeOut"
+@onready var uncle = $"../Uncle"
+@onready var mother = $"../Mother"
+@onready var fancy_man = $"../FancyMan"
+@onready var fancy_lady = $"../FancyLady"
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -72,6 +79,19 @@ func get_dialogue(id: String):
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 
+	# animate the speaker
+	match json_dict[id]["character"]:
+		"Mother":
+			mother.body_animation.play("talk")
+		"Uncle":
+			uncle.body_animation.play("talk")
+		"Fancy Man":
+			if not fancy_man_drink:
+				fancy_man.body_animation.play("talk")
+		"Fancy Lady":
+			if not fancy_lady_eat:
+				fancy_lady.body_animation.play("talk")
+
 	if id == "drinks7":
 		show_letter = true
 		change_pos_middle = true
@@ -84,6 +104,12 @@ func get_dialogue(id: String):
 	
 	if id == "afterfight2":
 		end_game = true
+	
+	if id == "charity8" or id == "question4":
+		fancy_man_drink = true
+	
+	if id == "food2":
+		fancy_lady_eat = true
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
@@ -129,6 +155,12 @@ func _on_end_pressed() -> void:
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
 		three_interactions = true
+	
+	if fancy_man_drink:
+		fancy_man.drink()
+	
+	if fancy_lady_eat:
+		fancy_lady.eat()
 	
 	if start_boss:
 		conflict_scene.end_conflict_scene()

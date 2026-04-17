@@ -4,6 +4,11 @@ extends MeshInstance3D
 @onready var player = $"../Player"
 @onready var exclamation = $Exclamation
 @onready var food = [$"../Food", $"../Food2"]
+@onready var body_animation = $AnimationPerson
+@onready var plate_animation = $AnimationPlate
+@onready var scallop_animation = $AnimationScallop
+@onready var plate = $dish
+@onready var scallops = $Scallops_
 var talked_count = 0
 var talk_ready = false
 
@@ -41,3 +46,11 @@ func show_exclamation():
 
 func hide_exclamation():
 	exclamation.hide()
+
+func eat():
+	plate.show()
+	scallops.show()
+	body_animation.stop()
+	body_animation.play("eating")
+	plate_animation.play("dish")
+	scallop_animation.play("scallop")

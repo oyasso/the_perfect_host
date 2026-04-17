@@ -24,6 +24,8 @@ var can_move = true
 var interactions = 0
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 	if use_camera:
 		_camera.make_current()
 	else:
