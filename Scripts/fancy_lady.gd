@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("talk") and talk_ready and not dialogue.is_talking:
 		match talked_count:
 			0:
-				if player.got_food:
+				if player.got_items:
 					dialogue.get_dialogue("food")
 					talked_count += 1
 					player.occured_interaction()

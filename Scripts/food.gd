@@ -8,7 +8,8 @@ var talk_ready = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("talk") and talk_ready:
-		player.got_food = true
+		player.got_items = true
+		player.acquired_items()
 		hide_exclamation()
 		other_food.hide_exclamation()
 		queue_free()

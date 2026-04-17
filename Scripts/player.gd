@@ -5,7 +5,10 @@ extends CharacterBody3D
 @onready var dialogue = $"../DialogueUI"
 @onready var _camera := $CameraPivot/SpringArm3D/Camera3D as Camera3D
 @onready var _camera_pivot := $CameraPivot as Node3D
-@onready var walking = $Pivot/Kyoshi/AnimationPlayer
+@onready var body_animation = $Pivot/Kyoshi/AnimationPerson
+@onready var plate_animation = $Pivot/Kyoshi/AnimationPlate
+@onready var empty_tray = $Pivot/Kyoshi/"Empty Tray"
+@onready var full_tray = $Pivot/Kyoshi/"Tray with items"
 @export_range(0.0, 1.0) var mouse_sensitivity = 0.01
 @export var tilt_limit = deg_to_rad(75)
 @export var speed = 14
@@ -14,10 +17,12 @@ extends CharacterBody3D
 var talk_ready = false
 var can_move = true
 
+var current_walk = "no_tray"
+var current_tray = "no_tray"
+
 # bools to see inventory
 @export var got_tray = false
-@export var got_drinks = false
-@export var got_food = false
+@export var got_items = false
 @export var got_wallet = false
 
 # count occured interactions
@@ -38,10 +43,12 @@ func _physics_process(delta):
 
 	if can_move:
 		if direction != Vector3.ZERO:
-			walking.play("Action_001")
+			body_animation.play(current_walk)
+			plate_animation.play(current_tray)
 			$Pivot.basis = Basis.looking_at(direction)
 		else:
-			walking.stop()
+			body_animation.stop()
+			plate_animation.stop()
 			
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
@@ -64,3 +71,13 @@ func occured_interaction():
 #
 		#if interactions == 3:
 			#dialogue.get_dialogue("fake1")
+
+func acquired_plate():
+	current_walk = "walk_tray"
+	current_tray = "tray_empty"
+	empty_tray.show()
+
+func acquired_items():
+	current_tray = "tray_full"
+	empty_tray.hide()
+	full_tray.show()

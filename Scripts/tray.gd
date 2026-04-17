@@ -9,6 +9,7 @@ var talk_ready = false
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("talk") and talk_ready:
 		player.got_tray = true
+		player.acquired_plate()
 		uncle.show_exclamation()
 		queue_free()
 

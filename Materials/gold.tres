@@ -1,0 +1,26 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cpf6qpdop2ifh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m4lmg"]
+load_path = "res://.godot/imported/ballroom_basecolor_14.jpg-dcdc121dd29f8219219d66eb92a5e302.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3dypr"]
+load_path = "res://.godot/imported/ballroom_Metallic-Rough_15.png-14ada95278dbecd2063aa62ea1daa9bf.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lgg2m"]
+load_path = "res://.godot/imported/ballroom_Metal048C_4K-JPG_Displacement.jpg-e82fe0af69fa6953f76529a4b30ddbf9.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dapot"]
+load_path = "res://.godot/imported/ballroom_Metallic-Rough_15.png-14ada95278dbecd2063aa62ea1daa9bf.s3tc.ctex"
+
+[resource]
+resource_name = "Gold (Golden Metal )"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("CompressedTexture2D_m4lmg")
+metallic = 1.0
+metallic_texture = SubResource("CompressedTexture2D_3dypr")
+metallic_texture_channel = 2
+roughness_texture = SubResource("CompressedTexture2D_dapot")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_lgg2m")

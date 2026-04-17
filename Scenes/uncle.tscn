@@ -109,7 +109,6 @@ material = SubResource("StandardMaterial3D_rq7xx")
 [sub_resource type="Animation" id="Animation_a6ebc"]
 resource_name = "Armature TorsoAction"
 length = 3.5
-loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true

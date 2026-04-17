@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bpdltok4rgo0s" path="res://Scripts/food.gd" id="1_j4qko"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h4kkx"]
-size = Vector3(1, 1, 0.9871826)
+size = Vector3(4.091305, 1, 0.9871826)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4qko"]
 albedo_color = Color(1, 1, 0.59607846, 1)
@@ -26,7 +26,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TalkArea"]
-transform = Transform3D(1.57, 0, 0, 0, 1.57, 0, 0, 0, 1.57, 0, 0, -0.006408691)
+transform = Transform3D(1.57, 0, 0, 0, 1.57, 0, 0, 0, 1.5699998, -0.0016619209, 0, -0.0064086905)
 shape = SubResource("BoxShape3D_h4kkx")
 
 [node name="Exclamation" type="Node3D" parent="."]

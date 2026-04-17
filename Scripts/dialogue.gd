@@ -56,6 +56,8 @@ func _ready() -> void:
 		get_dialogue(debug_line)
 
 func get_dialogue(id: String):
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 	is_talking = true
 	dialogue_ui.show()
 	end_button.hide()
@@ -127,6 +129,8 @@ func _on_next_button_pressed() -> void:
 	get_dialogue(next_dialogue)
 
 func _on_end_pressed() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 	dialogue_ui.hide()
 	is_talking = false
 	if !debug:
