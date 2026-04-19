@@ -1,0 +1,750 @@
+[gd_scene load_steps=12 format=4 uid="uid://fn8kbimil403"]
+
+[ext_resource type="Texture2D" uid="uid://bufdwy8uqfa6s" path="res://Models/textures/Fur 01_BaseColor.jpg" id="1_i3wa0"]
+[ext_resource type="Texture2D" uid="uid://ctdn5dlurrwm3" path="res://Models/textures/Fur 01_Roughness.jpg" id="2_q8uk2"]
+[ext_resource type="Texture2D" uid="uid://buxdq5xjldxaj" path="res://Models/textures/Fur 01_Normal.jpg" id="3_awxjq"]
+[ext_resource type="Texture2D" uid="uid://ovvper47pck0" path="res://Models/textures/fabric_123_albedo-1K.jpg" id="4_6v0fr"]
+[ext_resource type="Texture2D" uid="uid://dn6b164c85n0s" path="res://Models/textures/fabric_123_roughness-1K.jpg" id="5_jekos"]
+[ext_resource type="Texture2D" uid="uid://cl6577q57hc4t" path="res://Models/textures/fabric_123_normal-1K.jpg" id="6_qqyyr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjygn"]
+resource_name = "Worn Copper"
+cull_mode = 2
+metadata/extras = {
+"asset_data": {
+"access": "free",
+"accessLabel": "Free",
+"addonVersion": "3.12.3",
+"assetBaseId": "db5ba0b5-1e59-40d4-8697-41a95445c0bd",
+"assetType": "material",
+"author": {
+"aboutMe": "Hello! I'm Nazir a beginner 3D artist and 3D modeler with a passion for creating unique and detailed assets. I'm excited to share my work with the Blender community and learn from others. My goal is to continuously improve and expand my skills.",
+"aboutMeUrl": "https://cgzan.godaddysites.com",
+"avatar128": "/avatar-redirect/5771389f-6d9d-4a66-91f7-7ebce0777181/128/",
+"firstName": "Muhammad Nazir",
+"fullName": "Muhammad Nazir Khan",
+"gravatarHash": "d15e975b5296f959fc372c81f90bbf94",
+"id": "717546",
+"lastName": "Khan"
+},
+"available_resolutions": [],
+"basePrice": "",
+"canDownload": true,
+"canDownloadError": true,
+"category": "metal",
+"created": "2024-10-22T19:20:10.807821+02:00",
+"description": "This material offers the rich, warm tones of aged copper with a subtly worn surface, featuring slight imperfections and a slightly reflective, polished look. Perfect for use in antique, industrial, or steampunk scenes.",
+"dictParameters": {
+"addons": true,
+"animated": false,
+"engine": "cycles",
+"joinBlenderkitDiscounts": true,
+"materialStyle": "realistic",
+"megapixels": 0.0,
+"nodeCount": 10.0,
+"pbrType": "metallic",
+"platforms": ["windows-x64", "macos-arm64", "linux-x64", "macos-x64", "windows-arm64"],
+"procedural": true,
+"purePbr": true,
+"sexualizedContent": false,
+"shaders": ["[principled]"],
+"textureCount": 0.0,
+"textureSizeMeters": 1.0,
+"uv": false
+},
+"displayName": "Worn Copper",
+"downloaded": 0.0,
+"files": [{
+"created": "2024-10-22T19:20:16.512998+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/482045/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "blend",
+"fileUploadSize": 68805.0,
+"file_name": "C:\\Users\\Zombi\\Downloads\\Temple Work\\BFA Capstone\\assets\\materials\\worn-copper_e3214951-5b05-4fac-b268-8f0471e7dfef\\worn-copper_6f6b4570-9506-4584-a9ce-e5db16eefd68.blend",
+"filename": "assets/e32149515b054facb2688f0471e7dfef/files/blend_6f6b4570-9506-4584-a9ce-e5db16eefd68.blend",
+"modified": "2024-10-22T19:20:16.513012+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": "https://assets.blenderkit.com/assets/e32149515b054facb2688f0471e7dfef/files/blend_6f6b4570-9506-4584-a9ce-e5db16eefd68.blend?verify=1774633210-nSQMrtHEXZhk%2FEqEvbisrvUeuVE7K4iuSjhcEetXsxQ%3D"
+}, {
+"created": "2024-10-22T19:20:15.094409+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/482044/",
+"fileThumbnail": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.96x96_q85_crop-%2C.png",
+"fileThumbnailLarge": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.1024x1024_q85_crop-%2C.png",
+"fileType": "thumbnail",
+"fileUploadSize": 1041257.0,
+"filename": "assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png",
+"modified": "2025-12-23T00:11:40.539821+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85_crop-%2C.png",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85_crop-%2C.png",
+"url": ""
+}],
+"filesSize": 1084.0,
+"id": "e3214951-5b05-4fac-b268-8f0471e7dfef",
+"isForSale": false,
+"isFree": true,
+"isPrivate": false,
+"lastAnimatedThumbnailUpload": null,
+"lastBlendUpload": "2024-10-22T17:20:16.512998+00:00",
+"lastGltfGodotUpload": null,
+"lastGltfUpload": null,
+"lastPhotoThumbnailUpload": null,
+"lastResolutionUpload": null,
+"lastThumbnailUpload": "2024-10-22T17:20:15.094409+00:00",
+"lastUserInteraction": "2024-10-22T19:20:17.003692+02:00",
+"lastVideoUpload": null,
+"lastZipFileUpload": "",
+"license": "royalty_free",
+"max_resolution": 0.0,
+"name": "Worn Copper",
+"pk": 113584.0,
+"ratingsAverage": {
+"bookmarks": 0.9576271186440678,
+"quality": 10.0,
+"virtualPrice": null,
+"workingHours": 3.0
+},
+"ratingsCount": {
+"bookmarks": 118.0,
+"quality": 1.0,
+"virtualPrice": 0.0,
+"workingHours": 1.0
+},
+"ratingsMedian": {
+"bookmarks": 1.0,
+"quality": 10.0,
+"virtualPrice": null,
+"workingHours": 3.0
+},
+"ratingsSum": {
+"bookmarks": 113.0,
+"quality": 10.0,
+"score": 300.0,
+"virtualPrice": null,
+"workingHours": 3.0
+},
+"resolution": "resolution_2K",
+"score": 300.0,
+"showMarketingLabels": true,
+"sourceAppName": "blender",
+"sourceAppVersion": "4.2.0",
+"tags": ["copper", "metal", "worn", "aged", "polished", "reflective", "weathered", "metallic", "antique", "vintage"],
+"texture_size_meters": 1.0,
+"thumbnail": "thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85_crop-%2C.png.webp",
+"thumbnailLargeUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.1024x1024_q85_crop-%2C.png",
+"thumbnailLargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.1024x1024_q85.png",
+"thumbnailLargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.1024x1024_q85.png.webp?webp_generated=1766573121",
+"thumbnailLargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.1024x1024_q85_crop-%2C.png.webp?webp_generated=1766573121",
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85_crop-%2C.png",
+"thumbnailMiddleUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85.png",
+"thumbnailMiddleUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85.png.webp?webp_generated=1766573121",
+"thumbnailMiddleUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.512x512_q85_crop-%2C.png.webp?webp_generated=1766573121",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85_crop-%2C.png",
+"thumbnailSmallUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85.png",
+"thumbnailSmallUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85.png.webp?webp_generated=1766573121",
+"thumbnailSmallUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85_crop-%2C.png.webp?webp_generated=1766573121",
+"thumbnailXlargeUrl": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.2048x2048_q85_crop-%2C.png",
+"thumbnailXlargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.2048x2048_q85.png",
+"thumbnailXlargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.2048x2048_q85.png.webp?webp_generated=1766573121",
+"thumbnailXlargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e32149515b054facb2688f0471e7dfef/files/thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.2048x2048_q85_crop-%2C.png.webp?webp_generated=1766573121",
+"thumbnail_small": "thumbnail_a0c271b5-3183-4bfc-9a35-f8ba1d546e3a.png.256x256_q85_crop-%2C.png.webp",
+"tooltip_data": {
+"aname": "Worn Copper",
+"author_text": "by Muhammad Nazir Khan",
+"price_background": [0.0, 0.0, 0.0, 0.0],
+"price_color": [1.0, 1.0, 1.0, 0.9],
+"price_text": "",
+"quality": "10"
+},
+"url": "https://www.blenderkit.com/api/v1/assets/e3214951-5b05-4fac-b268-8f0471e7dfef/",
+"verificationStatus": "validated",
+"versionNumber": 1.0,
+"videoLink": "",
+"webpGeneratedTimestamp": 1766573121.0
+},
+"blenderkit": {
+"asset_base_id": "db5ba0b5-1e59-40d4-8697-41a95445c0bd",
+"category": 19.0,
+"description": "This material offers the rich, warm tones of aged copper with a subtly worn surface, featuring slight imperfections and a slightly reflective, polished look. Perfect for use in antique, industrial, or steampunk scenes.",
+"has_thumbnail": 1.0,
+"id": "e3214951-5b05-4fac-b268-8f0471e7dfef",
+"is_generating_thumbnail": 0.0,
+"is_procedural": 1.0,
+"name": "Worn Copper",
+"name_changed": 1.0,
+"name_old": "Worn Copper",
+"node_count": 10.0,
+"pbr": 1.0,
+"report": "",
+"shaders": "principled, ",
+"tags": "copper, metal, worn, aged, polished, reflective, weathered, metallic, antique, vintage",
+"texture_count": 0.0,
+"texture_resolution_max": 0.0,
+"texture_resolution_min": 0.0,
+"thumbnail": "//material-001_0026.png",
+"thumbnail_generating_state": "",
+"thumbnail_generator_type": 1.0,
+"thumbnail_samples": 700.0,
+"total_megapixels": 0.0,
+"uploading": 0.0
+}
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k14h7"]
+resource_name = "Fur 01"
+cull_mode = 2
+albedo_texture = ExtResource("1_i3wa0")
+metallic_texture = ExtResource("2_q8uk2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_q8uk2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_awxjq")
+metadata/extras = {
+"asset_data": {
+"access": "free",
+"accessLabel": "Free",
+"addonVersion": "3.6.1",
+"assetBaseId": "e8e71adb-89d4-4d02-8ed5-ff6b56669ac9",
+"assetType": "material",
+"author": {
+"aboutMe": "Material Artist / 3D Artist / Hobbyist",
+"aboutMeUrl": "https://linktr.ee/linkapalm",
+"avatar128": "/avatar-redirect/e0465e44-aa2a-4c40-aa21-f34780326b61/128/",
+"firstName": "Linka",
+"fullName": "Linka Palm",
+"gravatarHash": "edd4f28676536309a850138d913cd662",
+"id": "196003",
+"lastName": "Palm"
+},
+"available_resolutions": [512.0, 1024.0, 2048.0],
+"basePrice": "",
+"canDownload": true,
+"canDownloadError": true,
+"category": "animal-material",
+"created": "2023-05-27T03:32:30.707360+02:00",
+"description": "Fluffy fur texture. Generated with Midjourney, materialized with Substance Sampler.",
+"dictParameters": {
+"addons": true,
+"animated": false,
+"engine": "cycles",
+"imageAltTextGen4v": "High-resolution fluffy fur PBR texture for 3D rendering in Blender, created with Midjourney and Substance Sampler.",
+"imageCaptionInterrogator": "a close up of a ball of yarn on a black background, detailed white fur, kitbash 3 d texture vibrant, exposed bone, cinnamon #b57e59 skin color, large globe, well rendered.:1, multiphase flow, uv map, bone, tribbles, white soft leather model, yellowish",
+"joinBlenderkitDiscounts": true,
+"materialStyle": "realistic",
+"megapixels": 20.0,
+"nodeCount": 16.0,
+"pbrType": "metallic",
+"platforms": ["windows-x64", "macos-arm64", "linux-x64", "macos-x64", "windows-arm64"],
+"procedural": false,
+"purePbr": true,
+"sexualizedContent": false,
+"shaders": ["principled"],
+"textureCount": 5.0,
+"textureResolutionMax": 2048.0,
+"textureResolutionMin": 2048.0,
+"textureSizeMeters": 1.0,
+"uv": true
+},
+"displayName": "Fur 01",
+"downloaded": 0.0,
+"files": [{
+"created": "2023-05-27T03:32:56.002509+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/198489/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "blend",
+"fileUploadSize": 26254325.0,
+"filename": "assets/5ce56082e69e412aa26c60aa9954369e/files/blend_a52da227-c714-4c1c-b3b4-47132260d12b.blend",
+"modified": "2023-05-27T03:32:58.050504+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2023-10-04T15:15:26.365058+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/243716/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_0_5K",
+"fileUploadSize": 370424.0,
+"filename": "assets/5ce56082e69e412aa26c60aa9954369e/files/resolution_0_5K_d36fbb77-c34d-4351-aae2-9011d0f322f0.blend",
+"modified": "2023-10-04T15:15:26.365098+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2023-10-04T15:15:23.977018+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/243715/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_1K",
+"fileUploadSize": 1170831.0,
+"filename": "assets/5ce56082e69e412aa26c60aa9954369e/files/resolution_1K_2107e78f-0be8-4ce8-865f-e22915408200.blend",
+"modified": "2023-10-04T15:15:23.977049+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2023-10-04T15:15:19.955670+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/243714/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_2K",
+"fileUploadSize": 4014823.0,
+"file_name": "C:\\Users\\Zombi\\Downloads\\Temple Work\\BFA Capstone\\assets\\materials\\fur-01_5ce56082-e69e-412a-a26c-60aa9954369e\\fur-01_2K_adbeefd0-5e1b-42cd-b3fe-0838abd2b7b5.blend",
+"filename": "assets/5ce56082e69e412aa26c60aa9954369e/files/resolution_2K_adbeefd0-5e1b-42cd-b3fe-0838abd2b7b5.blend",
+"modified": "2023-10-04T15:15:19.955704+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": "https://assets.blenderkit.com/assets/5ce56082e69e412aa26c60aa9954369e/files/resolution_2K_adbeefd0-5e1b-42cd-b3fe-0838abd2b7b5.blend?verify=1774633343-ON%2B45F%2Fon9CtbMrJ9bV7iuX08MyEnf%2FEGWcr94421Qw%3D"
+}, {
+"created": "2023-05-27T03:32:52.429057+02:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/198488/",
+"fileThumbnail": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.96x96_q85_crop-%2C.png",
+"fileThumbnailLarge": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.1024x1024_q85_crop-%2C.png",
+"fileType": "thumbnail",
+"fileUploadSize": 328962.0,
+"filename": "assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png",
+"modified": "2025-12-22T19:50:41.930322+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85_crop-%2C.png",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85_crop-%2C.png",
+"url": ""
+}],
+"filesSize": 31386.0,
+"id": "5ce56082-e69e-412a-a26c-60aa9954369e",
+"isForSale": false,
+"isFree": true,
+"isPrivate": false,
+"lastAnimatedThumbnailUpload": null,
+"lastBlendUpload": "2023-05-27T01:32:56.002509+00:00",
+"lastGltfGodotUpload": null,
+"lastGltfUpload": null,
+"lastPhotoThumbnailUpload": null,
+"lastResolutionUpload": "2023-10-04T13:15:26.365058+00:00",
+"lastThumbnailUpload": "2023-05-27T01:32:52.429057+00:00",
+"lastUserInteraction": "2023-05-27T03:32:56.640002+02:00",
+"lastVideoUpload": null,
+"lastZipFileUpload": "",
+"license": "royalty_free",
+"max_resolution": 2048.0,
+"name": "Fur 01",
+"pk": 54691.0,
+"ratingsAverage": {
+"bookmarks": 0.9807692307692308,
+"quality": 7.25,
+"virtualPrice": null,
+"workingHours": 2.0
+},
+"ratingsCount": {
+"bookmarks": 208.0,
+"quality": 4.0,
+"virtualPrice": 0.0,
+"workingHours": 1.0
+},
+"ratingsMedian": {
+"bookmarks": 1.0,
+"quality": 7.0,
+"virtualPrice": null,
+"workingHours": 2.0
+},
+"ratingsSum": {
+"bookmarks": 204.0,
+"quality": 29.0,
+"score": 145.0,
+"virtualPrice": null,
+"workingHours": 2.0
+},
+"resolution": "resolution_2K",
+"score": 145.0,
+"showMarketingLabels": true,
+"sourceAppName": "blender",
+"sourceAppVersion": "3.5.1",
+"tags": ["animal", "organic", "fur", "fluffy", "sheepskin"],
+"texture_size_meters": 1.0,
+"thumbnail": "thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85_crop-%2C.png.webp",
+"thumbnailLargeUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.1024x1024_q85_crop-%2C.png",
+"thumbnailLargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.1024x1024_q85.png",
+"thumbnailLargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.1024x1024_q85.png.webp?webp_generated=1766481056",
+"thumbnailLargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.1024x1024_q85_crop-%2C.png.webp?webp_generated=1766481056",
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85_crop-%2C.png",
+"thumbnailMiddleUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85.png",
+"thumbnailMiddleUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85.png.webp?webp_generated=1766481056",
+"thumbnailMiddleUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.512x512_q85_crop-%2C.png.webp?webp_generated=1766481056",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85_crop-%2C.png",
+"thumbnailSmallUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85.png",
+"thumbnailSmallUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85.png.webp?webp_generated=1766481056",
+"thumbnailSmallUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85_crop-%2C.png.webp?webp_generated=1766481056",
+"thumbnailXlargeUrl": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.2048x2048_q85_crop-%2C.png",
+"thumbnailXlargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.2048x2048_q85.png",
+"thumbnailXlargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.2048x2048_q85.png.webp?webp_generated=1766481056",
+"thumbnailXlargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5ce56082e69e412aa26c60aa9954369e/files/thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.2048x2048_q85_crop-%2C.png.webp?webp_generated=1766481056",
+"thumbnail_small": "thumbnail_77079938-3b84-4580-a3fc-febd9f1fa762.png.256x256_q85_crop-%2C.png.webp",
+"tooltip_data": {
+"aname": "Fur 01",
+"author_text": "by Linka Palm",
+"price_background": [0.0, 0.0, 0.0, 0.0],
+"price_color": [1.0, 1.0, 1.0, 0.9],
+"price_text": "",
+"quality": "7"
+},
+"url": "https://www.blenderkit.com/api/v1/assets/5ce56082-e69e-412a-a26c-60aa9954369e/",
+"verificationStatus": "validated",
+"versionNumber": 1.0,
+"videoLink": "",
+"webpGeneratedTimestamp": 1766481056.0
+},
+"blenderkit": {
+"asset_base_id": "e8e71adb-89d4-4d02-8ed5-ff6b56669ac9",
+"category": 1.0,
+"description": "Fluffy fur texture. Generated with Midjourney, materialized with Substance Sampler.",
+"has_thumbnail": 1.0,
+"id": "5ce56082-e69e-412a-a26c-60aa9954369e",
+"is_procedural": 0.0,
+"name": "Fur 01",
+"name_changed": 1.0,
+"name_old": "Fur 01",
+"node_count": 16.0,
+"pbr": 1.0,
+"report": "",
+"shaders": "principled, ",
+"tags": "animal, organic, fur, fluffy, sheepskin",
+"texture_count": 5.0,
+"texture_resolution_max": 2048.0,
+"texture_resolution_min": 2048.0,
+"thumbnail": "//..\\..\\..\\sayas\\Pictures\\Blendkit_Render\\Fur_01.png",
+"thumbnail_generating_state": "",
+"total_megapixels": 20.0,
+"uploading": 0.0,
+"uv": 1.0
+},
+"flip_fluid_material_library": {}
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_if7et"]
+resource_name = "Cream leather"
+cull_mode = 2
+albedo_texture = ExtResource("4_6v0fr")
+metallic_texture = ExtResource("5_jekos")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("5_jekos")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("6_qqyyr")
+metadata/extras = {
+"asset_data": {
+"access": "free",
+"accessLabel": "Free",
+"addonVersion": "3.3.1",
+"assetBaseId": "e2ee9d06-0fae-4707-a4a1-68ac73cda42f",
+"assetType": "material",
+"author": {
+"aboutMe": "Rate our asset to show us what you like!
+If you like our assets, consider supporting us on patreon.com/sharetextures",
+"aboutMeUrl": "https://www.sharetextures.com/",
+"avatar128": "/avatar-redirect/af9c99a2-68bf-48ba-8c3e-d8cb50bc53b4/128/",
+"firstName": "Share",
+"fullName": "Share Textures",
+"gravatarHash": "2c3e97a0c812347b05e9e7b6020a8675",
+"id": "254131",
+"lastName": "Textures"
+},
+"available_resolutions": [512.0, 1024.0],
+"basePrice": "",
+"canDownload": true,
+"canDownloadError": true,
+"category": "leather",
+"created": "2022-12-26T11:14:39.153854+01:00",
+"description": "scanned cream leather material with 1K textures",
+"dictParameters": {
+"addons": true,
+"condition": "new",
+"engine": "cycles",
+"imageAltTextGen4v": "High-resolution scan of a PBR cream leather material for 3D rendering in Blender and other applications.",
+"imageCaptionInterrogator": "a close up of a table cloth with a large round design, tactical poncho latex rags, modelled in zbrush, with rap cap on head, light brown colors, ultra detailed content : face, dofus, blanket, burka, official product image, imagenet, ashen blonde hair, templar",
+"joinBlenderkitDiscounts": true,
+"materialStyle": "realistic",
+"megapixels": 0.0,
+"nodeCount": 0.0,
+"pbrType": "metallic",
+"platforms": ["windows-x64", "macos-arm64", "linux-x64", "macos-x64", "windows-arm64"],
+"procedural": true,
+"purePbr": true,
+"sexualizedContent": false,
+"shaders": [""],
+"textureCount": 0.0,
+"textureSizeMeters": 0.5,
+"uv": false
+},
+"displayName": "Cream leather",
+"downloaded": 100.0,
+"files": [{
+"created": "2022-12-26T11:15:23.506519+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/164274/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "blend",
+"fileUploadSize": 16861734.0,
+"filename": "assets/5f43016ee772471598372797d4add175/files/blend_33f72dc8-f726-4aaf-bd44-b5f4b2dbaa16.blend",
+"modified": "2022-12-26T11:15:24.536836+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2022-12-27T12:47:18.806790+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/164589/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_0_5K",
+"fileUploadSize": 368093.0,
+"filename": "assets/5f43016ee772471598372797d4add175/files/resolution_0_5K_4d068d89-ac25-40a2-a041-27f0096297e8.blend",
+"modified": "2022-12-27T12:47:19.483641+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2022-12-27T12:47:16.442194+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/164588/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_1K",
+"fileUploadSize": 1417382.0,
+"file_name": "C:\\Users\\Zombi\\Downloads\\Temple Work\\BFA Capstone\\assets\\materials\\cream-leather_5f43016e-e772-4715-9837-2797d4add175\\cream-leather_1K_d588ba75-9be2-492a-b11f-1ae5c7fb2726.blend",
+"filename": "assets/5f43016ee772471598372797d4add175/files/resolution_1K_d588ba75-9be2-492a-b11f-1ae5c7fb2726.blend",
+"modified": "2022-12-27T12:47:17.224382+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": "https://assets.blenderkit.com/assets/5f43016ee772471598372797d4add175/files/resolution_1K_d588ba75-9be2-492a-b11f-1ae5c7fb2726.blend?verify=1774633848-CLISmEuCqMkas9CWCvFB5Kptls0A9SA48ST4SEYyJ%2F8%3D"
+}, {
+"created": "2022-12-26T13:45:08.384571+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/164482/",
+"fileThumbnail": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.96x96_q85_crop-%2C.png",
+"fileThumbnailLarge": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.1024x1024_q85_crop-%2C.png",
+"fileType": "thumbnail",
+"fileUploadSize": 1355136.0,
+"filename": "assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png",
+"modified": "2025-12-22T19:08:36.072364+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85_crop-%2C.png",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85_crop-%2C.png",
+"url": ""
+}],
+"filesSize": 19533.0,
+"id": "5f43016e-e772-4715-9837-2797d4add175",
+"isForSale": false,
+"isFree": true,
+"isPrivate": false,
+"lastAnimatedThumbnailUpload": null,
+"lastBlendUpload": "2022-12-26T10:15:23.506519+00:00",
+"lastGltfGodotUpload": null,
+"lastGltfUpload": null,
+"lastPhotoThumbnailUpload": null,
+"lastResolutionUpload": "2022-12-27T11:47:18.806790+00:00",
+"lastThumbnailUpload": "2022-12-26T12:45:08.384571+00:00",
+"lastUserInteraction": "2022-12-26T13:45:13.917774+01:00",
+"lastVideoUpload": null,
+"lastZipFileUpload": "",
+"license": "royalty_free",
+"max_resolution": 1024.0,
+"name": "Cream leather",
+"pk": 44197.0,
+"ratingsAverage": {
+"bookmarks": 1.0,
+"quality": 9.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"ratingsCount": {
+"bookmarks": 81.0,
+"quality": 2.0,
+"virtualPrice": 0.0,
+"workingHours": 1.0
+},
+"ratingsMedian": {
+"bookmarks": 1.0,
+"quality": 9.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"ratingsSum": {
+"bookmarks": 81.0,
+"quality": 18.0,
+"score": 90.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"resolution": "resolution_2K",
+"score": 90.0,
+"showMarketingLabels": true,
+"sourceAppName": "blender",
+"sourceAppVersion": "3.2.1",
+"tags": ["cream", "leather", "fabric", "cloth", "nubuck"],
+"texture_size_meters": 0.5,
+"thumbnail": "thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85_crop-%2C.png.webp",
+"thumbnailLargeUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.1024x1024_q85_crop-%2C.png",
+"thumbnailLargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.1024x1024_q85.png",
+"thumbnailLargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.1024x1024_q85.png.webp?webp_generated=1766469289",
+"thumbnailLargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.1024x1024_q85_crop-%2C.png.webp?webp_generated=1766469289",
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85_crop-%2C.png",
+"thumbnailMiddleUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85.png",
+"thumbnailMiddleUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85.png.webp?webp_generated=1766469289",
+"thumbnailMiddleUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.512x512_q85_crop-%2C.png.webp?webp_generated=1766469289",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85_crop-%2C.png",
+"thumbnailSmallUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85.png",
+"thumbnailSmallUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85.png.webp?webp_generated=1766469289",
+"thumbnailSmallUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85_crop-%2C.png.webp?webp_generated=1766469289",
+"thumbnailXlargeUrl": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.2048x2048_q85_crop-%2C.png",
+"thumbnailXlargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.2048x2048_q85.png",
+"thumbnailXlargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.2048x2048_q85.png.webp?webp_generated=1766469289",
+"thumbnailXlargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/5f43016ee772471598372797d4add175/files/thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.2048x2048_q85_crop-%2C.png.webp?webp_generated=1766469289",
+"thumbnail_small": "thumbnail_9fa81f76-0d5b-4813-9a22-dbdbf1135d5b.png.256x256_q85_crop-%2C.png.webp",
+"tooltip_data": {
+"aname": "Cream leather",
+"author_text": "by Share Textures",
+"price_background": [0.0, 0.0, 0.0, 0.0],
+"price_color": [1.0, 1.0, 1.0, 0.9],
+"price_text": "",
+"quality": "9"
+},
+"url": "https://www.blenderkit.com/api/v1/assets/5f43016e-e772-4715-9837-2797d4add175/",
+"verificationStatus": "validated",
+"versionNumber": 1.0,
+"videoLink": "",
+"webpGeneratedTimestamp": 1766469289.0
+},
+"blenderkit": {
+"asset_base_id": "e2ee9d06-0fae-4707-a4a1-68ac73cda42f",
+"category": 15.0,
+"description": "scanned cream leather material with 1K textures",
+"has_thumbnail": 1.0,
+"id": "5f43016e-e772-4715-9837-2797d4add175",
+"is_procedural": 0.0,
+"name": "Cream leather",
+"name_changed": 1.0,
+"name_old": "Cream leather",
+"node_count": 16.0,
+"pbr": 1.0,
+"report": "",
+"shaders": "principled, ",
+"tags": "cream, leather, fabric, cloth, nubuck",
+"texture_count": 4.0,
+"texture_resolution_max": 1024.0,
+"texture_resolution_min": 1024.0,
+"texture_size_meters": 0.5,
+"thumbnail": "//fabric_123.png",
+"thumbnail_generating_state": "",
+"total_megapixels": 4.0,
+"upload_state": "Starting upload. Please don't close Blender until upload finishes",
+"uploading": 0.0
+}
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mi0a0"]
+_surfaces = [{
+"aabb": AABB(-0.052719474, 0.003979504, -0.07654333, 0.15681815, 0.07785493, 0.15595916),
+"format": 34896613377,
+"index_count": 258,
+"index_data": PackedByteArray("EgAiAAIAEgACAAMAAgAiABMAAgATAAMAEgADABQAEwAjAAMAAwAjAAoAAwAKABQAEwANACMAFAAKACQAIwAkAAoAAAASABQAAAAiABIAFAAkAAUAAAAUAAUABQAkABYAIwAlACQAJAAlABYABQAWACAAIAAWACUAIQAFACAAIQAAAAUAHwAhACAAHwAAACEAHwAgAAsAIAAlAAsAHgAfAAsABwAAAB8ABwAfAB4AHgALAB0ABwAeAB0ACwAMAB0ACwAlAAwAHQAMACYAJQAmAAwAHQAmAAgABwAdAAgACAAmABkAHAAHAAgAJQAnACYAJgAnABkACAAZABsAHAAIABsAGwAZACcAKAAHABwAKAAcABsAKQAHACgAKQAAAAcAKAAbABoAGwAnABoABAAoABoAKQAoAAQAGgAnABEABAAaAAkAGgARAAkAKQAEAAkAJwAqABEACQARACoAJwArACoAJQArACcAKwAlACMACQAqABgAKQAJABgAGAAqAA8AKgArAA8ADgApABgAGAAPABAADgAYABAAEAAPACsAFwApAA4AFwAOABAAIgApABcAAAApACIAIgAXAAEAFwAQABUAEAArABUAAQAXABUAIgABAAYAAQAVAAYAIgAGABMABgANABMAFQAsAAYABgAsAA0AFQArACwALAAjAA0AKwAjACwA"),
+"lods": [0.0082601905, PackedByteArray("EgABAAIAEgACAAMAAgABABMAAgATAAMAEgADABQAAAASABQAAAABABIAAwAKABQAEwANAAMAAwANAAoAAQAGABMABgANABMAAQAVAAYAFQANAAYAFAAKAAUAAAAUAAUADQAWAAoABQAKABYAFQAPAA0ADwAWAA0AAQAXABUAFwAQABUAEAAPABUAAQAEABcAAAAEAAEAFwAOABAAFwAEAA4ADgAYABAAGAAPABAADgAEABgAGAARAA8ACQARABgABAAJABgAGQAPABEAFgAPABkAGgARAAkABAAaAAkAGgAZABEAGwAZABoABAAcABoAHAAbABoABAAHABwABAAAAAcAHAAIABsACAAZABsAHAAHAAgACAAMABkAFgAZAAwABwAdAAgAHQAMAAgABwAeAB0ACwAMAB0ACwAWAAwAHgALAB0ABwAfAB4AHgAfAAsABwAAAB8AIAAWAAsAHwAgAAsABQAWACAAHwAAACEAIQAAAAUAHwAhACAAIQAFACAA"), 0.022027457, PackedByteArray("AAABAAIAAgABAAMAAAACAAUAAgADAAUAAwAKAAUAAAAFAAsABQAKAAwABQAMAAsAAwANAAoADQAMAAoAAQAGAAMABgANAAMAAQAOAAYADwAMAA0ABgAPAA0AAQAEAA4AAAAEAAEADgAQAAYAEAAPAAYADgAEABAADAAPABEAEAARAA8ACAAMABEACwAMAAgACQARABAABAAJABAACAARAAkABAAHAAkABwAIAAkABwALAAgABAAAAAcABwAAAAsA"), 0.09652125, PackedByteArray("AAABAAIAAgABAAMAAAAEAAEAAgADAAUAAAACAAUAAwAGAAUAAQAGAAMABwAAAAUABAAAAAcABgAIAAUABwAFAAgAAQAJAAYAAQAEAAkACQAIAAYABAAHAAkABwAIAAkA")],
+"name": "Worn Copper",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 45,
+"vertex_data": PackedByteArray("WiAAANEqAACk3wAA0SoAAP9/AAAAAAAA/3/ayQAAAAClywAAG+oAAFog2snRKgAApN/aydEqAABZNAAAG+oAAFk02skb6gAApcvayRvqAADTVv//biQAAAAA2snwjgAAVSj//020AAArqf//biQAAP//AADwjgAAquT//w2MAAD//9rJ8I4AAH67///B0wAApksAADALAABYtNrJMAsAAKZL2skwCwAAZvrayWtZAAC6H///9WEAAGb6AABrWQAAde/ayR7CAADzav//+OQAAMGa2sn//wAAPWXayf//AAA9ZQAA//8AAIkQ2skewgAAiRAAAB7CAAAAAAAA8I4AAJgF2slrWQAAmAUAAGtZAABYtAAAMAsAAP9///+hGwAAxjT//049AABUG///DYwAAIBE///B0wAAC5X///jkAADBmgAA//8AAHXvAAAewgAAqdf//020AABE4P//9WEAADjL//9OPQAA")
+}, {
+"aabb": AABB(-0.37077004, -0.005417764, -0.57607114, 0.40455538, 0.08042228, 1.1520314),
+"format": 34359742465,
+"index_count": 141,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABQAGAAQABwAGAAUABgAHAAgABgAIAAkABgAJAAoACgALAAYADAALAAoADAAKAA0ACwAOAA8ACwAQAA4ADgAQABEADAAQAAsAEAASABMAEAAUABIAEAAVABQAFAAVABYAEAAMABUAFQAMABcAGAAMAA0ADAAZABoAGAAZAAwAGQAbABwAGQAdABsAGwAdAB4AGQAfAB0AGAAfABkAHQAfACAAHQAgACEAHwAYACIAHwAiACMAIgAYACQAGAAlACQAJgAlABgAJQAmACcAJQAnACgAJQAoACkAKgAlACkAKwAiACQAKwAkACUAKgArACUAIgArACwALQArACoALQAuACsA"),
+"name": "Fur 01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 47,
+"vertex_data": PackedByteArray("rjm1vsDyBD3gBBK/CH+9vgCdj7t4sxG/FoS0voB3j7tmeRO/KNW9vtDRBD3KAhG/ZDO1vuDyBD3zAxK/KOipvgDYn7tu6hK/DGe0vjCJUD2EOgu/wmapvgCOGjyIRRG/7hGnvoDRsDxeaw6/hkSjvkCC8zwVywq/vJKevuCYBT0C8ga/pmq0vlCmUD14OAu/EGwJPWDnVz0AeB26gGIKPdCXDD0AeB26mEWdvug/iT3Y3PW+nOinvugNiT3hagK/kP+HvtCykT0D69e+lKKSvjjOjj3u4+a+JLcVvtCBmT1K24G+GLl6vnh4lD0Z8si+aK7/vSDZlT0Y7GS+oC6ovWDEkD0hVye+gO7TveiklD2cIUa+cN14vcCQiz2mjAi+jpmevqCYBT3q4wY/qNqZvTDVkD0eSxw+UIBhvXieiz18of49qA/svTDwlT3WP1Y+KPXCvdi4lD16RTk+gHB4vtB9lD0jEMc+FJUKvvibmT02OnM+4N+bvnBGiT1BsvM+qlKRvmDUjj2L0eQ+dMWGvpC4kT3X8NU+rG+0viCmUD0IKgs/FG2mvuAUiT16SQE/Emy0vgCJUD0ULAs/RjS1vuDyBD109hE/QEmjvkCC8zwOvQo/zBSnvoDSsDx0XQ4/TmipvoCSGjzKNxE/GOmpvoDKn7vc3BI/xIG0voCworsichM/kDq1vsDyBD1g9xE/SA27vvBnUD3esA4/4Hy9voCHsbuGqxE/ktW9vtDRBD289RA/")
+}, {
+"aabb": AABB(-0.3859442, -0.074997365, -0.5914114, 0.859905, 0.15000188, 1.1826298),
+"format": 34359742465,
+"index_count": 1167,
+"index_data": PackedByteArray("AACgAAIAoABcAAIAAABbAKAAAgBcAF0AAgBdAAQABABdAFkABABZAAoAoQBdAFwAoACiAFwAXwBdAKEAXwBZAF0AoQBcAKMAowBcAKIAXgBfAKEApAChAKMAXgChAKQAmgCiAKAAWwCaAKAAowCiAKUApACjAAMAAwCjAKUApQCiADoAmgA6AKIAAwClAKYApQA6AJkApgClAJkAmQA6ADwAmgA8ADoApgCZAD0AmgCbADwAmQA8AJgAPQCZAJgAmAA8AHUAdQA8AJsAPQCYAD4AmAB1AKcAPgCYAKcApwB1AHEAlQA9AD4APgCnAKgAqQCmAD0AqQA9AJUAlQA+AJcAlwA+AKgAlgCVAJcAqACnAKoApwBxAKoAqwCVAJYAqwCpAJUAlgCXAD8APwCrAJYAlwCoAKwAPwCXAKwArQCpAKsArACoACgAqACqACgAqwBAAK0APwBAAKsArQCuAKkAQACuAK0ArgCmAKkArgADAKYArwADAK4AQACvAK4ArwCkAAMAsACvAEAAkwCkAK8AsACTAK8AkwBeAKQAQACUALAAkwCwAJQAQABEAJQAPwBEAEAAkwCUAJIAXgCTAJIAkQCSAJQAlABEAJEAXgCSAFoAXwBeAFoAkQCxAJIAsQBaAJIARACxAJEAXwBaAGIAWQBfAGIAsQCQAFoAkABiAFoAsgCQALEARACyALEAkACzAGIAWQBiAFgAswBYAGIAWQBYAFcAWQBXAAoAVwAvAAoAsgAsAJAALACzAJAAVwBgAC8AYAAwAC8AYQBXAFgAYABXAGEAswBjAFgAYQBYAGMALAC0ALMAtABjALMAYABWADAAVgAxADAAYABhALUAVgBgALUAZwBhAGMAtQBhAGcAtABoAGMAZwBjAGgAVgBkADEAZAAyADEAVgC1AGUAZABWAGUAtQBnALYAZQC1ALYAZABmADIAZABlALcAZgBkALcAUgAyAGYAZgC3AFIAUgAzADIAtwBlAC4AZQC2AC4AtwAuALgAUgC3ALgALgC2ALkAtgBnAIQAtgCEALkAhABnAGgALgC5AIIAuAAuAIIAuQCEAFEAhABoAIYAUQCEAIYAugCGAGgAugBoALQAggC5ALsAuQBRALsAiQC6ALQAiQC0ACwAiACGALoATgC6AIkATgCIALoAvACJACwAvAAsALIAjwC8ALIAjwCyAEQAjQCJALwAjQBOAIkATQC8AI8ATQCNALwARABNAI8AjQBNAI4ARABJAE0ATQBJAI4AjQCOAIwATgCNAIwASQCMAI4ATgCMAEsAiABOAEsAvQBLAIwASQC9AIwAiABLAL4AiwC9AEkAvQCKAEsAigC+AEsAiwC/AL0AvwCKAL0ASQB5AIsAeQC/AIsASQBFAHkARABFAEkARAA/AEUAeQBFAEcAeQDAAL8ARwDAAHkAvwAtAIoAwAAtAL8ARwB4AMAARQB4AEcAwAB3AC0AeAB3AMAALQDBAIoAigDBAL4AdwDCAC0ALQDCAMEAeABDAHcARQB2AHgAdgBDAHgAwwB2AEUAQwDEAHcAdwDEAMIARQDFAMMARQA/AMUAxQA/AMYAPwCsAMYAxgCsAMcAxgDHAMUArAAoAMcAxQDIAMMAxQDHAMgAwwDIAHYAxwAoAMkAxwDJAMgAyAB0AHYAyADJAHQAdgB0AEMAKADKAMkAKACqAMoAyQByAHQAyQDKAHIAdABzAEMAdAByAHMAQwBzAMQAqgDLAMoAqgBxAMsAygBBAHIAygDLAEEAcgBwAHMAcgBBAHAAQQDLACoAywApACoAywBxACkAQQAqACsAcABBACsAcQDMACkAcQB1AMwAzAAlACkAdQCbAMwAzACcACUAmwCcAMwAcwBwAG8AcwBvAMQAQgBvAHAAcAArAEIAxABvAEoAxABKAMIAQgBtAG8AbQBKAG8AbABCACsAbAArADYAzQBtAEIAzQBCAGwAwgBKAHsAwgB7AMEAbQB6AEoAegB7AEoAzgBtAM0AzgB6AG0AwQB7AEwAwQBMAL4AegB9AHsAfQBMAHsAzwB6AM4AzwB9AHoAhwC+AEwAhwCIAL4AiACHAIYAUQCGAIcAhwBMAIUAhwCFAFEAfQCFAEwAuwBRAIUAgwCFAH0AuwCFAIMAgwB9AM8AVAC7AIMAggC7AFQAUACDAM8AVACDAFAA0ACCAFQAuACCANAAgQC4ANAAUgC4AIEA0ABUAH8AfwBUAFAAgQDQAIAAgADQAH8AgABSAIEAgAB/AFUAUwBSAIAAUwCAAFUAVQB/AH4AfwBQAH4AVQB+AFMAUADPAHwAfgBQAHwAfADPAM4AUwB+ANEAfgB8ANEAUwDRAG4AfADOADQA0QB8ADQANADOAM0AbgDRANIA0QA0ANIATwBTAG4AbgDSAE8ATwBSAFMANADNAGsA0gA0AGsAawDNAGwATwDSANMA0gBrANMAUgBPAEgAUgBIADMATwDTAGoASABPAGoAMwBIADUASAA3ADUAagBpAEgASABpADcAagDTAGkAaQA4ADcA0wBGAGkAaQBGADgA0wBrAEYAawBsAEYARgA2ADgARgBsADYAWwAnAJoAJwCaACcAJwCbAJoAJgCbACcAmwAmAJwAJgCcACYAJgAnACYAnQCcACYA1AAmACcAnQAmANQAJwDVACcA1AAnANUAJwBbANUAnQDUADsAOwDUANUAOwDVAJ4AnQA7AJ4A1QCfAJ4AnQCeAJ8A1QBbAAEA1QABAJ8AAQBbAAEADACdAJ8AnQAMAJwADACfAAEADACdAAwAAQAMAAEAWwAFAAEADAABAAUAWwAAAAUADAAlAJwAAAA5AAUAAAAGADkABwA5AAYAOQAHAAgAOQAIAAkACwA5AAkACwAFADkADAANACUADAAFAA0ADAANAAwADQAFAAsADQASACUADQAQABIADQAOABAADQALAA4ADgALAA8AEQAPAAsAEQALABMAFAARABMAFAATABUAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoAHAAaABsAHAAbAB0AHgAcAB0AHgAdAB8AIAAeAB8AIAAfACEAIgAgACEAIgAhACMAIwAkACIA"),
+"lods": [0.011275141, PackedByteArray("AABbAAIAWwAAAAUAAAA5AAUAAAAGADkABwA5AAYAOQAHAAgAOQAIAAkACwA5AAkACwAFADkAWwBcAAIAAgBcAF0AAgBdAAQAWwA6AFwAAwBdAFwAAwBcADoABABdAFkABABZAAoAXgBdAAMAXwBZAF0AXgBfAF0AWQBXAAoAVwAvAAoAVwBgAC8AYAAwAC8AYABXAGEAYABWADAAVgBgAGEAVgAxADAAWQBYAFcAYQBXAFgAWQBiAFgAWQBfAGIAYQBYAGMAYwBYAGIAVgBkADEAZAAyADEAVgBhAGUAZABWAGUAZABmADIAUgAyAGYAZgBkAFIAZABlAFIAUgAzADIAZQBhAGcAZwBhAGMAZQBnAC4AUgBlAC4AZwBjAGgAUgBIADMAMwBIADUASAA3ADUASABpADcAaQA4ADcAaQBGADgARgA2ADgAagBpAEgAagBGAGkASABPAGoAUgBPAEgAagBrAEYATwBrAGoARgBsADYAawBsAEYAbAArADYAawBtAGwAbABCACsAbQBCAGwATwA0AGsANABtAGsAbgA0AE8AQgBtAG8ATwBTAG4ATwBSAFMAcAArAEIAQgBvAHAAcABBACsAQQAqACsAQQBxACoAcQApACoAcgBBAHAAcQBBAHIAcgBwAHMAcwBwAG8AdABxAHIAdAByAHMAcQB1ACkAdABzAEMAQwBzAG8AKABxAHQAKAB1AHEAdgB0AEMAdgAoAHQAdQAlACkAQwBvAHcAdgBDAHgAeABDAHcAdwBvAEoAbQBKAG8AeAB3AHkAbQB6AEoANAB6AG0AdwBKAC0AeQB3AC0AegB7AEoALQBKAHsAfAB6ADQAbgB8ADQAegB9AHsAfAB9AHoAfgB8AG4AUwB+AG4AfgBQAHwAUAB9AHwAVQB+AFMAfwBQAH4AVQB/AH4AUwCAAFUAgAB/AFUAUwBSAIAAgABSAIEAUgAuAIEAgABUAH8AfwBUAFAAgQCCAIAAgQAuAIIAgACCAFQAVACDAFAAUACDAH0AggBRAFQAVABRAIMALgCEAIIAggCEAFEALgBnAIQAhABnAGgAgwCFAH0AUQCFAIMAfQCFAEwAUQCEAIYAhABoAIYAhwCFAFEAhwBMAIUAUQCGAIcAfQBMAHsAiACHAIYAhwCIAEwAiQCGAGgATgCIAIYATgCGAIkAiABLAEwAiABOAEsAigB7AEwAigBMAEsALQB7AIoAiwAtAIoAeQAtAIsAiwCKAEkASQB5AIsASQCKAEsATgCMAEsASQBLAIwATgCNAIwAjQBOAIkAjQCOAIwASQCMAI4AjQBNAI4ATQBJAI4AjQCJAI8ATQCNAI8AjwCJACwAiQBoACwALABoAGMARABNAI8AjwAsAEQARABJAE0ALABjAJAARAAsAJAAkABjAGIAkABiAFoAXwBaAGIAXwBeAFoAkQCQAFoARACQAJEAXgCSAFoAkQBaAJIAXgCTAJIAkQCSAJQAkwCUAJIAlABEAJEAkwBeAAMAQABEAJQAkwBAAJQAQACTAJUAkwADAJUAPwBEAEAAQACVAJYAPwBAAJYAlQADAD0ARAA/AEUARABFAEkASQBFAHkAeQBFAEcARwB4AHkARQB4AEcARQB2AHgAPwB2AEUAPwCXAHYAlgCXAD8AlgCVAJcAlwAoAHYAlQA+AJcAlwA+ACgAlQA9AD4APgB1ACgAPQCYAD4APgCYAHUAPQCZAJgAPQA6AJkAAwA6AD0AmQA8AJgAmAA8AHUAmQA6ADwAmgA8ADoAmgA6AFsAdQA8AJsAmgCbADwAmwCcAHUAdQCcACUAJwCbAJoAWwAnAJoAmwAmAJwAJgCbACcAOwAmACcAnQCcACYAnQAmADsAOwAnAJ4AJwBbAJ4AnQA7AJ4AngBbAAEAWwAFAAEAnQCeAJ8AngABAJ8ADACfAAEADACdAJ8ADAABAAUAnQAMAJwADACdAAwADAAlAJwADAANACUADAAFAA0ADAANAAwADQASACUADQAQABIADQAOABAADQAFAAsADQALAA4ADgALAA8AEQAPAAsAEQALABMAFAARABMAFAATABUAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoAHAAaABsAHAAbAB0AHgAcAB0AHgAdAB8AIAAeAB8AIAAfACEAIgAgACEAIgAhACMAIwAkACIA"), 0.06198092, PackedByteArray("AAABAAIAAQADAAIAAgADAAQAAQAAAAUAAAA5AAUAAAAGADkABwA5AAYAOQAHAAgAOQAIAAkACwA5AAkACwAFADkADAABAAUADQAFAAsADAAFAA0ADAANAAwADQALAA4ADgALAA8ADQAOABAAEQAPAAsADQAQABIAEQALABMAFAARABMAFAATABUAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoAHAAaABsAHAAbAB0AHgAcAB0AHgAdAB8AIAAeAB8AIAAfACEAIgAgACEAIgAhACMAIwAkACIAAQAnADoAOwAnAAEAOwAmACcAJwAmADoADAA7AAEAOwAMACYADAA7AAwAAQA6AAMADAAlACYADAANACUADQASACUAPAAmACUAOgAmADwAPAAlACkAPQA6ADwAAwA6AD0APQA8AD4AKAA8ACkAPgA8ACgAKAApACoAPQA+AD8APwA+ACgAQAADAD0AQAA9AD8AQQAoACoAQQAqACsAQgBBACsAKABBAEMAQQBCAEMAQgArADYAPwBEAEAAPwAoAEUARAA/AEUARQAoAEMARgBCADYARgA2ADgARQBDAEcASABGADgASAA4ADcASAA3ADUAMwBIADUASQBFAEcARABFAEkARwBDAC0ASQBHAC0AQwBKAC0AQwBCAEoASQAtAEsANABKAEIARgA0AEIALQBKAEwALQBMAEsANABMAEoATQBJAEsARABJAE0ATgBLAEwATgBNAEsARABNACwATQBOACwATwA0AEYASABPAEYAUABMADQAUQBOAEwAUQBMAFAATgBRACwAUgBPAEgAUgBIADMAUgAzADIATwBTADQAUwBQADQATwBSAFMAUgAyADEAVABQAFMAVABRAFAAUwBSAFUAVQBUAFMALgBRAFQAVQAuAFQAVQBSAC4ALgAsAFEAVgBSADEAUgBWAC4AVgAxADAAVgBXAC4AVwBWADAALgBXACwAVwAwAC8AVwAvAAoAVwBYACwAWQBXAAoAWQBYAFcABABZAAoABAADAFkAWQBaAFgAWgAsAFgAWQADAFoARAAsAFoAAwBAAFoAQABEAFoA"), 1.0370178, PackedByteArray("AAABAAIAAQADAAIAAgADAAQAAQAAAAUAAAAGAAUABwAFAAYABQAHAAgABQAIAAkABAADAAoACwAFAAkADAABAAUADQAFAAsADAAFAA0ADAANAAwADQALAA4ADgALAA8ADQAOABAAEQAPAAsADQAQABIAEQALABMAFAARABMAFAATABUAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoAHAAaABsAHAAbAB0AHgAcAB0AHgAdAB8AIAAeAB8AIAAfACEAIgAgACEAIgAhACMAIwAkACIADAAlACYADQASACUADAANACUADAAMACYADAAmACcADAAnAAEAKAAmACUAJwAmACgAKAAlACkAJwADAAEAJwAoAAMAKAApACoAKAAqACsAKAAsAAMALAAoAC0AAwAsAC4ALQAuACwAAwAuAAoALgAvAAoALgAwAC8ALgAxADAALgAyADEALgAzADIAKAA0AC0ALgAtADQALgA0ADMANAAoACsAMwA0ADUANAArADYANAA3ADUANAA2ADgANAA4ADcA")],
+"name": "Cream leather",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 214,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4t7tj"]
+resource_name = "wallet_Cube_020"
+_surfaces = [{
+"aabb": AABB(-0.052719474, 0.003979504, -0.07654333, 0.15681815, 0.07785493, 0.15595916),
+"attribute_data": PackedByteArray("KsmbzDUPT83T9pvMJWlPzf/fScItPPbKDfK4+r5fztfwzbj6nBjO1/+fScItPPbK07abzCVpT80riZvMNQ9PzfCNuPqcGM7XDbK4+r5fztf///zALTz//+7u/MAlaf////8xlS08d/ru7jGVJWl3+v9//MAtPP///38xlS08d/oQkTGVNQ93+hCR/MA1D///7u78wLvs///MzDGVSpN3+u7uMZW77Hf6zMz8wEqT///MzPzAvl///zKz/MCcGP//zMwxlb5fd/oyszGVnBh3+jKz/MBKk///EJExlbvsd/oyszGVSpN3+hCR/MC77P//jP6+5Ft4ztLTqRHLiE/1zCuWEcvSKPXMBrgM5IFrpdKMvr7kW3jO0hKLwO32EtvUcoG+5AAAztIyrlT1JliU1t3d/MDrvf//3d0xleu9d/ohojGV6713+oDT/MSRI5PLNv3X17l13s+c2f//mC8C2XLBvuQAAM7Sx8LX16EC3s9kxRTxxged1X6s/MTKVJPLNr3X17l13s+Ak/zEkSOTywSJ5tnqDlbQyILX16EC3s+ZuhTxlHCd1WSFFPHGB53V+Zp7+Ugyhtecmf//mC8C2WKm///CSALZdvcxlcpUd/qIiPzAkSP//4iIMZWRI3f6ZeYxlfHWd/pl5vzA8db//1TVMZX9pXf6Q8QxlcJId/q7u/zAmC///7u7MZWYL3f6qqoxlf2ld/qqqvzA/aX//yGi/MDrvf//mZkxlfHWd/qZmfzA8db//33s/MTKVJPLmfoU8ZRwndVi5v//wkgC2f+f8sgtPHrM87EQ0YtfU84KjhDRzxhTzviHDOTZDKXS+bbm2XBpVtDLkVT1NCCU1gWle/kSRobX67TA7WRl29R29/zAylT//1TV/MD9pf//Q8T8wMJI//8="),
+"format": 34896613431,
+"index_count": 258,
+"index_data": PackedByteArray("KQBHAAIAAABHACkARwAqAAEARwBIACoAAABIAEcAKgBIAB4ALAAAAC0ABAAAACwASAAAAAQABAAsAC4ASAAEAEkASQAEACsASABJAAMALwBKAAUABQBKACAABQAgADEALwAfAEoABgAfAC8ABgBLAB8ASwBKAB8AMABLAAYAMQAgAEwASgBMACAAMQBMAAcABwBMADIABwAyADMATABNADIAMwAyAE0ASgBNAEwAMwBNACQATgBKAEsAMABOAEsATgBNAEoAIgBOADAAJABNACMAJAAjADUAIgAhAE4ANAAhACIANQAjAE8ATQBPACMANQBPAAgACABPADYACAA2ADcATQBQAE8ATwBQADYANwA2AFAATQBOAFAANwBQADgAOABQACUAOAAlAAkAUABOAFEAUABRACUACQAlAFEAUQBOACEACQBRADQANABRACEACgA5AAwACgBSADkAUgANADkAUgALAA0AOgAPADsAOgAOAA8AEQA6ADsAEQA7ABAAEgA8ABQAEgA9ADwAPQAnADwAPQAmACcAJgA+ACcAJgBTAD4AUwATAD4AUwAVABMAFgA/ABgAFgBUAD8AVABBAD8AVABAAEEAQAAZAEEAQAAXABkAGgBCABwAGgBDAEIAQwAoAEIAQwBEACgARABFACgARABGAEUARgAbAEUARgAdABsA"),
+"lods": [0.0082601905, PackedByteArray("KQABAAIAAAABACkAAAADAAEAAQADACoAKgADAB4AAwAAAAQAAwAEACsABAAAACwALAAAAC0ABAAsAC4ALwAfAAUABgAfAC8AMAAfAAYABQAfACAABQAgADEAMQAgAAcABwAgADIAHwAyACAABwAyADMAMAAhAB8AIQAyAB8AIgAhADAAMwAyACQANAAhACIAJAAyACMAJAAjADUANQAjAAgAMgA2ACMACAAjADYAMgAhADYACAA2ADcANwA2ADgANgAhACUAOAA2ACUANAAlACEAOAAlAAkACQAlADQACgA5AAwACgALADkACwANADkAOgAPADsAOgAOAA8AEQA6ADsAEQA7ABAAEgA8ABQAEgA9ADwAPQAnADwAPQAmACcAJgA+ACcAJgAVAD4AFQATAD4AFgA/ABgAFgBAAD8AQABBAD8AQAAZAEEAQAAXABkAGgBCABwAGgBDAEIAQwAoAEIAQwBEACgARABFACgARABGAEUARgAbAEUARgAdABsA"), 0.022027457, PackedByteArray("AAABAAIAAAADAAEAAQADAB4AAwAAAAQABgAfAAUABQAfACAABQAgAAcABgAhAB8AIgAhAAYAHwAjACAABwAgACMAIQAjAB8ABwAjACQAJAAjAAgAIwAhACUAIgAlACEACAAjACUACQAlACIACAAlAAkACgALAAwACwANAAwADgAPABAAEQAOABAAEgAmABQAJgAnABQAJgAVACcAFQATACcAFgAXABgAFwAZABgAGgAoABwAGgAdACgAHQAbACgA"), 0.09652125, PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABQAGAAcABgAIAAcACQAIAAYACgALAAwACwANAAwADgAPABAAEQAOABAAEgATABQAEgAVABMAFgAXABgAFwAZABgAGgAbABwAGgAdABsA")],
+"material": SubResource("StandardMaterial3D_jjygn"),
+"name": "Worn Copper",
+"primitive": 3,
+"uv_scale": Vector4(2, 1.9695108, 0.33355057, 2.8420463),
+"vertex_count": 85,
+"vertex_data": PackedByteArray("WiAAANEq5yOk3wAA0SrnI/9/AAAAAIodpcsAABvqp1lZNAAAG+qnWf9/2skAAIjwpN/aydEqD+RaINrJ0SoP5Fk02skb6jampcvayRvqNqb/fwAAAAD5/aTfAADRKjTg/3/ayQAAZP+k39rJ0SqD3v9/AAAAAPn9/3/ayQAAZP9aINrJ0SqD3logAADRKjTgpN8AANEqNOCly9rJG+rFnaTf2snRKoPepcsAABvqtqalywAAG+q2plk0AAAb6rampcvayRvqxZ1ZNNrJG+rFnVk0AAAb6ramWiDaydEqg95ZNNrJG+rFnVogAADRKjTg//8AAPCONT0rqf//biQ20NNW//9uJDbQquT//w2MJsD//9rJ8I5DyVUo//9NtDW5AADayfCOQ8l+u///wdP6sv//AADwjmbB///ayfCOVr0AANrJ8I5WvaZLAAAwC/seZvoAAGtZ7S09ZQAA//9eYQAAAADwjjU9mAUAAGtZ7S2JEAAAHsL+TFi02skwCxvtZvrayWtZr9emS9rJMAsb7bof///1YczGmAXayWtZr9d179rJHsLhuIkQ2skewuG482r///jk8649ZdrJ//+ek8Ga2sn//56TWLTayTALPe+mSwAAMAsO8KZL2skwCz3vZvrayWtZ2s1m+gAAa1mV0HXv2skewiKtwZrayf//opE9ZQAA//+xnj1l2sn//6KRiRDayR7CIq2JEAAAHsIZswAAAADwjmbBmAXayWtZ2s2YBQAAa1mV0Fi0AAAwC/sede8AAB7C/kzBmgAA//9eYf9///+hG5zROMv//049YMzGNP//Tj1gzFQb//8NjCbAROD///VhzMaARP//wdP6sguV///45POuqdf//020NblYtAAAMAsO8HXvAAAewhmzwZoAAP//sZ4HKE2NTg34VwAA/39GJtdIJzdFpv///39sycZhxuGRthfccNKNrRhczXmwJwlyUi0NmBYEz5uRCE9YzfkVhPHnkYgu5K1SCPIJclItOLhvKs+bkQhSRb1NUkW9TUIyUsU4uG8qbqrFx0IyUsWRiC7kbqrFx61SCPL7ILFBp+40dTP1V5F22KhscbTbWuLuhqba2o3LpOCJcw1i6DjspG4TbZMS2wAXoYYqFqFKGRxHlE0++qBeNSmW8D9dqPvc+msQvd1c+esCo7fsLKTc3O7Ci66OWo3actHg+g6O+eVWvafC+mUtmD0ErFft+DyE0Ofgn2kNrmqnMgys7Ruc1XhNqBlko3fNYqrtm/HT3D6z1hZHDOJpjR7gWE2u6qIG/2hdKA9ARxTmY/7//38H4zVvNe/3nKjsiKfR27hsiPNan+/x4Xp32eJu7XhSKLNWI0FkI1Zm")
+}, {
+"aabb": AABB(-0.37077004, -0.005417764, -0.57607114, 0.40455538, 0.08042228, 1.1520314),
+"attribute_data": PackedByteArray("7U4gP99YPT+Stv4+P10CP/ARCj8AAEA/OHH2PqXLCz90KAo/dTs9Pyps/z5ayws/AAAgPwAAQD8YG/Y+Tl8CPwtPID/aVz0/3bz+Pj5dAj/Y5gk/i4M7PwwEBT8a7As/bXNeP8gLgz7Pme++L069P3YRXT/GBoM+9GThvgXyvT+UE10/zpGDPiq75b78k7w/w7BcP2Bsgz50eeW+JI+8P0tEXD/kK4U+Bp7mvjM8vD9hqFs/jpaGPthK6L6iwrs/MnhdPzD7hD6Y0e6+AOm5P010Xj9yC4M+FqDvvqZOvT9beF0/uvuEPjLV7r7657k/ZFVeP2Bxgz7OcvW+ZKu7P3Z3XT/Irvo+kczuvszWuj6Uw1s/OO75Pmgr3L6sMbk+MKdbP1T1+D5uSOi+8HCzPgqwXD8EVPw+CHjlvhA/sD7YCV0/oir8Pgh45b4QP7A+8xJdP2Iu/D5sueW+0iuwPu5yXj+Cv/w+6pjvvvBDrT4UdAk/AAAAAF9z9j56Dww/6k4gPwC/KTywtf4+P10CPyTOCT/AOjE8fG7/PszxCz8AACA/AAAAAK4a9j5OXwI/CE8gP0AAKjz7u/4+Pl0CPxPnCT+giY88lAMFPwDsCz8gjUA/rPK9PpwLvD1Cp68/MKdbP1T1+D4YTB4/tjmyPyCNQD+s8r0+nAu8Pb4Bsj9hqFs/jpaGPqoT3764ObI/n3ddPzSu+j6OkiI/SuGvP3Z3XT/Irvo+mZQiPzPirz9beF0/uvuEPuaf575M4a8/MnhdPzD7hD7+o+e+NOKvPzPgWT9EEIw+GP7EvhXarz9+a1s/mgWJPsne074u3a8/nrFIP6DorT4ii3u9mbevP6gwRz/s3rA+nqEHvZS0rz9QPlU/OjCVPvxbmL7J0K8/5lRYP+oajz5iHba+/NavP5vJVj+UJZI+rTynvuLTrz+Os0s/APynPguv8b2iva8/hDRNP7AFpT7k0RW+p8CvP5YySj9Q8qo+Trq3vZ66rz/QN0k/mibQPrxfgj6muK8/EJ5HPwDKzD789GU+cLWvP5P3Vj8wB+0+l08DPz7Urz9Qa0w/zN/WPjgqoT4Tv68/kNFKPzSD0z75xJE+3LuvPxAFTj9kPNo+c4+wPknCrz8XaVU/PMLpPkOm9z4e0a8/jBRaPxSR8z6ASBI/ftqvPxCGWD8iTPA+DMwKP17Xrz8Io1s/CNb2PvbEGT+e3a8/"),
+"format": 34359742519,
+"index_count": 141,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgAHAAgABgAJAAcABgAKAAkACgAGAAsACwAGAAwADQAMAAYADQAOAAwADgANAA8AEAARABIAEAATABEAEAAUABMAFAAQABUAFQAQABYAFwAYABkAFwAaABgAGQAYABsAGQAbABwAHQAeAB8AIAAdAB8AHgAhACIAHQAhAB4AIwAgACQAJQAgACMAJQAjACYAIAAlACcAIAAnAB0AHQAnACgAJwAlACkAKQAlACoAKQAqACsAJwApACwALAApAC0AJwAsAC4ALwAdADAAMQAdAC8AHQAxACEAMgAvADMAMQAvADIAMQAyADQAMQA0ADUAIQAxADYANgAxADcAIQA2ADgA"),
+"material": SubResource("StandardMaterial3D_k14h7"),
+"name": "Fur 01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 57,
+"vertex_data": PackedByteArray("rjm1vsDyBD3gBBK/CH+9vgCdj7t4sxG/FoS0voB3j7tmeRO/KNW9vtDRBD3KAhG/ZDO1vuDyBD3zAxK/KOipvgDYn7tu6hK/RjS1vuDyBD109hE/TmipvoCSGjzKNxE/GOmpvoDKn7vc3BI/zBSnvoDSsDx0XQ4/QEmjvkCC8zwOvQo/jpmevqCYBT3q4wY/Emy0vgCJUD0ULAs/kDq1vsDyBD1g9xE/rG+0viCmUD0IKgs/SA27vvBnUD3esA4/DGe0vjCJUD2EOgu/hkSjvkCC8zwVywq/vJKevuCYBT0C8ga/7hGnvoDRsDxeaw6/wmapvgCOGjyIRRG/KOipvgDYn7tu6hK/ZDO1vuDyBD3zAxK/4Hy9voCHsbuGqxE/kDq1vsDyBD1g9xE/xIG0voCworsichM/ktW9vtDRBD289RA/RjS1vuDyBD109hE/GOmpvoDKn7vc3BI/EGwJPWDnVz0AeB26vJKevuCYBT0C8ga/gGIKPdCXDD0AeB26jpmevqCYBT3q4wY/pmq0vlCmUD14OAu/DGe0vjCJUD2EOgu/rG+0viCmUD0IKgs/Emy0vgCJUD0ULAs/4N+bvnBGiT1BsvM+FG2mvuAUiT16SQE/qNqZvTDVkD0eSxw+UIBhvXieiz18of49gHB4vtB9lD0jEMc+qlKRvmDUjj2L0eQ+dMWGvpC4kT3X8NU+qA/svTDwlT3WP1Y+FJUKvvibmT02OnM+KPXCvdi4lD16RTk+oC6ovWDEkD0hVye+cN14vcCQiz2mjAi+kP+HvtCykT0D69e+aK7/vSDZlT0Y7GS+gO7TveiklD2cIUa+JLcVvtCBmT1K24G+GLl6vnh4lD0Z8si+mEWdvug/iT3Y3PW+lKKSvjjOjj3u4+a+nOinvugNiT3hagK/x9x59fZ7lOtBBZ3L3Xsx+BoO1fDpfnL3Bw9Q2DmETPSL2PjgjnH848jmOPlKf2zyCp91pws2gNZ8k1atRS7q3M2GNpmDOHoeMZOOt/ggxM4PlFHBjiLYyMKgpb90K3LXfq29qdpCztyFij2jUil02K2ZmcgrIuTZH4JF0CcdE+dB1ojSWD5i4bG+8euYPVTSVcBD3wgysNVzyM/sAyACl6vSg+x8R/+ByOY4+bo5vJmL2PjgMVmo4IJLPoVccOz9hYo9oyJX+f3JcCGO2W5y/0pYB49kl+H9Cp91p/RHxPjNhjaZ2GSk/6a+ccGhPkjfVcBD3wgysNVkuJ7H////v8Kgpb90K3LX2rf+5a0tLNFB1ojSWD5i4a2ZmcgrIuTZfq29qdpCztzSozvCaSzi2NabeMhlrrlRcKi0vs4vw9+Jqe69P7MyVxejgcKisYFU36AOxJGwsVPUopbC/CjC5pqnXL+pLHfm2KR3wYWyIFVzpjfA////P1zBrNeP0odmKMKa1pfRd2ZevTLdI9dKZ7fActgXTVjWyb+i2V7UpGZ9vj3bhU0Y1XS98NxSTn3Uvb003J3W5GbjuyjfY0+r0z63W+TF3Mpo")
+}, {
+"aabb": AABB(-0.3859442, -0.074997365, -0.5914114, 0.859905, 0.15000188, 1.1826298),
+"attribute_data": PackedByteArray("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"),
+"format": 34359742519,
+"index_count": 1167,
+"index_data": PackedByteArray("AADdAAIA3QCHAAIAAACGAN0AhgAAAAMAhgADAAEA3gCGAAEA3QDfAIcA4ACHAN8AhgCMAN0AjADfAN0A4QCGAN4A4QDeAIkA4QCJAIgAVwDhAIgABQCGAOEAhgAFAIwAVwDiAOEABQDhAOMA4gDjAOEA4wCMAAUAiwDiAFcA4gDkAOMAiwDkAOIACADjAOQAiwCRAOQA5ACRAAgACACNAOMA4wCNAIwAjQAIAJEAiwAJAJEACQCLAAYACQAKAJEACQAMAAoA5QCRAAoAjQCRAOUA5QAKAAsAkADlAAsAjwCNAOUAkACPAOUAjwBYAI0AjACNAFgA5gCPAJAA5gCQAOcA6ADmAOcA6ADnAAcAWQDmAOgAjgCPAOYAWQCOAOYAjgBYAI8AVgCOAFkAjABYAFUAjABVAN8AigBYAI4AVgCKAI4AigBVAFgA6QCKAFYA6gDfAFUA6gBVAIoA6QDqAIoA4ADfAOoABADqAOkABADgAOoADQBaAA8ADQAOAFoAEAARABIAEAATABEAkgCTAFsAXgCSAFsAWwCTAJQAWwCUAF4AkwBfAJQAlABfAJYAkwBcAF8AlACWAOsAXgCUAOsA6wCWABgAXgDrAJkA7ABcAJMAkgDsAJMA7ACVAFwA6wAYAO0AmQDrAO0A7QAYAJoAYQBeAJkAmQDtAGEA7QCaAO4AYQDtAO4A7gCaAGIAYQDuAJsA7gBiAJwAmwDuAJwAnABiABsAnAAbABkAmwCcAGMAYwCcABkAYwBhAJsAYwAZABoAHABjABoAXQBhAGMAXQBjABwAYQBdAF4AXQAcAB4AXgBdAJIAkgBdAJcAlwDsAJIAXQAeAJ0AlwDvAOwAXQDvAJcA7wCVAOwA7wAdAJUAXQDwAO8A8AAdAO8AnQDwAF0A8ACYAB0AngCdAB4AnQCeAPAAngCYAPAAngAeAB8AngBgAJgAYACeAB8AYAAfACAAnwDxAGUAZQDxAKAAZQCgAGYAnwDyAPEAFADyAJ8AFADzAPIAZgCgAPQAZgD0AKIAogD0APUAogD1ABYA9ACjAPUA8wCsAPIA8wCtAKwArACtAKsA8gCsAGQA8gBkAPEArACrAKkAZACsAKkA9gCpAKsA9gCrAPcAqgD2APcAqgD3ABcAZwD2AKoAZwCnAPYApwCpAPYApwBnAGkAZACpAKgApwCoAKkA8QBkAKYAqACmAGQA8QCmAKAApwBpAPgAqACnAPgApQD4AGkAqABoAKYAqAD4AGgAoACmAKEAoQCmAGgAoAChAPQA9AChAKMApQD5APgA+QBoAPgAFQD5AKUAFQD6APkA+QCkAGgAoQBoAKQA+gCkAPkAowChAKQA+gBqAKQAowCkAGoArgD7ACkArgD8APsAawD8AK4A/ACvAPsAawC0APwAtABrACwAtAAsACoAtACwAPwA/ACwAK8AbAC0ACoAtABsALAAbAAqACsAbwBsACsALwBvACsAsABsAG0AbwBtAGwArwCwALEAsABtALEArwCxALIA/QCyALEA/QCxAP4A/gCxAG0ALgD9AP4ALgD+ALMA/gBtALUAswD+ALUAbwC1AG0AswC1AG4AuQBuALUAbwC5ALUAuQC4AG4AuQBvALYALwC2AG8AMAC2AC8AMAC3ALYAuQC2AP8AuAC5AP8A/wC2ALcAuAD/AAAB/wC3AAEBAAH/AAEBAAEBAS0AugC7AHAAcAAiACMAcAC7ACIAuwAkACIAugACAbsAIQACAboAIQADAQIBAgFxALsAuwBxACQAAwG8AAIBAgG8AHEAAwG9ALwAvAC9AHIAcQC8AL4AvAByAL4AwAAkAHEAcQC+AMAAwAB0ACQAdAAnACQABAG+AHIABAFyAAUBvwAEAQUBvwAFASYAcwAEAb8AwQC+AAQBcwDBAAQBwQDAAL4AwgDBAHMAwwDAAMEAwgDDAMEAwwB0AMAABgHDAMIABgEHAcMABwF0AMMAJQAHAQYBJQAIAQcBBwEJAXQACAEJAQcBdAAJAScACAHEAAkBCQEoACcACQHEACgAMQB1ADMAdQAxADQAdQA0ADUANgB1ADUANgAyAHUANwA4ADIAOAA3AAoBNwAyADkANwA5ADoAOQAyADYAOQA2ADsAOQA7ADwAOwA2AD0APgA9ADYAPgA2AD8AQAA+AD8AQAA/AEEAQgBAAEEAQgBBAEMARABCAEMARABDAEUARQBGAEQARQBHAEYASABGAEcASABHAEkASgBIAEkASgBJAEsATABKAEsATABLAE0ATgBMAE0ATgBNAE8ATwBQAE4AdgDFAHgAdgDGAMUAxgDHAMUAxgB3AMcAeQALAckAyQALAQwBfAB5AMkAyQAMAXwACwFSAAwBDAFSAMsACwHKAFIADAHLAA0BfAAMAQ0BDQHLAH4AyADKAAsBeQDIAAsByAB6AMoAyAB5AMwAegDIAM0AyADMAM0AegDNAHsAeQB9AMwAfQDNAMwAfAB9AHkADgF7AM0AfQAOAc0ADgHOAHsAzwAOAX0ADwHOAA4BzwAPAQ4BDwFUAM4AfQDQAM8A0AAPAc8AEAFUAA8B0AAQAQ8BEAHRAFQAfwAQAdAA0gDRABABfwDSABAB0gCAANEA0ACBAH8AfQCBANAAgQDSAH8AfACBAH0A0wCAANIAgQDTANIA0wDUAIAAEQHTAIEAEgHUANMAEQESAdMAEgETAdQAgQAUAREBFAESAREBFQETARIBFAEVARIBFQFRABMBFgEVARQBFwFRABUBFgEXARUBFwEYAVEAFAGEABYBgQCEABQBhAAXARYBfACEAIEA1QAYARcBhADVABcB1QCFABgB1gDVAIQA1wCFANUA1gDXANUA1wCDAIUAhAAZAdYAGQHXANYAGgGDANcAGQEaAdcAGgEbAYMAHAEaARkBHQEbARoBHAEdARoBHQFTABsBGQGCABwBhACCABkBggAdARwBhAB8AIIAHgFTAB0BggAeAR0BHgEfAVMAIAEeAYIA2AAfAR4BIAHYAB4B2ADZAB8BggDaACAB2AAgAdoAggB8ANoA2QDYANsA2ADaANsA2QDbAH4A2gB8ANwA3ADbANoAfAANAdwADQF+ANsA3AANAdsA"),
+"lods": [0.011275141, PackedByteArray("AACGAAIAhgAAAAMAhgCHAAIAhgADAAEAiAABAIkAiACGAAEAhgBVAIcABACHAFUABQCGAIgABABVAFYAVwAFAIgAVgBVAIoAVwAIAAUAiwAIAFcAhgAFAIwAjABVAIYACACNAAUABQCNAIwAjABYAFUAigBVAFgAjACNAFgAVgCKAI4AigBYAI4AVgCOAFkAjgBYAI8AWQCOAI8AjwBYAI0AWQCPAAcABwCPAJAAkACPAAsAjwAKAAsAjQCRAI8AjwCRAAoAjQAIAJEAiwCRAAgACQAKAJEAiwAJAJEACQAMAAoACQCLAAYADQBaAA8ADQAOAFoAEAARABIAEAATABEAkgCTAFsAWwCTAJQAkgBcAJMAkwBcAF8AkwBfAJQAkgCVAFwAlABfAJYAlwCVAJIAlwAdAJUAXgCSAFsAWwCUAF4AkgBdAJcAXQAdAJcAXgBdAJIAXQCYAB0AlACWAJkAXgCUAJkAmQCWABgAYQBeAJkAmQAYAGEAYQBdAF4AYQAYAJoAYQCaAJsAmwCaAGIAYwBhAJsAXQBhAGMAmwBiAJwAmwCcAGMAnABiABsAnAAbABkAYwCcABkAYwAZABoAHABjABoAXQBjABwAXQAcAB4AXQAeAJ0AngCdAB4AnQCeAF0AngCYAF0AngAeAB8AngBgAJgAYACeAB8AYAAfACAAnwBkAGUAZQBkAKAAZQCgAGYAZgCgAKEAZgChAKIAogCjABYAogChAKMAowChAKQAowCkAGoAFQBqAKQAFQCkAKUApQCkAGgAoQBoAKQApQBoAGkAoACmAKEAoQCmAGgAZACmAKAApwBpAGgApwBnAGkAqABoAKYAqACnAGgAqACmAGQAZwCnAKkApwCoAKkAZACpAKgAZwCpAKoAqgCpAKsAqgCrABcAZACsAKkArACrAKkAnwCsAGQArACtAKsAFACsAJ8AFACtAKwArgCvACkArgCwAK8AawCwAK4ArwCwALEArwCxALIALgCyALEALgCxALMAawC0ALAAtABrACwAtAAsACoAbAC0ACoAtABsALAAbAAqACsAsABtALEAsABsAG0AbwBsACsAbwBtAGwALwBvACsAsQBtALUAswCxALUAbwC1AG0AswC1AG4ALwC2AG8AMAC2AC8AMAC3ALYALQC2ALcAuAC2AC0AuQBuALUAuQC4AG4AbwC5ALUAuAC5ALYAuQBvALYAugC7AHAAcAAiACMAcAC7ACIAuwAkACIAugC8ALsAIQC8ALoAIQC9ALwAvAC9AHIAvABxALsAuwBxACQAvAByAL4AcQC8AL4AvwByACYAvwC+AHIAcwC+AL8AcQC+AMAAwAAkAHEAcwDBAL4AwQDAAL4AwgDBAHMAwAB0ACQAdAAnACQAwwDAAMEAwwB0AMAAwgDDAMEAdADEACcAxAB0AMMAwgDEAMMAxAAoACcAJQDEAMIAMQB1ADMAdQAxADQAdQA0ADUANgB1ADUANgAyAHUANwA4ADIANwAyADkAOQAyADYANwA5ADoAOQA2ADsAOQA7ADwAOwA2AD0APgA9ADYAPgA2AD8AQAA+AD8AQAA/AEEAQgBAAEEAQgBBAEMARABCAEMARABDAEUARQBGAEQARQBHAEYASABGAEcASABHAEkASgBIAEkASgBJAEsATABKAEsATABLAE0ATgBMAE0ATgBNAE8ATwBQAE4AdgDFAHgAdgDGAMUAxgDHAMUAxgB3AMcAeQDIAMkAyADKAMkAyQDKAFIAyAB6AMoAyQBSAHwAfAB5AMkAfABSAMsAyAB5AMwAegDIAM0AyADMAM0AegDNAHsAeQB9AMwAfQDNAMwAfQB7AM0AfAB9AHkAfQDOAHsAzwDOAH0AzwBUAM4A0ABUAM8AfQDQAM8A0ADRAFQAfQCBANAAfACBAH0A0gDRANAA0gCAANEAfwDSANAA0ACBAH8AgQDSAH8A0wCAANIAgQDTANIA0wDUAIAA0wBRANQAhADTAIEAfACEAIEA1QBRANMAhADVANMA1QCFAFEA1gDVAIQA1wCFANUA1gDXANUA1wCDAIUA1wBTAIMAhACCANYAggDXANYAhAB8AIIA2ABTANcAggDYANcA2ADZAFMAggB8ANoA2ACCANoA2QDYANsA2ADaANsA2QDbAH4A2gB8ANwA3ADbANoA3AB+ANsAfADLANwA3ADLAH4A"), 0.06198092, PackedByteArray("AAABAAIAAQAAAAMAAQAEAAIAAQBVAAQABABVAFYAAQAFAFUAVwAFAAEAVgBVAFgAVgBYAFkAWQBYAAcABwBYAAsAWAAKAAsABQAIAFUAVQAIAFgAVwAIAAUAWAAIAAoAVwAJAAgACQAKAAgACQBXAAYACQAMAAoADQBaAA8ADQAOAFoAEAARABIAEAATABEAWwAdAFwAWwBdAB0AWwBcAF4AXgBdAFsAXABfAF4AXgBfABgAXQBgAB0AYQBeABgAYQBdAF4AYQAYAGIAYwBhAGIAXQBhAGMAYwBiABsAYwAbABkAYwAZABoAHABjABoAXQBjABwAXQAcAB4AXQAeAB8AYABdAB8AYAAfACAAFABkAGUAFAAXAGQAZQBkAGYAZwBkABcAZABoAGYAZABnAGgAZgBoABYAZwBpAGgAFgBoAGoAFQBoAGkAFQBqAGgAawBsACkAbABrACwAbAAsACoAKQBsAC4AbAAqACsAbABtAC4AbgAuAG0AbwBsACsAbwBtAGwAbwBuAG0ALwBvACsAbwAtAG4ALwAtAG8AMAAtAC8AcAAhAHEAIQByAHEAcAAiACMAcABxACIAcQAkACIAcwBxAHIAcwByACYAcQB0ACQAdABxAHMAdAAnACQAJQB0AHMAdAAlACcAJQAoACcAMQB1ADMAdQAxADQAdQA0ADUANgB1ADUANgAyAHUANwA4ADIANwAyADkAOQAyADYANwA5ADoAOQA2ADsAOQA7ADwAOwA2AD0APgA9ADYAPgA2AD8AQAA+AD8AQAA/AEEAQgBAAEEAQgBBAEMARABCAEMARABDAEUARQBGAEQARQBHAEYASABGAEcASABHAEkASgBIAEkASgBJAEsATABKAEsATABLAE0ATgBMAE0ATgBNAE8ATwBQAE4AdgB3AHgAeQB6AFIAegB5AHsAfAB5AFIAeQB9AHsAfAB9AHkAfQBUAHsAfABSAH4AfQB/AFQAfwCAAFQAfQCBAH8AgQCAAH8AfACBAH0AgQBRAIAAggB8AH4AUwCCAH4AggBTAIMAhAB8AIIAfACEAIEAggCDAIQAhABRAIEAgwCFAIQAhACFAFEA"), 1.0370178, PackedByteArray("AAABAAIAAQAAAAMAAQAEAAIABQAEAAEABgAFAAEABQAHAAQABgAIAAUABQAIAAcABgAJAAgABwAIAAoACQAKAAgABwAKAAsACQAMAAoADQAOAA8AEAARABIAEAATABEAFAAVABYAFQAUABcAGAAZABoAGAAbABkAHAAYABoAHQAYABwAHQAcAB4AHQAeAB8AHQAfACAAIQAiACMAIQAkACIAIQAlACQAJQAhACYAJQAnACQAJQAoACcAKQAqACsAKQAsACoALQApACsALQAuACkALwAtACsAMAAtAC8AMQAyADMAMgAxADQAMgA0ADUANgAyADUANwA4ADIANwAyADkAOQAyADYANwA5ADoAOQA2ADsAOQA7ADwAOwA2AD0APgA9ADYAPgA2AD8AQAA+AD8AQAA/AEEAQgBAAEEAQgBBAEMARABCAEMARABDAEUARQBGAEQARQBHAEYASABGAEcASABHAEkASgBIAEkASgBJAEsATABKAEsATABLAE0ATgBMAE0ATgBNAE8ATwBQAE4AUQBSAFMAUgBRAFQA")],
+"material": SubResource("StandardMaterial3D_if7et"),
+"name": "Cream leather",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 289,
+"vertex_data": PackedByteArray("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")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mi0a0")
+
+[node name="wallet_001" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_4t7tj")
+skeleton = NodePath("")
+metadata/extras = {
+"material_mapping": {
+"0": {
+"index": 0.0,
+"type": "SLOT"
+},
+"1": {
+"index": 1.0,
+"type": "SLOT"
+},
+"2": {
+"index": 2.0,
+"type": "SLOT"
+}
+}
+}
