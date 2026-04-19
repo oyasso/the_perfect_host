@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=26 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="Script" uid="uid://chts087yiwt3d" path="res://Scripts/position_change.gd" id="1_hibaj"]
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="1_pdsj5"]
@@ -24,6 +24,13 @@
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="22_ee4r6"]
 [ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="23_gt3je"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt3je"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 0.9764706)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3pmx8"]
+material = SubResource("StandardMaterial3D_gt3je")
+
 [node name="Main" type="Node3D"]
 
 [node name="FadeOut" parent="." instance=ExtResource("1_pdsj5")]
@@ -44,10 +51,10 @@ collision_layer = 3
 collision_mask = 5
 
 [node name="Mother" parent="." instance=ExtResource("3_jjvhh")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 13.576, 0.7, -12.474)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.351307, 0.7, -12.474)
 
 [node name="Father" parent="." instance=ExtResource("6_d1ilt")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 13.32, 1.0963424, -20.104)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.095306, 1.0963424, -20.104)
 
 [node name="Uncle" parent="." instance=ExtResource("5_kry3j")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 17.039, 0.45829633, 18.953)
@@ -131,6 +138,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
 
 [node name="Statue" parent="." instance=ExtResource("22_ee4r6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
+
+[node name="InvisibleWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 40.406155, 0, 0, 0, 123.50977, 12.588242, 15.731977, 0)
+visible = false
+mesh = SubResource("BoxMesh_3pmx8")
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_gt3je")

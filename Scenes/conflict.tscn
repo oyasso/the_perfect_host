@@ -45,7 +45,7 @@ got_wallet = true
 transform = Transform3D(-1.1108147, 0, 0.297642, 0, 1.15, 0, -0.297642, 0, -1.1108147, -72, 0.9, 4)
 
 [node name="Father" parent="." instance=ExtResource("6_2rsek")]
-transform = Transform3D(-1.1108147, 0, -0.297642, 0, 1.15, 0, 0.297642, 0, -1.1108147, -72, 0.9, -4)
+transform = Transform3D(-1.1108147, 0, -0.297642, 0, 1.15, 0, 0.297642, 0, -1.1108147, -72, 1.3101743, -4)
 
 [node name="Uncle" parent="." instance=ExtResource("7_5yga7")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -95, 7.2, 0)

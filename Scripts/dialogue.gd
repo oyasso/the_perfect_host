@@ -138,6 +138,7 @@ func _on_end_pressed() -> void:
 		
 	# show the letter
 	if show_letter:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		letter.show()
 		show_letter = false
 	
@@ -152,6 +153,7 @@ func _on_end_pressed() -> void:
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
+		# waltz phase 2
 	
 	if player.interactions == 3 and not three_interactions:
 		fade.show()

@@ -11,8 +11,8 @@ extends Node
 @onready var fade = $"../FadeOut"
 
 func change_middle():
-	fade.show()
-	fade.fade_out(1.0)
+	#fade.show()
+	#fade.fade_out(1.0)
 	mother.position = Vector3(-74.561, 0.4, -21.257)
 	father.position = Vector3(-74.561, 0.4, -28.887)
 	uncle.position = Vector3(-69, 0.4, 21)

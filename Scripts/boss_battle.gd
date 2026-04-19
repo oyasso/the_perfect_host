@@ -20,6 +20,8 @@ var defend_text = ["Kiyoshi cannot look at them.", "Mom, Dad, please! I'm sorry!
 var boss_text = ["LOOK AT ME WHEN I SPEAK TO YOU, CHILD!", "YOU'VE MADE TOO MANY!",
 "YOU HAVE BEEN NOTHING BUT A DISAPPOINTMENT!", "ALL YOU DO IS FAIL!", "WE'RE DONE WITH YOU!"]
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func show_player_attack_dialogue():
 	buttons.hide()

@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 							dialogue.get_dialogue("notray")
 
 					else:
-						if player.got_drinks:
+						if player.got_items:
 							dialogue.get_dialogue("drinks")
 							drinks_counter += 1
 							hide_exclamation()
