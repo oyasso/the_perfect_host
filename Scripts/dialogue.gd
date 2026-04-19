@@ -4,7 +4,7 @@ var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue9.json"
+var json_file = "res://Dialogue/perfect_host_dialogue11.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 

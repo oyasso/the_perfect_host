@@ -1,18 +1,17 @@
 extends Node3D
 
 @onready var dialogue = $"../../../DialogueUI"
+@export var gender = "m"
 var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("talk") and talk_ready and not dialogue.is_talking:		
-		print("party line", talk_ready)
-		var random_line = ["lost", "leave"].pick_random()
+		var random_line = ["lost_" + gender, "leave_" + gender].pick_random()
 		dialogue.get_dialogue(random_line)
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true
-	print("area entered")
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:
 	talk_ready = false

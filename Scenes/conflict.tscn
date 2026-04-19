@@ -42,10 +42,10 @@ use_camera = false
 got_wallet = true
 
 [node name="Mother" parent="." instance=ExtResource("5_t6mqk")]
-transform = Transform3D(-1.1108147, 0, 0.297642, 0, 1.15, 0, -0.297642, 0, -1.1108147, -72, 0.4, 4)
+transform = Transform3D(-1.1108147, 0, 0.297642, 0, 1.15, 0, -0.297642, 0, -1.1108147, -72, 0.9, 4)
 
 [node name="Father" parent="." instance=ExtResource("6_2rsek")]
-transform = Transform3D(-1.1108147, 0, -0.297642, 0, 1.15, 0, 0.297642, 0, -1.1108147, -72, 0.4, -4)
+transform = Transform3D(-1.1108147, 0, -0.297642, 0, 1.15, 0, 0.297642, 0, -1.1108147, -72, 0.9, -4)
 
 [node name="Uncle" parent="." instance=ExtResource("7_5yga7")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -95, 7.2, 0)
@@ -57,10 +57,10 @@ transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -120, 19.5, 0)
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15, 0.791, -0.193)
 
 [node name="FancyLady" parent="." instance=ExtResource("10_3v3q3")]
-transform = Transform3D(-0.9959292, 0, -0.5749999, 0, 1.1500001, 0, 0.5749999, 0, -0.9959292, -68.80485, 0.4, -18.745163)
+transform = Transform3D(-0.9959292, 0, -0.5749999, 0, 1.1500001, 0, 0.5749999, 0, -0.9959292, -68.80485, 0.77879894, -18.745163)
 
 [node name="FancyMan" parent="." instance=ExtResource("11_y37d2")]
-transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -34.64779, 0.4, -21.417488)
+transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -34.648, 0.9, -21.417)
 
 [node name="Extras" type="Node3D" parent="."]
 
