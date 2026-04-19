@@ -62,25 +62,25 @@ transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -
 [node name="Extras" type="Node3D" parent="."]
 
 [node name="extra_wine" parent="Extras" instance=ExtResource("13_7ecj4")]
-transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, -11.668588, 1, 17.311188)
+transform = Transform3D(0.59999996, 0, -1.0392306, 0, 1.2, 0, 1.0392306, 0, 0.59999996, -11.668588, 1, 17.311188)
 
 [node name="extra_wine3" parent="Extras" instance=ExtResource("13_7ecj4")]
-transform = Transform3D(0.86602545, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602545, -31.03531, 1, 22.777775)
+transform = Transform3D(1.0392306, 0, 0.59999996, 0, 1.2, 0, -0.59999996, 0, 1.0392306, -31.03531, 1, 22.777775)
 
 [node name="extra_wine2" parent="Extras" instance=ExtResource("13_7ecj4")]
-transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, -20.662369, 1, -19.930843)
+transform = Transform3D(-1.2, 0, 1.8119498e-07, 0, 1.2, 0, -1.8119498e-07, 0, -1.2, -20.662369, 1, -19.930843)
 
 [node name="extra_eating2" parent="Extras" instance=ExtResource("14_xar77")]
-transform = Transform3D(-1.1920929e-07, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -1.1920929e-07, 7.2289333, 0.9999981, 31.653778)
+transform = Transform3D(-1.9550482e-07, 0, 1.2, 0, 1.2, 0, -1.2, 0, -1.9550482e-07, 7.2289333, 0.9999981, 31.653778)
 
 [node name="extra_eating3" parent="Extras" instance=ExtResource("14_xar77")]
-transform = Transform3D(-0.5, 0, -0.86602557, 0, 1, 0, 0.86602557, 0, -0.5, 11.489736, 0.9999981, -30.997467)
+transform = Transform3D(-0.59999985, 0, -1.0392307, 0, 1.2, 0, 1.0392307, 0, -0.59999985, 11.489736, 0.9999981, -30.997467)
 
 [node name="extra_tall_glass" parent="Extras" instance=ExtResource("15_0m6cl")]
-transform = Transform3D(0.70710677, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.70710677, 4.0917397, 1, -31.083223)
+transform = Transform3D(0.84852815, 0, -0.84852815, 0, 1.2, 0, 0.84852815, 0, 0.84852815, 4.0917397, 1, -31.083223)
 
 [node name="extra_tall_glass3" parent="Extras" instance=ExtResource("15_0m6cl")]
-transform = Transform3D(0.70710677, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.70710677, -14.154683, 1, -21.151821)
+transform = Transform3D(0.84852815, 0, 0.84852815, 0, 1.2, 0, -0.84852815, 0, 0.84852815, -14.154683, 1, -21.151821)
 
 [node name="WalletHidden" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.87958485, 0.47367877, 0.044260032, -0.46716502, 0.84239465, 0.26856703, 0.08993007, -0.25690416, 0.9622437, -105.4505, 18.098925, 1.9876406)
