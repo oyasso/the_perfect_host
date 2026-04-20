@@ -23,23 +23,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_vdh8g")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -320.0
-offset_top = -587.0
-offset_right = 480.0
-offset_bottom = 263.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("1_atyk4")
-expand_mode = 1
-
 [node name="TextBackground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -58,12 +41,19 @@ expand_mode = 1
 
 [node name="TextureCharacter" type="TextureRect" parent="."]
 z_index = -1
-layout_mode = 0
-offset_left = 377.0
-offset_top = 802.0
-offset_right = 677.0
-offset_bottom = 1102.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -580.0
+offset_top = -300.0
+offset_right = -280.0
+grow_horizontal = 2
+grow_vertical = 0
 texture = ExtResource("3_8wwfb")
+expand_mode = 1
 
 [node name="DialogueBox" type="Panel" parent="."]
 layout_mode = 0
