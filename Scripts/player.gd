@@ -54,6 +54,9 @@ func _physics_process(delta):
 		velocity.z = direction.z * speed
 		velocity.y -= 9.81 * delta # adds gravity
 		move_and_slide()
+	else:
+		body_animation.stop()
+		plate_animation.stop()
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
