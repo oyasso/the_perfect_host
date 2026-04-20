@@ -8,7 +8,7 @@ var talk_ready = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("talk") and talk_ready and not dialogue.is_talking:
+	if Input.is_action_pressed("talk") and talk_ready and not dialogue.is_talking and visible:
 		dialogue.get_dialogue("wallet")
 		player.got_wallet = true
 		hide_exclamation()
