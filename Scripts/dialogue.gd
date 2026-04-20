@@ -29,6 +29,8 @@ var end_game = false
 var fancy_man_drink = false
 var fancy_lady_eat = false
 
+var move_uncle = false
+
 # references to nodes
 @onready var dialogue_ui : Control = $"."
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
@@ -49,6 +51,7 @@ var fancy_lady_eat = false
 @onready var mother = $"../Mother"
 @onready var fancy_man = $"../FancyMan"
 @onready var fancy_lady = $"../FancyLady"
+@onready var wallet = $"../Wallet"
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -109,9 +112,12 @@ func get_dialogue(id: String):
 	
 	if id == "charity8" or id == "question4":
 		fancy_man_drink = true
-	
+
 	if id == "food2":
 		fancy_lady_eat = true
+
+	if id == "fourth":
+		move_uncle = true
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
@@ -174,6 +180,11 @@ func _on_end_pressed() -> void:
 	
 	if end_game:
 		end_scene.end_game()
+	
+	if move_uncle:
+		change_position_script.change_uncle()
+		move_uncle = false
+		wallet.show()
 
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI

@@ -7,7 +7,7 @@ extends MeshInstance3D
 @onready var fancy_lady = $"../FancyLady"
 @onready var fancy_man = $"../FancyMan"
 @onready var wallet = $"../Wallet"
-@onready var drinks = [$"../Drinks", $"../Drinks2"]
+@onready var items = [$"../Items", $"../Items2"]
 @onready var tray = $"../Tray"
 @onready var body_animation = $AnimationPerson
 var first_talk = false
@@ -26,8 +26,8 @@ func _process(_delta: float) -> void:
 							dialogue.get_dialogue("tray")
 							tray_talk = true
 							hide_exclamation()
-							drinks[0].show_exclamation()
-							drinks[1].show_exclamation()
+							items[0].show_exclamation()
+							items[1].show_exclamation()
 						elif not player.got_tray:
 							dialogue.get_dialogue("notray")
 

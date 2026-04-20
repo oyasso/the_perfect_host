@@ -2,6 +2,7 @@ extends MeshInstance3D
 
 @onready var player = $"../Player"
 @onready var exclamation = $Exclamation
+@onready var uncle = $"../Uncle"
 @export var other_food: Node3D
 var talk_ready = false
 
@@ -12,6 +13,7 @@ func _process(_delta: float) -> void:
 		player.acquired_items()
 		hide_exclamation()
 		other_food.hide_exclamation()
+		uncle.show_exclamation()
 		queue_free()
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:

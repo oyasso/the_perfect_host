@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://dh38ijkwba3x3" path="res://Scenes/butler.tscn" id="11_k12tt"]
 [ext_resource type="PackedScene" uid="uid://ca378hufkjbiq" path="res://Scenes/tray.tscn" id="12_jkdf5"]
 [ext_resource type="PackedScene" uid="uid://o2edts3v34u5" path="res://Scenes/food.tscn" id="13_wsu2k"]
-[ext_resource type="PackedScene" uid="uid://5air06jhlcqq" path="res://Scenes/drinks.tscn" id="14_k12tt"]
 [ext_resource type="ArrayMesh" uid="uid://df3e5vyqlajtl" path="res://Mesh/wallet.mesh" id="17_gt3je"]
 [ext_resource type="PackedScene" uid="uid://n426nowra7d4" path="res://Scenes/extras_wine.tscn" id="17_h1bgf"]
 [ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="18_b3802"]
@@ -30,6 +29,9 @@ albedo_color = Color(0, 0, 0, 0.9764706)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3pmx8"]
 material = SubResource("StandardMaterial3D_gt3je")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gt3je"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Main" type="Node3D"]
 
@@ -54,10 +56,10 @@ collision_mask = 5
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.351307, 0.7, -12.474)
 
 [node name="Father" parent="." instance=ExtResource("6_d1ilt")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.095306, 1.0963424, -20.104)
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.095, 1.1, -20.104)
 
 [node name="Uncle" parent="." instance=ExtResource("5_kry3j")]
-transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 17.039, 0.45829633, 18.953)
+transform = Transform3D(0.9959292, 0, 0.575, 0, 1.15, 0, -0.575, 0, 0.9959292, -68.90989, 0.45829728, 19.05815)
 
 [node name="Butler" parent="." instance=ExtResource("11_k12tt")]
 transform = Transform3D(0.5749999, 0, -0.99592924, 0, 1.15, 0, 0.99592924, 0, 0.5749999, -3.5132446, 0.6892071, -27.773666)
@@ -106,6 +108,7 @@ transform = Transform3D(0.84852815, 0, 0.84852815, 0, 1.2, 0, -0.84852815, 0, 0.
 
 [node name="Wallet" parent="." instance=ExtResource("10_wsu2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.90307, 0.76840425, 0.21181202)
+visible = false
 
 [node name="WalletHidden" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.87958485, 0.47367877, 0.044260032, -0.46716502, 0.84239465, 0.26856703, 0.08993007, -0.25690416, 0.9622437, -105.4505, 18.098925, 1.9876406)
@@ -115,23 +118,13 @@ mesh = ExtResource("17_gt3je")
 [node name="Tray" parent="." instance=ExtResource("12_jkdf5")]
 transform = Transform3D(1.195, 0, 0, 0, 1.195, 0, 0, 0, 1.195, -81.46452, 4.7117434, -24.558878)
 
-[node name="Food" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
+[node name="Items" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -51.828598, 4.060643, -33.112137)
-other_food = NodePath("../Food2")
+other_food = NodePath("../Items2")
 
-[node name="Food2" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
+[node name="Items2" parent="." node_paths=PackedStringArray("other_food") instance=ExtResource("13_wsu2k")]
 transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -51.778416, 4.040247, 32.68802)
-other_food = NodePath("../Food")
-
-[node name="Drinks" parent="." node_paths=PackedStringArray("other_drinks") instance=ExtResource("14_k12tt")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -47.98124, 4.003726, 32.468624)
-visible = false
-other_drinks = NodePath("../Drinks2")
-
-[node name="Drinks2" parent="." node_paths=PackedStringArray("other_drinks") instance=ExtResource("14_k12tt")]
-transform = Transform3D(3.4035082, 0, 0, 0, 3.4035082, 0, 0, 0, 3.4035082, -48.121403, 4.003726, -32.24028)
-visible = false
-other_drinks = NodePath("../Drinks")
+other_food = NodePath("../Items")
 
 [node name="ballroom" parent="." instance=ExtResource("19_hibaj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
@@ -140,9 +133,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
 
 [node name="InvisibleWall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 40.406155, 0, 0, 0, 123.50977, 12.588242, 15.731977, 0)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 40.406155, 0, 0, 0, 92.47951, 12.588242, 15.731977, 0)
 mesh = SubResource("BoxMesh_3pmx8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="InvisibleWall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gt3je")
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_gt3je")
