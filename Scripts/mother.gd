@@ -4,6 +4,7 @@ extends MeshInstance3D
 @onready var uncle = $"../Uncle"
 @onready var exclamation = $Exclamation
 @onready var body_animation = $AnimationPerson
+@onready var invis_wall = $"../InvisibleWall"
 var talked_count = 0
 var talk_ready = false
 
@@ -15,6 +16,7 @@ func _process(_delta: float) -> void:
 				talked_count += 1
 				uncle.show_exclamation()
 				hide_exclamation()
+				invis_wall.queue_free()
 
 			1:
 				dialogue.get_dialogue("cater")
