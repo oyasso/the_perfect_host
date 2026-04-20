@@ -1,6 +1,6 @@
 extends Control
 
-@onready var texture = $TextureRect
+@onready var texture = $Pivot/TextureRect
 @onready var fade = $ColorRect
 
 func _on_button_mouse_entered() -> void:
