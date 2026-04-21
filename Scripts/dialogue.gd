@@ -20,6 +20,7 @@ var is_talking = false
 var show_letter = false # bool for showing the letter
 var change_pos_middle = false
 #var change_conflict_scene = false
+var one_interaction = false
 var two_interactions = false
 var three_interactions = false
 
@@ -119,7 +120,14 @@ func get_dialogue(id: String):
 	if id == "food2":
 		fancy_lady_eat = true
 
-	if id == "fourth":
+	if id == "third":
+		uncle.hide_exclamation()
+		wallet.show()
+	
+	if id == "storewallet":
+		uncle.show_exclamation()
+	
+	if id == "sixth":
 		move_uncle = true
 
 # if first option is picked get its dialogue
@@ -159,12 +167,16 @@ func _on_end_pressed() -> void:
 		#get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
 		#change_conflict_scene = false
 	
+	if player.interactions == 1 and not one_interaction:
+		uncle.show_exclamation()
+		one_interaction = false
+	
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
 		# waltz phase 2
 	
-	if player.interactions == 3 and not three_interactions:
+	if player.interactions == 3 and not three_interactions and move_uncle:
 		fade.show()
 		fade.fade_in(1.0)
 		await get_tree().create_timer(1.0).timeout
@@ -186,8 +198,6 @@ func _on_end_pressed() -> void:
 	
 	if move_uncle:
 		change_position_script.change_uncle()
-		move_uncle = false
-		wallet.show()
 
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
@@ -213,20 +223,20 @@ func on_tween_finished(id):
 		end_button.show()
 		next_button.hide()
 	
-	# stop NPC talking animation
-	match json_dict[id]["character"]:
-		"Mother":
-			mother.body_animation.stop()
-		"Uncle":
-			uncle.body_animation.stop()
-		"Fancy Man":
-			if not fancy_man_drink:
-				fancy_man.body_animation.stop()
-		"Fancy Lady":
-			if not fancy_lady_eat:
-				fancy_lady.body_animation.stop()
-		"Butler":
-			butler.body_animation.stop()
+	## stop NPC talking animation
+	#match json_dict[id]["character"]:
+		#"Mother":
+			#mother.body_animation.stop()
+		#"Uncle":
+			#uncle.body_animation.stop()
+		#"Fancy Man":
+			#if not fancy_man_drink:
+				#fancy_man.body_animation.stop()
+		#"Fancy Lady":
+			#if not fancy_lady_eat:
+				#fancy_lady.body_animation.stop()
+		#"Butler":
+			#butler.body_animation.stop()
 
 func hide_continue_buttons():
 	choice_box.hide()

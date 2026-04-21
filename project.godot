@@ -15,7 +15,7 @@ warnings/check_invalid_track_paths=false
 [application]
 
 config/name="APPCG"
-run/main_scene="uid://e4hkman78d3y"
+run/main_scene="uid://bk4ck46nhpc5b"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

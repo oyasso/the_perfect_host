@@ -11,10 +11,6 @@ extends MeshInstance3D
 var talked_count = 0
 var talk_ready = false
 
-func _ready():
-	get_viewport().size_changed.connect(_update_spacer)
-	_update_spacer()
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("talk") and talk_ready and not dialogue.is_talking:
@@ -29,12 +25,12 @@ func _process(_delta: float) -> void:
 			1:
 				dialogue.get_dialogue("allergy")
 				talked_count += 1
-				hide_exclamation()
 			2:
 				dialogue.get_dialogue("allergy2")
 				talked_count += 1
 			3:
 				dialogue.get_dialogue("allergy3")
+				hide_exclamation()
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true
@@ -55,6 +51,3 @@ func eat():
 	body_animation.play("eating")
 	plate_animation.play("dish")
 	scallop_animation.play("scallop")
-
-func _update_spacer():
-	var h = get_viewport()

@@ -16,6 +16,7 @@ func _process(_delta: float) -> void:
 			if player.got_items:
 				dialogue.get_dialogue("beverage")
 				player.occured_interaction()
+				gave_drink = true
 				hide_exclamation()
 			else:
 				dialogue.get_dialogue("nobeverage")

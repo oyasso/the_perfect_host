@@ -5,4 +5,4 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	fade.show()
-	fade.fade_out(2.5)
+	fade.fade_out(1.0)

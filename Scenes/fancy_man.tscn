@@ -268,7 +268,7 @@ bones/2/parent = 1
 bones/2/rest = Transform3D(0.981782, -0.06852997, -0.17722215, -0.01483837, 0.90219575, -0.43107182, 0.18943039, 0.4258483, 0.88474256, -2.3748726e-08, 0.47955057, -2.2887252e-07)
 bones/2/enabled = true
 bones/2/position = Vector3(-2.3748726e-08, 0.47955057, -2.2887252e-07)
-bones/2/rotation = Quaternion(0.38784462, -0.10992116, -0.008346286, 0.9151089)
+bones/2/rotation = Quaternion(0.38022825, -0.0938326, 0.0025372405, 0.9201172)
 bones/2/scale = Vector3(0.99999994, 1.0000001, 1)
 bones/3/name = "L Forearm"
 bones/3/parent = 2
@@ -296,21 +296,21 @@ bones/6/parent = 5
 bones/6/rest = Transform3D(0.99458295, -0.09065218, 0.05086, 0.05186203, 0.8568184, 0.51300347, -0.09008267, -0.50758684, 0.85687846, -4.2491592e-09, 0.55288976, 7.6484866e-08)
 bones/6/enabled = true
 bones/6/position = Vector3(-4.2491592e-09, 0.55288976, 7.6484866e-08)
-bones/6/rotation = Quaternion(-0.3916555, -0.23762743, -0.3436893, 0.81976634)
+bones/6/rotation = Quaternion(-0.27513072, -0.37396362, -0.4221628, 0.7786096)
 bones/6/scale = Vector3(0.9999999, 0.99999994, 1)
 bones/7/name = "R Forearm"
 bones/7/parent = 6
 bones/7/rest = Transform3D(0.9907392, 0.12051302, -0.062548816, -0.12783828, 0.98315275, -0.1306459, 0.045750506, 0.13743219, 0.98945403, -2.9802322e-08, 1.2257267, 1.3876706e-07)
 bones/7/enabled = true
 bones/7/position = Vector3(-2.9802322e-08, 1.2257267, 1.3876706e-07)
-bones/7/rotation = Quaternion(-0.029959466, -0.09556757, -0.4202147, 0.9018807)
+bones/7/rotation = Quaternion(-0.4387032, 0.006590916, -0.48232466, 0.75819457)
 bones/7/scale = Vector3(1, 1.0000001, 1)
 bones/8/name = "R Hand"
 bones/8/parent = 7
 bones/8/rest = Transform3D(0.99904764, 0.03323777, 0.028268298, -0.0402902, 0.95142204, 0.30524218, -0.016749514, -0.3060904, 0.95185506, -4.4703484e-08, 1.2181314, 1.17812306e-07)
 bones/8/enabled = true
 bones/8/position = Vector3(-4.4703484e-08, 1.2181314, 1.17812306e-07)
-bones/8/rotation = Quaternion(-0.15449457, 0.011601505, -0.01966731, 0.9877298)
+bones/8/rotation = Quaternion(-0.22499639, 0.2620955, -0.04493976, 0.93737024)
 bones/8/scale = Vector3(1, 1, 0.99999994)
 bones/9/name = "neck"
 bones/9/parent = 0
@@ -402,6 +402,7 @@ collision_mask = 2
 shape = SubResource("SphereShape3D_jjvhh")
 
 [node name="Exclamation" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8205614, 0)
 visible = false
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
