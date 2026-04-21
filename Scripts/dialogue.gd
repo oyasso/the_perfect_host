@@ -77,10 +77,10 @@ func get_dialogue(id: String):
 	tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
-	if json_dict[id]["sprite"] == "Fama":
-		speaker_sprite.position = Vector2(377, 801)
-	else:
-		speaker_sprite.position = Vector2(454, 783)
+	#if json_dict[id]["sprite"] == "Fama":
+		#speaker_sprite.position = Vector2(377, 801)
+	#else:
+		#speaker_sprite.position = Vector2(454, 783)
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 

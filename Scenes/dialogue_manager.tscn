@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://chr01qu7qw7wy"]
 
 [ext_resource type="Texture2D" uid="uid://dja5uujk2n1gm" path="res://Sprites/text_box.png" id="1_atyk4"]
-[ext_resource type="Texture2D" uid="uid://mebqpy4rsts" path="res://Sprites/Fama_Pixel_Sprite.png" id="3_8wwfb"]
+[ext_resource type="Texture2D" uid="uid://dkncpl3ydlwfy" path="res://Sprites/Mother_Pixel_Sprite.png" id="3_8wwfb"]
 [ext_resource type="Script" uid="uid://jj0qyxn35re" path="res://Scripts/dialogue.gd" id="3_vdh8g"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="4_r5bdp"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="5_8wwfb"]
@@ -47,20 +47,27 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -580.0
+offset_left = -545.0
 offset_top = -300.0
-offset_right = -280.0
+offset_right = -245.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("3_8wwfb")
 expand_mode = 1
 
 [node name="DialogueBox" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 700.0
-offset_top = 884.0
-offset_right = 1350.0
-offset_bottom = 1054.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -257.0
+offset_top = -191.0
+offset_right = 393.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vdh8g")
 
 [node name="SpeakerLabel" type="Label" parent="DialogueBox"]

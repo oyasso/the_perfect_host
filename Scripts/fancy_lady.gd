@@ -3,7 +3,6 @@ extends MeshInstance3D
 @onready var dialogue = $"../DialogueUI"
 @onready var player = $"../Player"
 @onready var exclamation = $Exclamation
-@onready var food = [$"../Food", $"../Food2"]
 @onready var body_animation = $AnimationPerson
 @onready var plate_animation = $AnimationPlate
 @onready var scallop_animation = $AnimationScallop
@@ -11,6 +10,10 @@ extends MeshInstance3D
 @onready var scallops = $Scallops_
 var talked_count = 0
 var talk_ready = false
+
+func _ready():
+	get_viewport().size_changed.connect(_update_spacer)
+	_update_spacer()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -24,8 +27,6 @@ func _process(_delta: float) -> void:
 					hide_exclamation()
 				else:
 					dialogue.get_dialogue("nofood")
-					food[0].show_exclamation()
-					food[1].show_exclamation()
 			1:
 				dialogue.get_dialogue("allergy")
 				talked_count += 1
@@ -54,3 +55,6 @@ func eat():
 	body_animation.play("eating")
 	plate_animation.play("dish")
 	scallop_animation.play("scallop")
+
+func _update_spacer():
+	var h = get_viewport()

@@ -2,9 +2,10 @@ extends Control
 
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
 @onready var text_label : RichTextLabel = $DialogueBox/DialogueText
-@onready var buttons : Control = $Buttons
-@onready var attack_button : Button = $Buttons/AttackButton
-@onready var defend_button : Button = $Buttons/DefendButton
+@onready var button_container : Control = $ButtonContainer
+@onready var attack_button : Button = $ButtonContainer/AttackButton
+@onready var defend_button : Button = $ButtonContainer/DefendButton
+@onready var spacer = $ButtonContainer/Spacer
 @onready var next_button : Button = $DialogueBox/NextButton
 @onready var fade = $Fade
 
@@ -22,9 +23,11 @@ var boss_text = ["LOOK AT ME WHEN I SPEAK TO YOU, CHILD!", "YOU'VE MADE TOO MANY
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_viewport().size_changed.connect(_update_spacer)
+	_update_spacer()
 
 func show_player_attack_dialogue():
-	buttons.hide()
+	button_container.hide()
 	text_label.text = "Kiyoshi tries to muster all of his courage, but he cannot fight back."
 
 	# animate the text
@@ -34,7 +37,7 @@ func show_player_attack_dialogue():
 
 func show_player_defend_dialogue(text: String):
 	print(turn_counter)
-	buttons.hide()
+	button_container.hide()
 	next_button.hide()
 
 	if turn_counter <= 1:
@@ -66,7 +69,7 @@ func show_boss_dialogue(text: String):
 
 func on_tween_boss_finished():
 	if turn_counter < 4:
-		buttons.show()
+		button_container.show()
 		next_button.hide()
 	else:
 		next_button.show()
@@ -90,3 +93,7 @@ func end_boss_scene():
 	fade.fade_in(1.5)
 	await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/end.tscn")
+
+func _update_spacer():
+	var h = get_viewport_rect().size.y
+	spacer.custom_minimum_size.y = h * 0.05
