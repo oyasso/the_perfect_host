@@ -12,8 +12,8 @@ func _on_button_mouse_exited() -> void:
 func _on_button_pressed() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	texture.hide()
-	fade.modulate.a = 1.0
+	fade.color.a = 1.0
 	var tween = create_tween()
-	tween.tween_property(fade, "modulate:a", 0.0, 1.0)
+	tween.tween_property(fade, "color:a", 0.0, 1.0)
 	await tween.finished
 	queue_free()

@@ -51,6 +51,7 @@ var move_uncle = false
 @onready var mother = $"../Mother"
 @onready var fancy_man = $"../FancyMan"
 @onready var fancy_lady = $"../FancyLady"
+@onready var butler = $"../Butler"
 @onready var wallet = $"../Wallet"
 
 ## Called when the node enters the scene tree for the first time.
@@ -73,8 +74,8 @@ func get_dialogue(id: String):
 	
 	# animate the text
 	var tween : Tween = create_tween()
-	#tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
-	tween.tween_property(text_label, "visible_ratio", 1.0, 0)
+	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	#tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
 	#if json_dict[id]["sprite"] == "Fama":
@@ -96,6 +97,8 @@ func get_dialogue(id: String):
 		"Fancy Lady":
 			if not fancy_lady_eat:
 				fancy_lady.body_animation.play("talk")
+		"Butler":
+			butler.body_animation.play("talk")
 
 	if id == "drinks7":
 		show_letter = true
@@ -209,6 +212,21 @@ func on_tween_finished(id):
 	else:
 		end_button.show()
 		next_button.hide()
+	
+	# stop NPC talking animation
+	match json_dict[id]["character"]:
+		"Mother":
+			mother.body_animation.stop()
+		"Uncle":
+			uncle.body_animation.stop()
+		"Fancy Man":
+			if not fancy_man_drink:
+				fancy_man.body_animation.stop()
+		"Fancy Lady":
+			if not fancy_lady_eat:
+				fancy_lady.body_animation.stop()
+		"Butler":
+			butler.body_animation.stop()
 
 func hide_continue_buttons():
 	choice_box.hide()

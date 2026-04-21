@@ -1,6 +1,7 @@
 extends MeshInstance3D
 
 @onready var dialogue = $"../DialogueUI"
+@onready var body_animation = $AnimationPerson
 var talk_ready = false
 var first_talk = true
 

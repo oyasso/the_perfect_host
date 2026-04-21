@@ -29,7 +29,6 @@ func _process(_delta: float) -> void:
 			#dialogue.get_dialogue("goingon")
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
-	print("area entered")
 	talk_ready = true
 
 func _on_talk_area_body_exited(_body: Node3D) -> void:

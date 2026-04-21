@@ -24,12 +24,12 @@ func _process(_delta: float) -> void:
 					dialogue.get_dialogue("food")
 					talked_count += 1
 					player.occured_interaction()
-					hide_exclamation()
 				else:
 					dialogue.get_dialogue("nofood")
 			1:
 				dialogue.get_dialogue("allergy")
 				talked_count += 1
+				hide_exclamation()
 			2:
 				dialogue.get_dialogue("allergy2")
 				talked_count += 1

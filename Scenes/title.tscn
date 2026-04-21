@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk4ck46nhpc5b"]
+
+[ext_resource type="Script" uid="uid://c2plxf8jbvvtf" path="res://Scripts/title.gd" id="1_ekrfg"]
+[ext_resource type="Texture2D" uid="uid://jmwuynvx1vho" path="res://Sprites/Title.png" id="1_w31pl"]
+[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_fp2oq"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekrfg")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w31pl")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.328
+anchor_top = 0.825
+anchor_right = 0.658
+anchor_bottom = 0.938
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+flat = true
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="IntroText" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_fp2oq")
+theme_override_font_sizes/normal_font_size = 36
+text = "I'll never forget that night.
+All I wanted to be was the perfect host.
+To make my parents proud.
+But I realized no matter how hard I tried,
+the problem was never with me..."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+flat = true
+
+[connection signal="mouse_entered" from="Background/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Background/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
