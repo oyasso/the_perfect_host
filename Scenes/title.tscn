@@ -55,11 +55,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("3_fp2oq")
 theme_override_font_sizes/normal_font_size = 36
-text = "I'll never forget that night.
-All I wanted to be was the perfect host.
+text = "No matter how hard I try, I'll never forget that night.
+All I wanted was to be the perfect host.
 To make my parents proud.
-But I realized no matter how hard I tried,
-the problem was never with me..."
+But only now do I realize..."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="EndText" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_fp2oq")
+theme_override_font_sizes/normal_font_size = 36
+text = "The problem was never me."
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters = 0
