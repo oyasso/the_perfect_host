@@ -64,7 +64,7 @@ transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.095, 1.1, -20.104
 transform = Transform3D(0.9959292, 0, 0.575, 0, 1.15, 0, -0.575, 0, 0.9959292, -68.90989, 0.45829728, 19.05815)
 
 [node name="Butler" parent="." instance=ExtResource("11_k12tt")]
-transform = Transform3D(0.5749999, 0, -0.99592924, 0, 1.15, 0, 0.99592924, 0, 0.5749999, -3.5132446, 0.6892071, -27.773666)
+transform = Transform3D(0.5749999, 0, -0.99592924, 0, 1.15, 0, 0.99592924, 0, 0.5749999, -3.2310686, 0.6892061, -25.064663)
 
 [node name="Fama" parent="." instance=ExtResource("9_hibaj")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 21, 0.791, -0.193)
@@ -100,7 +100,7 @@ gender = "f"
 transform = Transform3D(-0.59999985, 0, -1.0392307, 0, 1.2, 0, 1.0392307, 0, -0.59999985, 11.489736, 0.9999981, -30.997467)
 
 [node name="extra_tall_glass" parent="Extras" instance=ExtResource("19_fevyy")]
-transform = Transform3D(0.84852815, 0, -0.84852815, 0, 1.2, 0, 0.84852815, 0, 0.84852815, 4.0917397, 1, -31.083223)
+transform = Transform3D(0.6, 0, -1.0392305, 0, 1.2000002, 0, 1.0392305, 0, 0.6, 6.116347, 1, -31.569056)
 
 [node name="PartyGoer" parent="Extras/extra_tall_glass" index="0"]
 gender = "f"

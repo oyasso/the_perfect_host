@@ -17,7 +17,7 @@
 [ext_resource type="ArrayMesh" uid="uid://df3e5vyqlajtl" path="res://Mesh/wallet.mesh" id="15_ldm1h"]
 [ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="16_ykr5d"]
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="17_srvnt"]
-[ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="18_o6g2o"]
+[ext_resource type="AudioStream" uid="uid://biaq4qjo1a3jk" path="res://Sounds/Waltz_2.mp3" id="18_a74b6"]
 
 [node name="Conflict" type="Node3D"]
 script = ExtResource("1_a74b6")
@@ -101,6 +101,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_o6g2o")
+stream = ExtResource("18_a74b6")
 autoplay = true
 parameters/looping = true
