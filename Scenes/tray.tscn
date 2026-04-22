@@ -29,6 +29,7 @@ shape = SubResource("SphereShape3D_jjvhh")
 
 [node name="Exclamation" parent="." instance=ExtResource("3_74l68")]
 transform = Transform3D(-3.4969112e-08, -0.8, 0, 0.8, -3.4969112e-08, 0, 0, 0, 0.8, 0, 1.2739446, 0)
+visible = false
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

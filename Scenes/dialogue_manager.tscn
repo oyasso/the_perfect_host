@@ -125,13 +125,14 @@ text = "Next"
 alignment = 0
 
 [node name="End" type="Button" parent="DialogueBox"]
+visible = false
 layout_mode = 0
 offset_left = -1.0
-offset_top = 140.0
+offset_top = 134.0
 offset_right = 649.0
-offset_bottom = 173.0
+offset_bottom = 172.0
 theme_override_fonts/font = ExtResource("5_8wwfb")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 24
 text = "End"
 alignment = 0
 

@@ -270,7 +270,7 @@ libraries = {
 }
 
 [node name="Exclamation" parent="." instance=ExtResource("5_rq7xx")]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 10, -0.428)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 10.316908, -0.428)
 visible = false
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
