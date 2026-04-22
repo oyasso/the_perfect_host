@@ -304,7 +304,7 @@ collision_mask = 2
 shape = SubResource("SphereShape3D_jjvhh")
 
 [node name="Exclamation" parent="." instance=ExtResource("2_arl56")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 8.7, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 9.6, 0)
 visible = false
 
 [node name="Wine Glass_002" type="MeshInstance3D" parent="."]

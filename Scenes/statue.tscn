@@ -321,7 +321,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.32286, 0)
 shape = SubResource("CylinderShape3D_0k2tg")
 
 [node name="Exclamation" parent="." instance=ExtResource("8_hel5t")]
-transform = Transform3D(-1.0053619e-07, 0, -2.3, 0, 2.3, 0, 2.3, 0, -1.0053619e-07, 1.2640862, 25.72919, -0.28779292)
+transform = Transform3D(-1.0053619e-07, -2.3, 0, 2.3, -1.0053619e-07, 0, 0, 0, 2.3, 1.2640862, 28.336966, -0.28779292)
 visible = false
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]

@@ -92,7 +92,7 @@ bind/18/pose = Transform3D(0.49947375, 0.8638107, -0.06600631, 0.8643041, -0.502
 size = Vector3(1.5163574, 8.97168, 2.6029663)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jjvhh"]
-radius = 2.0907853
+radius = 1.7332984
 
 [sub_resource type="Animation" id="Animation_5igx6"]
 resource_name = "Armature TorsoAction"

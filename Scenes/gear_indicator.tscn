@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://b3dutrkmfttw4"]
+[gd_scene load_steps=7 format=4 uid="uid://b3dutrkmfttw4"]
 
 [ext_resource type="Animation" uid="uid://dcuynocrqlelh" path="res://Animations/gear.tres" id="1_8yvcg"]
 
@@ -42,16 +42,44 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jme3f")
 
+[sub_resource type="Animation" id="Animation_8yvcg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torus_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torus_001:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rdr2g"]
 _data = {
+&"RESET": SubResource("Animation_8yvcg"),
 &"Torus_001Action": ExtResource("1_8yvcg")
 }
 
 [node name="gear indicator" type="Node3D"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="Torus_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.9921977, 0.12467465, 5.449702e-09, 0, -4.371139e-08, 1, 0.12467465, 0.9921977, 4.337034e-08, 0, 1.1384901, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 mesh = SubResource("ArrayMesh_dr2jb")
 skeleton = NodePath("")
 
@@ -59,3 +87,4 @@ skeleton = NodePath("")
 libraries = {
 &"": SubResource("AnimationLibrary_rdr2g")
 }
+autoplay = "Torus_001Action"

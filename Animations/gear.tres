@@ -1,13 +1,30 @@
-[gd_resource type="Animation" load_steps=0 format=3 uid="uid://c4v3p3g2r7gad"]
+[gd_resource type="Animation" format=3 uid="uid://dcuynocrqlelh"]
 
 [resource]
 resource_name = "Torus_001Action"
-length = 0.041666668
+length = 2.0
 loop_mode = 1
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
+tracks/0/type = "value"
+tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Torus_001")
+tracks/0/path = NodePath("Torus_001:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.044165377, -0.7057262, -0.70572615, 0.04416544)
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.2831855, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Torus_001:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.25, 0, 0), Vector3(0, 0, 0)]
+}
