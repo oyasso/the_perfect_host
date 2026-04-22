@@ -4,7 +4,7 @@ var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue11.json"
+var json_file = "res://Dialogue/perfect_host_dialogue12.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 
@@ -56,6 +56,7 @@ var uncle_trips = false
 @onready var fancy_lady = $"../FancyLady"
 @onready var butler = $"../Butler"
 @onready var wallet = $"../Wallet"
+@onready var bgmusic = $"../BGMusic"
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -198,7 +199,8 @@ func _on_end_pressed() -> void:
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
-		# waltz phase 2
+		bgmusic.stream = load("res://Sounds/Waltz_2.mp3")
+		bgmusic.play()
 	
 	if player.interactions == 3 and not three_interactions and move_uncle:
 		fade.show()
