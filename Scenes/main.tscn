@@ -53,6 +53,8 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.351248, 0.74801445, 0)
 collision_layer = 3
 collision_mask = 5
+got_tray = true
+got_items = true
 
 [node name="Mother" parent="." instance=ExtResource("3_jjvhh")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 14.351307, 0.7, -12.474)
@@ -74,7 +76,7 @@ visible = false
 transform = Transform3D(-0.81317276, 0, 0.81317276, 0, 1.15, 0, -0.81317276, 0, -0.81317276, -4.454015, 0.7446536, 28.10093)
 
 [node name="FancyMan" parent="." instance=ExtResource("8_fdnlq")]
-transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -34.648, 0.9, -21.417)
+transform = Transform3D(0.9959292, 0, -0.575, 0, 1.15, 0, 0.575, 0, 0.9959292, -34.648, 1.113335, -21.417)
 
 [node name="Extras" type="Node3D" parent="."]
 

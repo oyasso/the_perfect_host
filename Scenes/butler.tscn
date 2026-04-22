@@ -97,6 +97,7 @@ radius = 2.0907853
 [sub_resource type="Animation" id="Animation_5igx6"]
 resource_name = "Armature TorsoAction"
 length = 3.0
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -198,7 +199,7 @@ tracks/13/keys = PackedFloat32Array(0, 1, 1.0016568, 1.0595027, 1.164036)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qyl7t"]
 _data = {
-&"Armature TorsoAction": SubResource("Animation_5igx6")
+&"talk": SubResource("Animation_5igx6")
 }
 
 [node name="Butler" type="MeshInstance3D"]
@@ -364,6 +365,7 @@ shape = SubResource("SphereShape3D_jjvhh")
 libraries = {
 &"": SubResource("AnimationLibrary_qyl7t")
 }
+autoplay = "talk"
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

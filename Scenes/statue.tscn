@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bhrtqnsp0nj0b"]
+[gd_scene load_steps=20 format=4 uid="uid://bhrtqnsp0nj0b"]
 
 [ext_resource type="Script" uid="uid://dqdi75syhmwl2" path="res://Scripts/statue.gd" id="1_3mhwb"]
 [ext_resource type="Texture2D" uid="uid://deky0duc2iryf" path="res://Models/ballroom/ballroom_Mud 01 diffuse.jpg" id="2_hel5t"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b86al0be8reih" path="res://Models/ballroom/ballroom_marble-10_diffuse.jpg" id="5_khuh7"]
 [ext_resource type="Texture2D" uid="uid://bc8qxb5k6xnoc" path="res://Models/ballroom/ballroom_marble-10_smooth.png" id="6_pn155"]
 [ext_resource type="Texture2D" uid="uid://bknmw5us1n1il" path="res://Models/ballroom/ballroom_marble-10_normal.jpg" id="7_627nv"]
+[ext_resource type="PackedScene" uid="uid://b3dutrkmfttw4" path="res://Scenes/gear_indicator.tscn" id="8_hel5t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfhfm"]
 resource_name = "Marble"
@@ -148,18 +149,6 @@ shadow_mesh = SubResource("ArrayMesh_txjny")
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0k2tg"]
 height = 16.483429
 radius = 13.862793
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ap017"]
-albedo_color = Color(1, 1, 0.59607846, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_3mhwb"]
-material = SubResource("StandardMaterial3D_ap017")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvcbw"]
-albedo_color = Color(1, 1, 0.59607846, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_hel5t"]
-material = SubResource("StandardMaterial3D_pvcbw")
 
 [node name="Statue" type="Node3D"]
 script = ExtResource("1_3mhwb")
@@ -331,19 +320,9 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.32286, 0)
 shape = SubResource("CylinderShape3D_0k2tg")
 
-[node name="Exclamation" type="Node3D" parent="."]
-transform = Transform3D(2.72, 0, 0, 0, 2.72, 0, 0, 0, 2.72, 1.3334259, 27.167969, -0.2800231)
+[node name="Exclamation" parent="." instance=ExtResource("8_hel5t")]
+transform = Transform3D(-1.0053619e-07, 0, -2.3, 0, 2.3, 0, 2.3, 0, -1.0053619e-07, 1.2640862, 25.72919, -0.28779292)
 visible = false
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Exclamation"]
-transform = Transform3D(0.35373828, 0, 0, 0, 0.625996, 0, 0, 0, 0.35373828, 0.009266734, 0.72446656, 0)
-mesh = SubResource("CapsuleMesh_3mhwb")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Exclamation"]
-transform = Transform3D(0.37332904, 0, 0, 0, 0.37332904, 0, 0, 0, 0.37332904, 0.009266734, -0.27784657, 0)
-mesh = SubResource("SphereMesh_hel5t")
-skeleton = NodePath("../..")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

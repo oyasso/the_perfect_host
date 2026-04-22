@@ -17,7 +17,7 @@ var end_battle = false
 
 var attack_text = "Kiyoshi tries to muster all of his courage, but he cannot fight back."
 var defend_text = ["Kiyoshi cannot look at them.", "Mom, Dad, please! I'm sorry! It was just a mistake!",
-"I can do better! I can better!", "Please, give me another chance!", "Please, I love you! Don't do this."]
+"I can do better! I can be better!", "Please, give me another chance!", "Please, I love you! Don't do this."]
 var boss_text = ["LOOK AT ME WHEN I SPEAK TO YOU, CHILD!", "YOU'VE MADE TOO MANY!",
 "YOU HAVE BEEN NOTHING BUT A DISAPPOINTMENT!", "ALL YOU DO IS FAIL!", "WE'RE DONE WITH YOU!"]
 
@@ -27,6 +27,7 @@ func _ready():
 	_update_spacer()
 
 func show_player_attack_dialogue():
+	speaker_label.hide()
 	button_container.hide()
 	text_label.text = "Kiyoshi tries to muster all of his courage, but he cannot fight back."
 
@@ -36,11 +37,10 @@ func show_player_attack_dialogue():
 	tween.connect("finished", on_tween_boss_finished.bind())
 
 func show_player_defend_dialogue(text: String):
-	print(turn_counter)
 	button_container.hide()
 	next_button.hide()
 
-	if turn_counter <= 1:
+	if turn_counter < 1:
 		speaker_label.hide()
 	else:
 		speaker_label.show()

@@ -51,3 +51,9 @@ func eat():
 	body_animation.play("eating")
 	plate_animation.play("dish")
 	scallop_animation.play("scallop")
+
+func chocking():
+	plate.hide()
+	scallops.hide()
+	body_animation.stop()
+	body_animation.play("choking")

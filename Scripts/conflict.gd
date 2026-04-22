@@ -7,6 +7,7 @@ extends Node3D
 @onready var fama = $"Fama"
 @onready var fancy_lady = $"FancyLady"
 @onready var player = $Player
+@onready var uncle = $Uncle
 @onready var cam1 = $Cam01
 @onready var cam2 = $Cam02
 
@@ -17,6 +18,9 @@ func _ready() -> void:
 	dialogue.get_dialogue("fake1")
 	fade.show()
 	fade.fade_out(1.0)
+	mother.hide_exclamation()
+	fancy_lady.chocking()
+	uncle.drunk()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

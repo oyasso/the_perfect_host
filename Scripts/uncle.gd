@@ -10,6 +10,8 @@ extends MeshInstance3D
 @onready var items = [$"../Items", $"../Items2"]
 @onready var tray = $"../Tray"
 @onready var body_animation = $AnimationPerson
+@onready var wallet_hidden_1 = $"../WalletHidden"
+@onready var wallet_hidden_2 = $"../WalletHidden2"
 var first_talk = false
 var talk_ready = false
 var drinks_counter = 0
@@ -81,3 +83,14 @@ func show_exclamation():
 
 func hide_exclamation():
 	exclamation.hide()
+
+func drunk():
+	body_animation.stop()
+	body_animation.play("drunk")
+
+func fall():
+	body_animation.stop()
+	body_animation.play("fall")
+	await get_tree().create_timer(3.0).timeout
+	wallet_hidden_1.hide()
+	wallet_hidden_2.show()

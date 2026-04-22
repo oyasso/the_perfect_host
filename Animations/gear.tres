@@ -1,0 +1,13 @@
+[gd_resource type="Animation" load_steps=0 format=3 uid="uid://c4v3p3g2r7gad"]
+
+[resource]
+resource_name = "Torus_001Action"
+length = 0.041666668
+loop_mode = 1
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Torus_001")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.044165377, -0.7057262, -0.70572615, 0.04416544)

@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://dke5jv1s1jnud"]
+[gd_scene load_steps=14 format=4 uid="uid://dke5jv1s1jnud"]
 
 [ext_resource type="Script" uid="uid://28yd87chfmiw" path="res://Scripts/father.gd" id="1_ei72b"]
 [ext_resource type="Material" uid="uid://c875f8gsv6k31" path="res://Materials/wine_glass.material" id="2_8gm3y"]
 [ext_resource type="Animation" uid="uid://dqn16u4tw55ja" path="res://Animations/father_tall_glass.res" id="2_moxho"]
 [ext_resource type="Animation" uid="uid://erg6tlq1gfwo" path="res://Animations/father_idle.res" id="3_806dq"]
-[ext_resource type="PackedScene" uid="uid://6eql2crmdsrp" path="res://Models/Father with Glass.blend" id="5_ic0wo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gige"]
 resource_name = "Material"
@@ -327,9 +326,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_b4bbx")
 }
 autoplay = "father_tall_glass"
-
-[node name="Father with Glass" parent="." instance=ExtResource("5_ic0wo")]
-visible = false
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

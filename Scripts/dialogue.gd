@@ -31,6 +31,8 @@ var fancy_man_drink = false
 var fancy_lady_eat = false
 
 var move_uncle = false
+var mother_stop_talking = false
+var uncle_trips = false
 
 # references to nodes
 @onready var dialogue_ui : Control = $"."
@@ -75,31 +77,45 @@ func get_dialogue(id: String):
 	
 	# animate the text
 	var tween : Tween = create_tween()
-	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
-	#tween.tween_property(text_label, "visible_ratio", 1.0, 0)
+	#tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
-	#if json_dict[id]["sprite"] == "Fama":
+	if json_dict[id]["sprite"] == "Fama":
 		#speaker_sprite.position = Vector2(377, 801)
-	#else:
+		speaker_sprite.offset_left = -583
+		speaker_sprite.offset_top = -281
+		speaker_sprite.offset_right = -283
+		speaker_sprite.offset_bottom = 19
+	else:
 		#speaker_sprite.position = Vector2(454, 783)
+		speaker_sprite.offset_left = -508
+		speaker_sprite.offset_top = -300
+		speaker_sprite.offset_right = -208
+		speaker_sprite.offset_bottom = 0
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
 
 	# animate the speaker
-	match json_dict[id]["character"]:
-		"Mother":
-			mother.body_animation.play("talk")
-		"Uncle":
-			uncle.body_animation.play("talk")
-		"Fancy Man":
-			if not fancy_man_drink:
-				fancy_man.body_animation.play("talk")
-		"Fancy Lady":
-			if not fancy_lady_eat:
-				fancy_lady.body_animation.play("talk")
-		"Butler":
-			butler.body_animation.play("talk")
+	if id != "goingon":
+		match json_dict[id]["character"]:
+			"Mother":
+				mother.body_animation.play("talk")
+			"Uncle":
+				if id not in ["third", "fourth", "fifth", "sixth", "fake1", "fake3", "fake5", "fake7", "fake9"]:
+					uncle.body_animation.play("talk")
+				else:
+					uncle.body_animation.play("drunk")
+			"Fancy Man":
+				if not fancy_man_drink and id != "notalk":
+					fancy_man.body_animation.play("talk")
+			"Fancy Lady":
+				if not fancy_lady_eat and id not in ["allergy", "allergy1", "allergy2"]:
+					fancy_lady.body_animation.play("talk")
+				if id in ["allergy3", "fake14"]:
+					fancy_lady.chocking()
+			"Butler":
+				butler.body_animation.play("talk")
 
 	if id == "drinks7":
 		show_letter = true
@@ -123,12 +139,20 @@ func get_dialogue(id: String):
 	if id == "third":
 		uncle.hide_exclamation()
 		wallet.show()
+		uncle.body_animation.play("drunk")
 	
 	if id == "storewallet":
 		uncle.show_exclamation()
 	
 	if id == "sixth":
 		move_uncle = true
+	
+	if id in ["ready5", "fix4", "defend2", "cater", "goingon"]:
+		mother_stop_talking = true
+	
+	if id == "fake18":
+		uncle_trips = true
+		uncle.fall()
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
@@ -185,9 +209,11 @@ func _on_end_pressed() -> void:
 	
 	if fancy_man_drink:
 		fancy_man.drink()
+		fancy_man_drink = false
 	
 	if fancy_lady_eat:
 		fancy_lady.eat()
+		fancy_lady_eat = false
 	
 	if start_boss:
 		conflict_scene.end_conflict_scene()
@@ -198,6 +224,9 @@ func _on_end_pressed() -> void:
 	
 	if move_uncle:
 		change_position_script.change_uncle()
+	
+	if mother_stop_talking:
+		mother.body_animation.play("idle")
 
 func on_tween_finished(id):
 	# if the dialogue contains options show its UI
@@ -226,7 +255,7 @@ func on_tween_finished(id):
 	## stop NPC talking animation
 	#match json_dict[id]["character"]:
 		#"Mother":
-			#mother.body_animation.stop()
+			#mother.body_animation.play("idle")
 		#"Uncle":
 			#uncle.body_animation.stop()
 		#"Fancy Man":
