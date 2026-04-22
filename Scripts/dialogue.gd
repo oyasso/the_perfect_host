@@ -78,8 +78,8 @@ func get_dialogue(id: String):
 	
 	# animate the text
 	var tween : Tween = create_tween()
-	#tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
-	tween.tween_property(text_label, "visible_ratio", 1.0, 0)
+	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	#tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
 	if json_dict[id]["sprite"] == "Fama":
