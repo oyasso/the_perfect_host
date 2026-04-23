@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4unky2j4ahhb"
+path="res://.godot/imported/SFX Vox Generic Extended.wav-ddc28a5dcea2eac398bb3b1793627a22.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX Vox Generic Extended.wav"
+dest_files=["res://.godot/imported/SFX Vox Generic Extended.wav-ddc28a5dcea2eac398bb3b1793627a22.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

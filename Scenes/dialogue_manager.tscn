@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://chr01qu7qw7wy"]
+[gd_scene load_steps=9 format=3 uid="uid://chr01qu7qw7wy"]
 
 [ext_resource type="Texture2D" uid="uid://dja5uujk2n1gm" path="res://Sprites/text_box.png" id="1_atyk4"]
 [ext_resource type="Texture2D" uid="uid://mebqpy4rsts" path="res://Sprites/Fama_Pixel_Sprite.png" id="3_8wwfb"]
 [ext_resource type="Script" uid="uid://jj0qyxn35re" path="res://Scripts/dialogue.gd" id="3_vdh8g"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="4_r5bdp"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="5_8wwfb"]
+[ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="6_r5bdp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdh8g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -135,6 +136,9 @@ theme_override_fonts/font = ExtResource("5_8wwfb")
 theme_override_font_sizes/font_size = 24
 text = "End"
 alignment = 0
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_r5bdp")
 
 [connection signal="pressed" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="DialogueBox/ChoiceBox/Option2" to="." method="_on_option_2_pressed"]

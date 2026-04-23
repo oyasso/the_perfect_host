@@ -11,4 +11,5 @@ func _ready() -> void:
 	uncle.body_animation.play("reset")
 	mother.show_exclamation()
 	BgMusic.player.stream = load("res://Sounds/Waltz V1.mp3")
+	BgMusic.player.play()
 	Pause.can_pause = true

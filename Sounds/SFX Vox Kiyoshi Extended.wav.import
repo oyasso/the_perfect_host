@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgtekdheq7xpa"
+path="res://.godot/imported/SFX Vox Kiyoshi Extended.wav-8f442fd0ee742d156888ff4add11fd98.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX Vox Kiyoshi Extended.wav"
+dest_files=["res://.godot/imported/SFX Vox Kiyoshi Extended.wav-8f442fd0ee742d156888ff4add11fd98.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

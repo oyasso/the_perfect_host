@@ -1,6 +1,6 @@
 extends Node
 
-var fast_dialogue = true
+var fast_dialogue = false
 var debug = false
 var debug_line = "where"
 
@@ -58,6 +58,7 @@ var uncle_trips = false
 @onready var butler = $"../Butler"
 @onready var wallet = $"../Wallet"
 @onready var bgmusic = $"../BGMusic"
+@onready var voice = $Voice
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -78,10 +79,46 @@ func get_dialogue(id: String):
 	speaker_label.text = json_dict[id]["character"]
 	text_label.text = json_dict[id]["text"]
 	
+		# animate the speaker
+	if id != "goingon":
+		match json_dict[id]["character"]:
+			"Kiyoshi":
+				voice.stream = load("res://Sounds/SFX Vox Kiyoshi Extended.wav")
+			"Mother":
+				mother.body_animation.play("talk")
+				voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
+			"Uncle":
+				if id not in ["third", "fourth", "fifth", "sixth", "fake1", "fake3", "fake5", "fake7", "fake9"]:
+					uncle.body_animation.play("talk")
+					voice.stream = load("res://Sounds/SFX Vox Uncle Extended.wav")
+				else:
+					uncle.body_animation.play("drunk")
+					voice.stream = load("res://Sounds/SFX Vox Uncle Alt Extended.wav")
+			"Fancy Man":
+				if not fancy_man_drink and id != "notalk":
+					fancy_man.body_animation.play("talk")
+				voice.stream = load("res://Sounds/SFX Vox Generic 2 Extended.wav")
+			"Fancy Lady":
+				if not fancy_lady_eat and id not in ["allergy", "allergy1", "allergy2"]:
+					fancy_lady.body_animation.play("talk")
+				if id in ["allergy3", "fake14"]:
+					fancy_lady.chocking()
+				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
+			"Butler":
+				butler.body_animation.play("talk")
+				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
+			"Father":
+				voice.stream = load("res://Sounds/SFX Vox Father Extended.wav")
+			"Party Goer":
+				voice.stream = load("res://Sounds/SFX Vox Generic 2 Extended.wav")
+			"Fama":
+				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
+	
 	# animate the text
 	var tween : Tween = create_tween()
 	if not fast_dialogue:
 		tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+		voice.play()
 	else:
 		tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
@@ -100,27 +137,6 @@ func get_dialogue(id: String):
 		speaker_sprite.offset_bottom = 0
 
 	speaker_sprite.texture = load("res://Sprites/" + json_dict[id]["sprite"] + "_Pixel_Sprite.png")
-
-	# animate the speaker
-	if id != "goingon":
-		match json_dict[id]["character"]:
-			"Mother":
-				mother.body_animation.play("talk")
-			"Uncle":
-				if id not in ["third", "fourth", "fifth", "sixth", "fake1", "fake3", "fake5", "fake7", "fake9"]:
-					uncle.body_animation.play("talk")
-				else:
-					uncle.body_animation.play("drunk")
-			"Fancy Man":
-				if not fancy_man_drink and id != "notalk":
-					fancy_man.body_animation.play("talk")
-			"Fancy Lady":
-				if not fancy_lady_eat and id not in ["allergy", "allergy1", "allergy2"]:
-					fancy_lady.body_animation.play("talk")
-				if id in ["allergy3", "fake14"]:
-					fancy_lady.chocking()
-			"Butler":
-				butler.body_animation.play("talk")
 
 	if id == "drinks7":
 		show_letter = true
@@ -260,6 +276,8 @@ func on_tween_finished(id):
 	else:
 		end_button.show()
 		next_button.hide()
+	
+	voice.stop()
 	
 	## stop NPC talking animation
 	#match json_dict[id]["character"]:
