@@ -1,6 +1,6 @@
 extends Node
 
-var fast_dialogue = true
+var fast_dialogue = false
 var debug = false
 var debug_line = "where"
 

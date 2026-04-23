@@ -41,8 +41,9 @@ func show_end_text():
 	next_button.show()
 
 func animate_text(text):
-	for n in text.text.length():
-		voice.play()
+	for n in text.text:
+		if n not in [".", ","]:
+			voice.play()
 		text.visible_characters += 1
 		await get_tree().create_timer(0.1).timeout
 

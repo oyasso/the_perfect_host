@@ -502,6 +502,7 @@ shadow_mesh = SubResource("ArrayMesh_fyc0r")
 [sub_resource type="Animation" id="Animation_yukg5"]
 resource_name = "Armature TorsoAction"
 length = 3.0
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
