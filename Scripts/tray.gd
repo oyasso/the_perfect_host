@@ -9,7 +9,7 @@ var objective_name = "Pick up tray"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("talk") and talk_ready:
+	if Input.is_action_pressed("talk") and talk_ready and self.exclamation.is_visible():
 		pickup.play()
 		player.got_tray = true
 		player.acquired_plate()

@@ -1,7 +1,6 @@
 extends Node3D
 
 @onready var player = $"../Player"
-@onready var uncle = $"../Uncle"
 @onready var wallet = $"../WalletHidden"
 @onready var dialogue = $"../DialogueUI"
 @onready var exclamation = $Exclamation

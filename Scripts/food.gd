@@ -10,7 +10,7 @@ var objective_name = "Get food and drinks"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("talk") and talk_ready and player.got_tray:
+	if Input.is_action_pressed("talk") and talk_ready and player.got_tray and self.exclamation.is_visible():
 		pickup2.play()
 		player.got_items = true
 		player.acquired_items()

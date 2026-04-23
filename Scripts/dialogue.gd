@@ -1,6 +1,6 @@
 extends Node
 
-var fast_dialogue = false
+var fast_dialogue = true
 var debug = false
 var debug_line = "where"
 
@@ -34,6 +34,7 @@ var fancy_lady_eat = false
 var move_uncle = false
 var mother_stop_talking = false
 var uncle_trips = false
+var uncle_balcony = false
 
 # references to nodes
 @onready var dialogue_ui : Control = $"."
@@ -169,10 +170,10 @@ func get_dialogue(id: String):
 		wallet.show_exclamation()
 		uncle.body_animation.play("drunk")
 	
-	if id == "storewallet" and !move_uncle:
+	if id == "storewallet" and !uncle_balcony:
 		uncle.show_exclamation()
 	
-	if id == "sixth":
+	if id == "sixth" and !uncle_balcony:
 		move_uncle = true
 		uncle.hide_exclamation()
 	
@@ -228,7 +229,7 @@ func _on_end_pressed() -> void:
 		#get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
 		#change_conflict_scene = false
 	
-	if player.interactions == 1 and not one_interaction:
+	if player.interactions == 1 and not one_interaction and !uncle_balcony:
 		uncle.show_exclamation()
 		one_interaction = true
 	
@@ -262,6 +263,8 @@ func _on_end_pressed() -> void:
 	
 	if move_uncle:
 		change_position_script.change_uncle()
+		move_uncle = false
+		uncle_balcony = true
 	
 	if mother_stop_talking:
 		mother.body_animation.play("idle")
