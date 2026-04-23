@@ -8,6 +8,7 @@ extends MeshInstance3D
 @onready var scallop_animation = $AnimationScallop
 @onready var plate = $dish
 @onready var scallops = $Scallops_
+@onready var give2 = $Give2
 var talked_count = 0
 var talk_ready = false
 var objective_name = "Talk to Fancy Lady"
@@ -18,6 +19,7 @@ func _process(_delta: float) -> void:
 		match talked_count:
 			0:
 				if player.got_items:
+					give2.play()
 					dialogue.get_dialogue("food")
 					talked_count += 1
 					player.occured_interaction()

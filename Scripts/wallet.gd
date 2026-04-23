@@ -4,12 +4,14 @@ extends MeshInstance3D
 @onready var player = $"../Player"
 @onready var exclamation = $Exclamation
 @onready var statue = $"../Statue"
+@onready var pickup = $Pickup
 var talk_ready = false
 var objective_name = "Store wallet"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("talk") and talk_ready and not dialogue.is_talking and visible:
+		pickup.play()
 		dialogue.get_dialogue("wallet")
 		player.got_wallet = true
 		hide_exclamation()

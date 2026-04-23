@@ -6,6 +6,7 @@ extends MeshInstance3D
 @onready var body_animation = $AnimationPerson
 @onready var glass_animation = $AnimationGlass
 @onready var glass = $"Wine Glass_002"
+@onready var give2 = $Give2
 var talk_ready = false
 var gave_drink = false
 var objective_name = "Talk to Fancy Man"
@@ -15,6 +16,7 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("talk") and talk_ready and not dialogue.is_talking:		
 		if not gave_drink:
 			if player.got_items:
+				give2.play()
 				dialogue.get_dialogue("beverage")
 				player.occured_interaction()
 				gave_drink = true

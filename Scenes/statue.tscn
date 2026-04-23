@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://bhrtqnsp0nj0b"]
+[gd_scene load_steps=21 format=4 uid="uid://bhrtqnsp0nj0b"]
 
 [ext_resource type="Script" uid="uid://dqdi75syhmwl2" path="res://Scripts/statue.gd" id="1_3mhwb"]
 [ext_resource type="Texture2D" uid="uid://deky0duc2iryf" path="res://Models/ballroom/ballroom_Mud 01 diffuse.jpg" id="2_hel5t"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bc8qxb5k6xnoc" path="res://Models/ballroom/ballroom_marble-10_smooth.png" id="6_pn155"]
 [ext_resource type="Texture2D" uid="uid://bknmw5us1n1il" path="res://Models/ballroom/ballroom_marble-10_normal.jpg" id="7_627nv"]
 [ext_resource type="PackedScene" uid="uid://b3dutrkmfttw4" path="res://Scenes/gear_indicator.tscn" id="8_hel5t"]
+[ext_resource type="AudioStream" uid="uid://cchawln8vl0js" path="res://Sounds/SFX Give 1.wav" id="9_mi83f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfhfm"]
 resource_name = "Marble"
@@ -323,6 +324,9 @@ shape = SubResource("CylinderShape3D_0k2tg")
 [node name="Exclamation" parent="." instance=ExtResource("8_hel5t")]
 transform = Transform3D(-1.0053619e-07, -2.3, 0, 2.3, -1.0053619e-07, 0, 0, 0, 2.3, 1.2640862, 28.336966, -0.28779292)
 visible = false
+
+[node name="Give" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mi83f")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

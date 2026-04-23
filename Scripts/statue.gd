@@ -5,12 +5,14 @@ extends Node3D
 @onready var wallet = $"../WalletHidden"
 @onready var dialogue = $"../DialogueUI"
 @onready var exclamation = $Exclamation
+@onready var give = $Give
 var talk_ready = false
 var objective_name = "Hide wallet"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("talk") and talk_ready and player.got_wallet:
+		give.play()
 		dialogue.get_dialogue("storewallet")
 		
 		# change wallet pos

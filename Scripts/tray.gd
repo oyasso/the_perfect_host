@@ -3,12 +3,14 @@ extends MeshInstance3D
 @onready var player = $"../Player"
 @onready var uncle = $"../Uncle"
 @onready var exclamation = $Exclamation
+@onready var pickup = $Pickup
 var talk_ready = false
 var objective_name = "Pick up tray"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("talk") and talk_ready:
+		pickup.play()
 		player.got_tray = true
 		player.acquired_plate()
 		uncle.show_exclamation()

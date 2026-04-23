@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://o2edts3v34u5"]
+[gd_scene load_steps=5 format=3 uid="uid://o2edts3v34u5"]
 
 [ext_resource type="Script" uid="uid://bpdltok4rgo0s" path="res://Scripts/food.gd" id="1_j4qko"]
 [ext_resource type="PackedScene" uid="uid://b3dutrkmfttw4" path="res://Scenes/gear_indicator.tscn" id="2_fhto3"]
+[ext_resource type="AudioStream" uid="uid://bitox51r6i8dd" path="res://Sounds/SFX Pick Up 2.wav" id="3_h4kkx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h4kkx"]
 size = Vector3(4.091305, 1, 0.9871826)
@@ -21,6 +22,9 @@ shape = SubResource("BoxShape3D_h4kkx")
 [node name="Exclamation" parent="." instance=ExtResource("2_fhto3")]
 transform = Transform3D(-1.7484556e-08, -0.4, 0, 0.4, -1.7484556e-08, 0, 0, 0, 0.4, 0, 1.2357255, 0)
 visible = false
+
+[node name="Pickup2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h4kkx")
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]
