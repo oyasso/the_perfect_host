@@ -28,7 +28,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_viewport().size_changed.connect(_update_spacer)
 	_update_spacer()
-	BgMusic.player.stream = load("res://Sounds/Battle Theme Piano Sketch.mp3")
+	BgMusic.player.stream = load("res://Sounds/Battle V2.mp3")
 	BgMusic.player.play()
 	Pause.dialogue_playing = true
 

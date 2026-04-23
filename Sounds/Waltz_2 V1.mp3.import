@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biaq4qjo1a3jk"
+path="res://.godot/imported/Waltz_2 V1.mp3-63557062a06472f6ff767924f3ce9be3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Waltz_2 V1.mp3"
+dest_files=["res://.godot/imported/Waltz_2 V1.mp3-63557062a06472f6ff767924f3ce9be3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

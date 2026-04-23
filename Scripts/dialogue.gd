@@ -224,7 +224,7 @@ func _on_end_pressed() -> void:
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
-		BgMusic.player.stream = load("res://Sounds/Waltz_2.mp3")
+		BgMusic.player.stream = load("res://Sounds/Waltz Phase 2 V2.mp3")
 		BgMusic.player.play()
 	
 	if player.interactions == 3 and not three_interactions and move_uncle:

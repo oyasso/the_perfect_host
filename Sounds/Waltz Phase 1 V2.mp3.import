@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b70cmt6hvv6yi"
+path="res://.godot/imported/Waltz Phase 1 V2.mp3-2602384fef371d530d7127a37f8904c5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Waltz Phase 1 V2.mp3"
+dest_files=["res://.godot/imported/Waltz Phase 1 V2.mp3-2602384fef371d530d7127a37f8904c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

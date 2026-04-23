@@ -10,6 +10,6 @@ func _ready() -> void:
 	fade.fade_out(1.0)
 	uncle.body_animation.play("reset")
 	mother.show_exclamation()
-	BgMusic.player.stream = load("res://Sounds/Waltz V1.mp3")
+	BgMusic.player.stream = load("res://Sounds/Waltz Phase 1 V2.mp3")
 	BgMusic.player.play()
 	Pause.can_pause = true
