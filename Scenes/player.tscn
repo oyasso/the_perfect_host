@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7yy3somea7s0"]
+[gd_scene load_steps=6 format=3 uid="uid://b7yy3somea7s0"]
 
 [ext_resource type="Script" uid="uid://1psixtlusj02" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="PackedScene" uid="uid://udxj7mq36wq6" path="res://Scenes/kyoshi.tscn" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://dpyy5suo0u63n" path="res://Sounds/SFX Footsteps Walk Cycle.wav" id="3_6t5aa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kkt2s"]
 radius = 1.4101563
@@ -35,3 +36,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 8
 spring_length = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+
+[node name="Walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6t5aa")

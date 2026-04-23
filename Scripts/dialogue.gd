@@ -87,6 +87,8 @@ func get_dialogue(id: String):
 			"Mother":
 				mother.body_animation.play("talk")
 				voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
+			"Mother+Father":
+				voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
 			"Uncle":
 				if id not in ["third", "fourth", "fifth", "sixth", "fake1", "fake3", "fake5", "fake7", "fake9"]:
 					uncle.body_animation.play("talk")
@@ -103,7 +105,7 @@ func get_dialogue(id: String):
 					fancy_lady.body_animation.play("talk")
 				if id in ["allergy3", "fake14"]:
 					fancy_lady.chocking()
-				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
+				voice.stream = load("res://Sounds/DOP_SFX_Vox_Generic_Combined_Extended_W_.wav")
 			"Butler":
 				butler.body_animation.play("talk")
 				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
@@ -112,7 +114,7 @@ func get_dialogue(id: String):
 			"Party Goer":
 				voice.stream = load("res://Sounds/SFX Vox Generic 2 Extended.wav")
 			"Fama":
-				voice.stream = load("res://Sounds/SFX Vox Generic Extended.wav")
+				voice.stream = load("res://Sounds/SFX Vox Generic 2 Extended.wav")
 	
 	# animate the text
 	var tween : Tween = create_tween()

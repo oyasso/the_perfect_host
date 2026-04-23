@@ -1,0 +1,268 @@
+[gd_scene load_steps=30 format=3 uid="uid://lv4x0vpw77q"]
+
+[ext_resource type="Texture2D" uid="uid://bqfhto6bxky6b" path="res://Animations/boss_battle/frame0000.png" id="1_466ia"]
+[ext_resource type="Script" uid="uid://cmwgt828nak8n" path="res://Scripts/boss_battle.gd" id="1_ji3i5"]
+[ext_resource type="Texture2D" uid="uid://cthec4wknu6jj" path="res://Animations/boss_battle/frame0001.png" id="2_oh7a1"]
+[ext_resource type="Texture2D" uid="uid://bvow5sxwpwgv8" path="res://Animations/boss_battle/frame0002.png" id="3_s70no"]
+[ext_resource type="Texture2D" uid="uid://dxmbonx3pea10" path="res://Animations/boss_battle/frame0003.png" id="4_ji3i5"]
+[ext_resource type="Texture2D" uid="uid://brom2qoc733gn" path="res://Animations/boss_battle/frame0004.png" id="5_wue74"]
+[ext_resource type="Texture2D" uid="uid://w4shvullt47y" path="res://Animations/boss_battle/frame0005.png" id="6_1q7hp"]
+[ext_resource type="Texture2D" uid="uid://q7oqjvord73f" path="res://Animations/boss_battle/frame0006.png" id="7_iibpd"]
+[ext_resource type="Texture2D" uid="uid://cg4jggny8by5l" path="res://Animations/boss_battle/frame0007.png" id="8_51iu1"]
+[ext_resource type="Texture2D" uid="uid://8x0qhohtpma0" path="res://Animations/boss_battle/frame0008.png" id="9_03wjb"]
+[ext_resource type="Texture2D" uid="uid://dacr6gfjtfjv2" path="res://Animations/boss_battle/frame0009.png" id="10_f3cet"]
+[ext_resource type="Texture2D" uid="uid://cwnupmmxulchq" path="res://Animations/boss_battle/frame0010.png" id="11_nwu1h"]
+[ext_resource type="Texture2D" uid="uid://bebgpm3822fox" path="res://Animations/boss_battle/frame0011.png" id="12_6di4l"]
+[ext_resource type="Texture2D" uid="uid://cib5da6rnm5ke" path="res://Animations/boss_battle/frame0012.png" id="13_t5bhf"]
+[ext_resource type="Texture2D" uid="uid://cbexbgwll6qg3" path="res://Animations/boss_battle/frame0013.png" id="14_ap0vo"]
+[ext_resource type="Texture2D" uid="uid://dob5dyjab7wcr" path="res://Animations/boss_battle/frame0014.png" id="15_s0etp"]
+[ext_resource type="Texture2D" uid="uid://dn8rmacv0mpm5" path="res://Animations/boss_battle/frame0015.png" id="16_hot5r"]
+[ext_resource type="Texture2D" uid="uid://c40hc6iotx0jp" path="res://Animations/boss_battle/frame0016.png" id="17_ipvnc"]
+[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="18_oh7a1"]
+[ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="19_s70no"]
+[ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="21_1q7hp"]
+[ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="22_1q7hp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_1q7hp"]
+frames = 17
+frame_0/texture = ExtResource("1_466ia")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_oh7a1")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("3_s70no")
+frame_2/duration = 0.2
+frame_3/texture = ExtResource("4_ji3i5")
+frame_3/duration = 0.2
+frame_4/texture = ExtResource("5_wue74")
+frame_4/duration = 0.2
+frame_5/texture = ExtResource("6_1q7hp")
+frame_5/duration = 0.2
+frame_6/texture = ExtResource("7_iibpd")
+frame_6/duration = 0.2
+frame_7/texture = ExtResource("8_51iu1")
+frame_7/duration = 0.2
+frame_8/texture = ExtResource("9_03wjb")
+frame_8/duration = 0.2
+frame_9/texture = ExtResource("10_f3cet")
+frame_9/duration = 0.2
+frame_10/texture = ExtResource("11_nwu1h")
+frame_10/duration = 0.2
+frame_11/texture = ExtResource("12_6di4l")
+frame_11/duration = 0.2
+frame_12/texture = ExtResource("13_t5bhf")
+frame_12/duration = 0.2
+frame_13/texture = ExtResource("14_ap0vo")
+frame_13/duration = 0.2
+frame_14/texture = ExtResource("15_s0etp")
+frame_14/duration = 0.2
+frame_15/texture = ExtResource("16_hot5r")
+frame_15/duration = 0.2
+frame_16/texture = ExtResource("17_ipvnc")
+frame_16/duration = 0.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yjr8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_466ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oh7a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s70no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ji3i5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wue74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1q7hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iibpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_51iu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_03wjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f3cet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nwu1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6di4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_t5bhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ap0vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s0etp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hot5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ipvnc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Theme" id="Theme_s70no"]
+default_font = ExtResource("18_oh7a1")
+default_font_size = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ji3i5"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wue74"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.76168793, 0, 0.1597881, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q7hp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iibpd"]
+font = ExtResource("19_s70no")
+font_size = 36
+
+[node name="boss_battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ji3i5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_1q7hp")
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_yjr8k")
+autoplay = "default"
+frame = 11
+frame_progress = 0.2610611
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.786
+anchor_top = 0.775
+anchor_right = 0.841
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AttackButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = SubResource("Theme_s70no")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ji3i5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wue74")
+text = "Attack"
+
+[node name="Spacer" type="Control" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DefendButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+focus_mode = 0
+theme = SubResource("Theme_s70no")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ji3i5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wue74")
+text = "Defend"
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.61
+anchor_right = 0.616
+anchor_bottom = 0.817
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1q7hp")
+
+[node name="SpeakerLabel" type="Label" parent="DialogueBox"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Mother"
+label_settings = SubResource("LabelSettings_iibpd")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 655.0
+offset_bottom = 129.0
+theme_override_fonts/normal_font = ExtResource("18_oh7a1")
+theme_override_font_sizes/normal_font_size = 36
+text = "Where have you been? You're unbelievably late."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="DialogueBox"]
+visible = false
+layout_mode = 0
+offset_left = -2.2222195
+offset_top = 2.9629607
+offset_right = 5.7777805
+offset_bottom = 10.962961
+scale = Vector2(82.064255, 35.954784)
+focus_mode = 0
+flat = true
+
+[node name="Fade" parent="." instance=ExtResource("21_1q7hp")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_1q7hp")
+
+[connection signal="pressed" from="ButtonContainer/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/DefendButton" to="." method="_on_defend_button_pressed"]
+[connection signal="pressed" from="DialogueBox/NextButton" to="." method="_on_next_button_pressed"]

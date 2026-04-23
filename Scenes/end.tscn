@@ -45,6 +45,7 @@ transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -72, 1.2641515, -4)
 
 [node name="Uncle" parent="." instance=ExtResource("8_xpef6")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -105, 12.75, -15)
+visible = false
 
 [node name="Butler" parent="." instance=ExtResource("9_ay106")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -120, 19.5, 0)

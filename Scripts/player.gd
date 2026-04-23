@@ -9,6 +9,7 @@ extends CharacterBody3D
 @onready var plate_animation = $Pivot/Kyoshi/AnimationPlate
 @onready var empty_tray = $Pivot/Kyoshi/"Empty Tray"
 @onready var full_tray = $Pivot/Kyoshi/"Tray with items"
+@onready var walk_sound = $Walk
 @export_range(0.0, 1.0) var mouse_sensitivity = 0.01
 @export var tilt_limit = deg_to_rad(75)
 @export var speed = 14
@@ -46,9 +47,12 @@ func _physics_process(delta):
 			body_animation.play(current_walk)
 			plate_animation.play(current_tray)
 			$Pivot.basis = Basis.looking_at(direction)
+			if not walk_sound.playing:
+				walk_sound.play()
 		else:
 			body_animation.stop()
 			plate_animation.stop()
+			walk_sound.stop()
 			
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
@@ -57,6 +61,7 @@ func _physics_process(delta):
 	else:
 		body_animation.stop()
 		plate_animation.stop()
+		walk_sound.stop()
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:

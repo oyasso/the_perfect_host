@@ -8,6 +8,7 @@ extends Control
 @onready var spacer = $ButtonContainer/Spacer
 @onready var next_button : Button = $DialogueBox/NextButton
 @onready var fade = $Fade
+@onready var voice = $Voice
 
 var text_speed = 30.0
 
@@ -60,11 +61,14 @@ func show_player_defend_dialogue(text: String):
 	# animate the text
 	var tween : Tween = create_tween()
 	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	voice.stream = load("res://Sounds/SFX Vox Kiyoshi Extended.wav")
+	voice.play()
 	tween.connect("finished", on_tween_player_defend_finished.bind())
 
 func on_tween_player_defend_finished():
 	next_button.show()
 	show_next_dialogue = true
+	voice.stop()
 
 func show_boss_dialogue(text: String):
 	print(turn_counter)
@@ -76,6 +80,8 @@ func show_boss_dialogue(text: String):
 	# animate the text
 	var tween : Tween = create_tween()
 	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
+	voice.play()
 	tween.connect("finished", on_tween_boss_finished.bind())
 
 func on_tween_boss_finished():
@@ -85,6 +91,7 @@ func on_tween_boss_finished():
 	else:
 		next_button.show()
 		show_next_dialogue = true
+	voice.stop()
 
 func _on_next_button_pressed() -> void:
 	next_dialogue()

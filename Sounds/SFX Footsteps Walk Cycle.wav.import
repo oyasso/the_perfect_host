@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpyy5suo0u63n"
+path="res://.godot/imported/SFX Footsteps Walk Cycle.wav-429c462f64620a84568c0d5d292c1a04.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX Footsteps Walk Cycle.wav"
+dest_files=["res://.godot/imported/SFX Footsteps Walk Cycle.wav-429c462f64620a84568c0d5d292c1a04.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
