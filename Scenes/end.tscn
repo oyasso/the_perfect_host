@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dvg6wl6kurr8h"]
+[gd_scene load_steps=18 format=3 uid="uid://dvg6wl6kurr8h"]
 
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="1_71tud"]
 [ext_resource type="Script" uid="uid://bxop14qpwfjx0" path="res://Scripts/end.gd" id="1_yb8mu"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://exisvajj7gqu" path="res://Scenes/extras_eating.tscn" id="14_xar77"]
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="15_0m6cl"]
 [ext_resource type="ArrayMesh" uid="uid://df3e5vyqlajtl" path="res://Mesh/wallet.mesh" id="17_0n7mr"]
-[ext_resource type="AudioStream" uid="uid://biaq4qjo1a3jk" path="res://Sounds/Waltz_2.mp3" id="18_yb8mu"]
 [ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="21_xabv8"]
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="22_vwpr1"]
 
@@ -91,8 +90,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.020709038, 0)
 
 [node name="Statue" parent="." instance=ExtResource("22_vwpr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.38338, 0.019974232, -0.02842021)
-
-[node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("18_yb8mu")
-autoplay = true
-parameters/looping = true

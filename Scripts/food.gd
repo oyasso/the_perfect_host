@@ -5,6 +5,7 @@ extends MeshInstance3D
 @onready var uncle = $"../Uncle"
 @export var other_food: Node3D
 var talk_ready = false
+var objective_name = "Get food and drinks"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -24,6 +25,8 @@ func _on_talk_area_body_exited(_body: Node3D) -> void:
 
 func show_exclamation():
 	exclamation.show()
+	Pause.add_objective(objective_name)
 
 func hide_exclamation():
 	exclamation.hide()
+	Pause.remove_objective(objective_name)

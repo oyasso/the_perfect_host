@@ -15,6 +15,8 @@ var turn_counter = 0
 
 var end_battle = false
 
+var show_next_dialogue = false
+
 var attack_text = "Kiyoshi tries to muster all of his courage, but he cannot fight back."
 var defend_text = ["Kiyoshi cannot look at them.", "Mom, Dad, please! I'm sorry! It was just a mistake!",
 "I can do better! I can be better!", "Please, give me another chance!", "Please, I love you! Don't do this."]
@@ -25,6 +27,14 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_viewport().size_changed.connect(_update_spacer)
 	_update_spacer()
+	BgMusic.player.stream = load("res://Sounds/Battle Theme Piano Sketch.mp3")
+	BgMusic.player.play()
+	Pause.dialogue_playing = true
+
+func _process(_delta):
+	if Input.is_action_pressed("show_boss_dialogue") and show_next_dialogue:
+		next_dialogue()
+		show_next_dialogue = false
 
 func show_player_attack_dialogue():
 	speaker_label.hide()
@@ -54,6 +64,7 @@ func show_player_defend_dialogue(text: String):
 
 func on_tween_player_defend_finished():
 	next_button.show()
+	show_next_dialogue = true
 
 func show_boss_dialogue(text: String):
 	print(turn_counter)
@@ -73,14 +84,10 @@ func on_tween_boss_finished():
 		next_button.hide()
 	else:
 		next_button.show()
+		show_next_dialogue = true
 
 func _on_next_button_pressed() -> void:
-	if turn_counter < 4:
-		show_boss_dialogue(boss_text[turn_counter])
-		turn_counter += 1
-	else:
-		end_boss_scene()
-		#get_tree().change_scene_to_file("res://Scenes/end.tscn")
+	next_dialogue()
 
 func _on_attack_button_pressed() -> void:
 	show_player_attack_dialogue()
@@ -93,6 +100,13 @@ func end_boss_scene():
 	fade.fade_in(1.5)
 	await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/end.tscn")
+
+func next_dialogue():
+	if turn_counter < 4:
+		show_boss_dialogue(boss_text[turn_counter])
+		turn_counter += 1
+	else:
+		end_boss_scene()
 
 func _update_spacer():
 	var h = get_viewport_rect().size.y

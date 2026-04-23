@@ -1,5 +1,6 @@
 extends Node
 
+var fast_dialogue = true
 var debug = false
 var debug_line = "where"
 
@@ -68,6 +69,7 @@ func get_dialogue(id: String):
 
 	is_talking = true
 	dialogue_ui.show()
+	Pause.dialogue_playing = true
 	end_button.hide()
 	if not debug:
 		player.can_move = false
@@ -78,8 +80,10 @@ func get_dialogue(id: String):
 	
 	# animate the text
 	var tween : Tween = create_tween()
-	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
-	#tween.tween_property(text_label, "visible_ratio", 1.0, 0)
+	if not fast_dialogue:
+		tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
+	else:
+		tween.tween_property(text_label, "visible_ratio", 1.0, 0)
 	tween.connect("finished", on_tween_finished.bind(id))
 
 	if json_dict[id]["sprite"] == "Fama":
@@ -140,6 +144,7 @@ func get_dialogue(id: String):
 	if id == "third":
 		uncle.hide_exclamation()
 		wallet.show()
+		wallet.show_exclamation()
 		uncle.body_animation.play("drunk")
 	
 	if id == "storewallet":
@@ -147,6 +152,7 @@ func get_dialogue(id: String):
 	
 	if id == "sixth":
 		move_uncle = true
+		uncle.hide_exclamation()
 	
 	if id in ["ready5", "fix4", "defend2", "cater", "goingon"]:
 		mother_stop_talking = true
@@ -174,6 +180,7 @@ func _on_end_pressed() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	dialogue_ui.hide()
+	Pause.dialogue_playing = false
 	is_talking = false
 	if !debug:
 		player.can_move = true
@@ -194,13 +201,13 @@ func _on_end_pressed() -> void:
 	
 	if player.interactions == 1 and not one_interaction:
 		uncle.show_exclamation()
-		one_interaction = false
+		one_interaction = true
 	
 	if player.interactions == 2 and not two_interactions:
 		get_dialogue("goingon")
 		two_interactions = true
-		bgmusic.stream = load("res://Sounds/Waltz_2.mp3")
-		bgmusic.play()
+		BgMusic.player.stream = load("res://Sounds/Waltz_2.mp3")
+		BgMusic.player.play()
 	
 	if player.interactions == 3 and not three_interactions and move_uncle:
 		fade.show()

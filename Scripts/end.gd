@@ -17,4 +17,4 @@ func end_game():
 	fade.show()
 	fade.fade_in(1.5)
 	await get_tree().create_timer(1.5).timeout
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/title.tscn")

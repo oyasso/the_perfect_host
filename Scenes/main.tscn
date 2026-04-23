@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=26 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="Script" uid="uid://cywxhkjhh3ndp" path="res://Scripts/main.gd" id="1_gt3je"]
 [ext_resource type="Script" uid="uid://chts087yiwt3d" path="res://Scripts/position_change.gd" id="1_hibaj"]
@@ -22,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
 [ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="19_hibaj"]
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="22_ee4r6"]
-[ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="23_gt3je"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt3je"]
 transparency = 1
@@ -49,7 +48,7 @@ visible = false
 [node name="Letter" parent="." instance=ExtResource("2_fevyy")]
 visible = false
 
-[node name="Player" parent="." instance=ExtResource("2_bo1nx")]
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_bo1nx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.351248, 0.74801445, 0)
 collision_layer = 3
 collision_mask = 5
@@ -142,11 +141,6 @@ mesh = SubResource("BoxMesh_3pmx8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_gt3je")
-
-[node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_gt3je")
-autoplay = true
-parameters/looping = true
 
 [editable path="Extras/extra_wine"]
 [editable path="Extras/extra_wine3"]

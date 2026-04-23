@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0ha83tcxby71"]
+[gd_scene load_steps=3 format=3 uid="uid://c0ha83tcxby71"]
 
+[ext_resource type="Script" uid="uid://d18mlbt5ttv46" path="res://Scripts/bg_music.gd" id="1_0kug2"]
 [ext_resource type="AudioStream" uid="uid://mlpwfx57qal" path="res://Sounds/Waltz V1.mp3" id="1_wrh0v"]
 
 [node name="BGMusic" type="Node"]
+script = ExtResource("1_0kug2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_wrh0v")
-autoplay = true
 parameters/looping = true

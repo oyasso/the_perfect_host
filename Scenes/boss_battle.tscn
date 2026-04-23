@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://lv4x0vpw77q"]
+[gd_scene load_steps=29 format=3 uid="uid://lv4x0vpw77q"]
 
 [ext_resource type="Texture2D" uid="uid://bqfhto6bxky6b" path="res://Animations/boss_battle/frame0000.png" id="1_466ia"]
 [ext_resource type="Script" uid="uid://cmwgt828nak8n" path="res://Scripts/boss_battle.gd" id="1_ji3i5"]
@@ -21,7 +21,6 @@
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="18_oh7a1"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="19_s70no"]
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="21_1q7hp"]
-[ext_resource type="AudioStream" uid="uid://c1e53krxhytpk" path="res://Sounds/Battle Theme Piano Sketch.mp3" id="21_wue74"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1q7hp"]
 frames = 17
@@ -259,11 +258,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
-
-[node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_wue74")
-autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="ButtonContainer/AttackButton" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/DefendButton" to="." method="_on_defend_button_pressed"]

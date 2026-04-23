@@ -1,0 +1,165 @@
+[gd_scene load_steps=10 format=3 uid="uid://bvxltfq6jdeoa"]
+
+[ext_resource type="Script" uid="uid://dphdjass35oci" path="res://Scripts/pause.gd" id="1_6eyaj"]
+[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="1_45vjg"]
+[ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="1_aq7p1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6eyaj"]
+font = ExtResource("1_aq7p1")
+font_size = 56
+
+[sub_resource type="Theme" id="Theme_aq7p1"]
+default_font = ExtResource("1_45vjg")
+default_font_size = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a6ek"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 120.0
+expand_margin_right = 120.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0jm0"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.76168793, 0, 0.1597881, 1)
+expand_margin_left = 120.0
+expand_margin_right = 120.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6eyaj"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 150.0
+expand_margin_right = 150.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u653"]
+content_margin_left = 36.0
+content_margin_top = 16.0
+content_margin_right = 36.0
+content_margin_bottom = 16.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.76168793, 0, 0.1597881, 1)
+expand_margin_left = 150.0
+expand_margin_right = 150.0
+
+[node name="Pause" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6eyaj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="SpeakerLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.152
+anchor_right = 0.5
+anchor_bottom = 0.152
+offset_left = -175.0
+offset_top = -29.5
+offset_right = 175.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Current Objective"
+label_settings = SubResource("LabelSettings_6eyaj")
+
+[node name="CurrentObjective" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.274
+anchor_right = 0.5
+anchor_bottom = 0.603
+offset_left = -327.5
+offset_top = -48.5
+offset_right = 327.5
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_45vjg")
+theme_override_font_sizes/normal_font_size = 48
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.732
+anchor_right = 0.5
+anchor_bottom = 0.732
+offset_left = -105.5
+offset_top = -55.5
+offset_right = 105.5
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = SubResource("Theme_aq7p1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5a6ek")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e0jm0")
+text = "Resume
+"
+
+[node name="ResetButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.811
+anchor_right = 0.5
+anchor_bottom = 0.811
+offset_left = -105.5
+offset_top = 195.0
+offset_right = 105.5
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = SubResource("Theme_aq7p1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6eyaj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8u653")
+text = "Reset
+"
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

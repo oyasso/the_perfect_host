@@ -7,6 +7,7 @@ extends MeshInstance3D
 @onready var invis_wall = $"../InvisibleWall"
 var talked_count = 0
 var talk_ready = false
+var objective_name = "Talk to Mother"
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("talk") and talk_ready and not dialogue.is_talking:
@@ -36,6 +37,8 @@ func _on_talk_area_body_exited(_body: Node3D) -> void:
 
 func show_exclamation():
 	exclamation.show()
+	Pause.add_objective(objective_name)
 
 func hide_exclamation():
 	exclamation.hide()
+	Pause.remove_objective(objective_name)

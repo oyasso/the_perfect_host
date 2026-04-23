@@ -8,6 +8,13 @@ extends Control
 
 var text_speed = 10.0
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	BgMusic.player.stop()
+	Pause.can_pause = false
+	Pause.dialogue_playing = false
+	Pause.objectives = []
+
 func show_text():
 	intro_text.show()
 	var tween : Tween = create_tween()

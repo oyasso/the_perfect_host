@@ -27,7 +27,8 @@ collision_mask = 2
 shape = SubResource("SphereShape3D_jjvhh")
 
 [node name="Exclamation" parent="." instance=ExtResource("3_n4hrx")]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 1.306935, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 1.8643807, 0)
+visible = false
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]
