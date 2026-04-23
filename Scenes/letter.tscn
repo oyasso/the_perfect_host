@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://tf6p8i075uyf"]
+[gd_scene load_steps=5 format=3 uid="uid://tf6p8i075uyf"]
 
 [ext_resource type="Script" uid="uid://dq2xlwj8kiv70" path="res://Scripts/letter.gd" id="1_7n1mw"]
 [ext_resource type="Texture2D" uid="uid://i4rte3x7if0e" path="res://Sprites/letter.png" id="2_sqwnb"]
+[ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="3_xbl6t"]
+[ext_resource type="AudioStream" uid="uid://d007v1iqcf6l1" path="res://Sounds/SFX Select and Close.wav" id="4_cfy4y"]
 
 [node name="Letter" type="Control"]
 layout_mode = 3
@@ -59,6 +61,12 @@ offset_bottom = 617.0
 scale = Vector2(12, 6)
 focus_mode = 0
 flat = true
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xbl6t")
+
+[node name="Close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cfy4y")
 
 [connection signal="mouse_entered" from="Pivot/TextureRect/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Pivot/TextureRect/Button" to="." method="_on_button_mouse_exited"]

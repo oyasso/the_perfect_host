@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://chr01qu7qw7wy"]
+[gd_scene load_steps=13 format=3 uid="uid://chr01qu7qw7wy"]
 
 [ext_resource type="Texture2D" uid="uid://dja5uujk2n1gm" path="res://Sprites/text_box.png" id="1_atyk4"]
 [ext_resource type="Texture2D" uid="uid://mebqpy4rsts" path="res://Sprites/Fama_Pixel_Sprite.png" id="3_8wwfb"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="7_lvscr"]
 [ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="8_357dx"]
 [ext_resource type="AudioStream" uid="uid://d007v1iqcf6l1" path="res://Sounds/SFX Select and Close.wav" id="9_w5xmk"]
+[ext_resource type="AudioStream" uid="uid://0hd1qichss5i" path="res://Sounds/SFX Give 2.wav" id="10_5yy2n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdh8g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -151,6 +152,10 @@ stream = ExtResource("8_357dx")
 
 [node name="Close" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_w5xmk")
+
+[node name="Give2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_5yy2n")
+volume_db = 10.0
 
 [connection signal="mouse_entered" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_option_1_pressed"]

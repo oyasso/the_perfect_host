@@ -16,7 +16,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("talk") and talk_ready and not dialogue.is_talking:		
 		if not gave_drink:
 			if player.got_items:
-				give2.play()
 				dialogue.get_dialogue("beverage")
 				player.occured_interaction()
 				gave_drink = true
@@ -41,6 +40,7 @@ func hide_exclamation():
 	Pause.remove_objective(objective_name)
 
 func drink():
+	give2.play()
 	glass.show()
 	body_animation.stop()
 	body_animation.play("drinking")

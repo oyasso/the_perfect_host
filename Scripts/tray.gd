@@ -15,7 +15,8 @@ func _process(_delta: float) -> void:
 		player.acquired_plate()
 		uncle.show_exclamation()
 		hide_exclamation()
-		queue_free()
+		self.hide()
+		set_process(false)
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true

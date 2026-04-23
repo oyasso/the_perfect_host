@@ -44,7 +44,6 @@ func remove_objective(item: String):
 	update_objectives()
 
 func update_objectives():
-	print(objectives)
 	objective.text = ""
 	for item in objectives:
 		objective.text += item + "\n"

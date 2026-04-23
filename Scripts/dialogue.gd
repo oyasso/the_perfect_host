@@ -62,6 +62,7 @@ var uncle_trips = false
 @onready var select = $Select
 @onready var hover = $Hover
 @onready var close = $Close
+@onready var give2 = $Give2
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -168,7 +169,7 @@ func get_dialogue(id: String):
 		wallet.show_exclamation()
 		uncle.body_animation.play("drunk")
 	
-	if id == "storewallet":
+	if id == "storewallet" and !move_uncle:
 		uncle.show_exclamation()
 	
 	if id == "sixth":
@@ -196,7 +197,10 @@ func _on_option_2_pressed() -> void:
 
 # if next button is clicked get next dialogue
 func _on_next_button_pressed() -> void:
-	select.play()
+	if next_button.text == "Hand him the drink.":
+		give2.play()
+	else:
+		select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue)
 

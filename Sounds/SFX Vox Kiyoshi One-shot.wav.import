@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cl3vob7gq7ax6"
+path="res://.godot/imported/SFX Vox Kiyoshi One-shot.wav-a3d07dea6a90b32030d09db433dc1d49.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX Vox Kiyoshi One-shot.wav"
+dest_files=["res://.godot/imported/SFX Vox Kiyoshi One-shot.wav-a3d07dea6a90b32030d09db433dc1d49.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

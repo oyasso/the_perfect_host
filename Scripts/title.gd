@@ -20,23 +20,31 @@ func _ready():
 
 func show_text():
 	intro_text.show()
-	var tween : Tween = create_tween()
-	tween.tween_property(intro_text, "visible_ratio", 1.0, intro_text.text.length()/text_speed).from(0.0)
-	voice.play()
-	await tween.finished
-	voice.stop()
+	await animate_text(intro_text)
+	#var tween : Tween = create_tween()
+	#tween.tween_property(intro_text, "visible_ratio", 1.0, intro_text.text.length()/text_speed).from(0.0)
+	#voice.play()
+	#await tween.finished
+	#voice.stop()
 	await get_tree().create_timer(1.5).timeout
 	intro_text.hide()
 	show_end_text()
 
 func show_end_text():
 	end_text.show()
-	var tween : Tween = create_tween()
-	tween.tween_property(end_text, "visible_ratio", 1.0, end_text.text.length()/text_speed).from(0.0)
-	voice.play()
-	await tween.finished
-	voice.stop()
+	await animate_text(end_text)
+	#var tween : Tween = create_tween()
+	#tween.tween_property(end_text, "visible_ratio", 1.0, end_text.text.length()/text_speed).from(0.0)
+	#voice.play()
+	#await tween.finished
+	#voice.stop()
 	next_button.show()
+
+func animate_text(text):
+	for n in text.text.length():
+		voice.play()
+		text.visible_characters += 1
+		await get_tree().create_timer(0.1).timeout
 
 func _on_button_mouse_entered() -> void:
 	hover.play()

@@ -6,7 +6,7 @@ extends MeshInstance3D
 @onready var statue = $"../Statue"
 @onready var pickup = $Pickup
 var talk_ready = false
-var objective_name = "Store wallet"
+var objective_name = "Find wallet"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -16,7 +16,8 @@ func _process(_delta: float) -> void:
 		player.got_wallet = true
 		hide_exclamation()
 		statue.show_exclamation()
-		queue_free()
+		self.hide()
+		set_process(false)
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true

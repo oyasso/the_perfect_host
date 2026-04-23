@@ -34,6 +34,7 @@ visible = false
 
 [node name="Pickup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4luho")
+volume_db = 10.0
 
 [connection signal="body_entered" from="TalkArea" to="." method="_on_talk_area_body_entered"]
 [connection signal="body_exited" from="TalkArea" to="." method="_on_talk_area_body_exited"]

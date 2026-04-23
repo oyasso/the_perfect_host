@@ -73,7 +73,6 @@ func on_tween_player_defend_finished():
 	voice.stop()
 
 func show_boss_dialogue(text: String):
-	print(turn_counter)
 	speaker_label.show()
 	speaker_label.text = "Mother+Father"
 	text_label.text = text

@@ -7,7 +7,7 @@ extends Node3D
 @onready var exclamation = $Exclamation
 @onready var give = $Give
 var talk_ready = false
-var objective_name = "Hide wallet"
+var objective_name = "Store wallet"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

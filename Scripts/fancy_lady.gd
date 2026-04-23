@@ -19,10 +19,8 @@ func _process(_delta: float) -> void:
 		match talked_count:
 			0:
 				if player.got_items:
-					give2.play()
 					dialogue.get_dialogue("food")
 					talked_count += 1
-					player.occured_interaction()
 				else:
 					dialogue.get_dialogue("nofood")
 			1:
@@ -33,6 +31,7 @@ func _process(_delta: float) -> void:
 				talked_count += 1
 			3:
 				dialogue.get_dialogue("allergy3")
+				player.occured_interaction()
 				hide_exclamation()
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
@@ -50,6 +49,7 @@ func hide_exclamation():
 	Pause.remove_objective(objective_name)
 
 func eat():
+	give2.play()
 	plate.show()
 	scallops.show()
 	body_animation.stop()

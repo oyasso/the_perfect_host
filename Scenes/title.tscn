@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c2plxf8jbvvtf" path="res://Scripts/title.gd" id="1_ekrfg"]
 [ext_resource type="Texture2D" uid="uid://jmwuynvx1vho" path="res://Sprites/Title.png" id="1_w31pl"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_fp2oq"]
-[ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="4_2qdx2"]
+[ext_resource type="AudioStream" uid="uid://cl3vob7gq7ax6" path="res://Sounds/SFX Vox Kiyoshi One-shot.wav" id="4_2qdx2"]
 [ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="4_yosvi"]
 [ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="5_2qdx2"]
 

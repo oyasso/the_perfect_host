@@ -2,14 +2,18 @@ extends Control
 
 @onready var texture = $Pivot/TextureRect
 @onready var fade = $ColorRect
+@onready var hover = $Hover
+@onready var close = $Close
 
 func _on_button_mouse_entered() -> void:
+	hover.play()
 	texture.texture = load("res://Sprites/letter_hover.png")
 
 func _on_button_mouse_exited() -> void:
 	texture.texture = load("res://Sprites/letter.png")
 
 func _on_button_pressed() -> void:
+	close.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	texture.hide()
 	fade.color.a = 1.0
