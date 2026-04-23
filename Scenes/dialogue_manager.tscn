@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chr01qu7qw7wy"]
+[gd_scene load_steps=12 format=3 uid="uid://chr01qu7qw7wy"]
 
 [ext_resource type="Texture2D" uid="uid://dja5uujk2n1gm" path="res://Sprites/text_box.png" id="1_atyk4"]
 [ext_resource type="Texture2D" uid="uid://mebqpy4rsts" path="res://Sprites/Fama_Pixel_Sprite.png" id="3_8wwfb"]
@@ -6,6 +6,9 @@
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="4_r5bdp"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="5_8wwfb"]
 [ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="6_r5bdp"]
+[ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="7_lvscr"]
+[ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="8_357dx"]
+[ext_resource type="AudioStream" uid="uid://d007v1iqcf6l1" path="res://Sounds/SFX Select and Close.wav" id="9_w5xmk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdh8g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -140,7 +143,20 @@ alignment = 0
 [node name="Voice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_r5bdp")
 
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lvscr")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_357dx")
+
+[node name="Close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_w5xmk")
+
+[connection signal="mouse_entered" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="DialogueBox/ChoiceBox/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="mouse_entered" from="DialogueBox/ChoiceBox/Option2" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="DialogueBox/ChoiceBox/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="mouse_entered" from="DialogueBox/NextButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="DialogueBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="mouse_entered" from="DialogueBox/End" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="DialogueBox/End" to="." method="_on_end_pressed"]

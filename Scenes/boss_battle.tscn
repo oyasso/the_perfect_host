@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://lv4x0vpw77q"]
+[gd_scene load_steps=32 format=3 uid="uid://lv4x0vpw77q"]
 
 [ext_resource type="Texture2D" uid="uid://bqfhto6bxky6b" path="res://Animations/boss_battle/frame0000.png" id="1_466ia"]
 [ext_resource type="Script" uid="uid://cmwgt828nak8n" path="res://Scripts/boss_battle.gd" id="1_ji3i5"]
@@ -22,6 +22,8 @@
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="19_s70no"]
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="21_1q7hp"]
 [ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="22_1q7hp"]
+[ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="23_51iu1"]
+[ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="24_03wjb"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_1q7hp"]
 frames = 17
@@ -264,6 +266,14 @@ grow_vertical = 1
 stream = ExtResource("22_1q7hp")
 volume_db = 10.0
 
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_51iu1")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_03wjb")
+
+[connection signal="mouse_entered" from="ButtonContainer/AttackButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="ButtonContainer/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="mouse_entered" from="ButtonContainer/DefendButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="ButtonContainer/DefendButton" to="." method="_on_defend_button_pressed"]
 [connection signal="pressed" from="DialogueBox/NextButton" to="." method="_on_next_button_pressed"]

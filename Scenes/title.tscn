@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bk4ck46nhpc5b"]
+[gd_scene load_steps=7 format=3 uid="uid://bk4ck46nhpc5b"]
 
 [ext_resource type="Script" uid="uid://c2plxf8jbvvtf" path="res://Scripts/title.gd" id="1_ekrfg"]
 [ext_resource type="Texture2D" uid="uid://jmwuynvx1vho" path="res://Sprites/Title.png" id="1_w31pl"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_fp2oq"]
+[ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="4_2qdx2"]
+[ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="4_yosvi"]
+[ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="5_2qdx2"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -90,6 +93,15 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 flat = true
+
+[node name="Voice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2qdx2")
+
+[node name="Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yosvi")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2qdx2")
 
 [connection signal="mouse_entered" from="Background/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Background/Button" to="." method="_on_button_mouse_exited"]

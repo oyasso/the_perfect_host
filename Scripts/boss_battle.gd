@@ -9,6 +9,8 @@ extends Control
 @onready var next_button : Button = $DialogueBox/NextButton
 @onready var fade = $Fade
 @onready var voice = $Voice
+@onready var select = $Select
+@onready var hover = $Hover
 
 var text_speed = 30.0
 
@@ -80,7 +82,7 @@ func show_boss_dialogue(text: String):
 	# animate the text
 	var tween : Tween = create_tween()
 	tween.tween_property(text_label, "visible_ratio", 1.0, text_label.text.length()/text_speed).from(0.0)
-	voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
+	voice.stream = load("res://Sounds/DOP_SFX_Vox_Parents_Extended_W_.wav")
 	voice.play()
 	tween.connect("finished", on_tween_boss_finished.bind())
 
@@ -97,9 +99,11 @@ func _on_next_button_pressed() -> void:
 	next_dialogue()
 
 func _on_attack_button_pressed() -> void:
+	select.play()
 	show_player_attack_dialogue()
 
 func _on_defend_button_pressed() -> void:
+	select.play()
 	show_player_defend_dialogue(defend_text[turn_counter])
 	
 func end_boss_scene():
@@ -109,6 +113,7 @@ func end_boss_scene():
 	get_tree().change_scene_to_file("res://Scenes/end.tscn")
 
 func next_dialogue():
+	select.play()
 	if turn_counter < 4:
 		show_boss_dialogue(boss_text[turn_counter])
 		turn_counter += 1
@@ -118,3 +123,6 @@ func next_dialogue():
 func _update_spacer():
 	var h = get_viewport_rect().size.y
 	spacer.custom_minimum_size.y = h * 0.05
+
+func _on_button_mouse_entered() -> void:
+	hover.play()

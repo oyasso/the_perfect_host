@@ -59,6 +59,9 @@ var uncle_trips = false
 @onready var wallet = $"../Wallet"
 @onready var bgmusic = $"../BGMusic"
 @onready var voice = $Voice
+@onready var select = $Select
+@onready var hover = $Hover
+@onready var close = $Close
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -88,7 +91,7 @@ func get_dialogue(id: String):
 				mother.body_animation.play("talk")
 				voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
 			"Mother+Father":
-				voice.stream = load("res://Sounds/SFX Vox Mother Extended.wav")
+				voice.stream = load("res://Sounds/DOP_SFX_Vox_Parents_Extended_W_.wav")
 			"Uncle":
 				if id not in ["third", "fourth", "fifth", "sixth", "fake1", "fake3", "fake5", "fake7", "fake9"]:
 					uncle.body_animation.play("talk")
@@ -181,20 +184,24 @@ func get_dialogue(id: String):
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
+	select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue[0])
 
 # if second option is picked get its dialogue
 func _on_option_2_pressed() -> void:
+	select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue[1])
 
 # if next button is clicked get next dialogue
 func _on_next_button_pressed() -> void:
+	select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue)
 
 func _on_end_pressed() -> void:
+	close.play()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	dialogue_ui.hide()
@@ -299,3 +306,6 @@ func on_tween_finished(id):
 func hide_continue_buttons():
 	choice_box.hide()
 	next_button.hide()
+
+func _on_button_mouse_entered() -> void:
+	hover.play()

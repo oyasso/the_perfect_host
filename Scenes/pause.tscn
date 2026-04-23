@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvxltfq6jdeoa"]
+[gd_scene load_steps=12 format=3 uid="uid://bvxltfq6jdeoa"]
 
 [ext_resource type="Script" uid="uid://dphdjass35oci" path="res://Scripts/pause.gd" id="1_6eyaj"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="1_45vjg"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="1_aq7p1"]
+[ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="4_3fojq"]
+[ext_resource type="AudioStream" uid="uid://d007v1iqcf6l1" path="res://Sounds/SFX Select and Close.wav" id="5_nsogc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6eyaj"]
 font = ExtResource("1_aq7p1")
@@ -161,5 +163,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_8u653")
 text = "Reset
 "
 
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3fojq")
+
+[node name="Close" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_nsogc")
+
+[connection signal="mouse_entered" from="ResumeButton" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

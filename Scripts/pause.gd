@@ -1,6 +1,8 @@
 extends Control
 
 @onready var objective = $CurrentObjective
+@onready var hover = $Hover
+@onready var close = $Close
 
 var objectives = []
 var paused = false
@@ -24,7 +26,8 @@ func pause():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	self.show()
 
-func resume():
+func resume(): 
+	close.play()
 	paused = false
 	get_tree().paused = false
 	if not dialogue_playing:
@@ -52,3 +55,6 @@ func _on_reset_button_pressed() -> void:
 
 func _on_resume_button_pressed() -> void:
 	resume()
+
+func _on_button_mouse_entered() -> void:
+	hover.play()
