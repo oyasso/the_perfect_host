@@ -98,6 +98,7 @@ func on_tween_boss_finished():
 	else:
 		next_button.show()
 		show_next_dialogue = true
+		triangle.show()
 	voice.stop()
 
 func _on_next_button_pressed() -> void:

@@ -300,15 +300,15 @@ func on_tween_finished(id):
 		#"Mother":
 			#mother.body_animation.play("idle")
 		#"Uncle":
-			#uncle.body_animation.stop()
+			#uncle.body_animation.pause()
 		#"Fancy Man":
 			#if not fancy_man_drink:
-				#fancy_man.body_animation.stop()
+				#fancy_man.body_animation.pause()
 		#"Fancy Lady":
 			#if not fancy_lady_eat:
-				#fancy_lady.body_animation.stop()
+				#fancy_lady.body_animation.pause()
 		#"Butler":
-			#butler.body_animation.stop()
+			#butler.body_animation.pause()
 
 func hide_continue_buttons():
 	choice_box.hide()
