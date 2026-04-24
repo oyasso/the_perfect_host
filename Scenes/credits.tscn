@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dego2pr7elp6s"]
+
+[ext_resource type="Script" uid="uid://duw0cwytg3uwf" path="res://Scripts/credits.gd" id="1_r18jl"]
+[ext_resource type="VideoStream" uid="uid://d2pdg3gjnbjdi" path="res://Video/Credits.ogv" id="2_gryuy"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r18jl")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_gryuy")
+autoplay = true
