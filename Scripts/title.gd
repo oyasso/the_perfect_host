@@ -8,12 +8,14 @@ extends Control
 @onready var voice = $Voice
 @onready var select = $Select
 @onready var hover = $Hover
+@onready var triangle = $Triangle
 
 var text_speed = 10.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	BgMusic.player.stop()
+	BgMusic.player.stream = load("res://Sounds/SFX Crowd Ambience.wav")
+	BgMusic.play()
 	Pause.can_pause = false
 	Pause.dialogue_playing = false
 	Pause.objectives = []
@@ -46,6 +48,7 @@ func animate_text(text):
 			voice.play()
 		text.visible_characters += 1
 		await get_tree().create_timer(0.1).timeout
+	triangle.show()
 
 func _on_button_mouse_entered() -> void:
 	hover.play()
