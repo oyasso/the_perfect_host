@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://lv4x0vpw77q"]
+[gd_scene load_steps=33 format=3 uid="uid://lv4x0vpw77q"]
 
 [ext_resource type="Texture2D" uid="uid://bqfhto6bxky6b" path="res://Animations/boss_battle/frame0000.png" id="1_466ia"]
 [ext_resource type="Script" uid="uid://cmwgt828nak8n" path="res://Scripts/boss_battle.gd" id="1_ji3i5"]
@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="18_oh7a1"]
 [ext_resource type="FontFile" uid="uid://cq0oy27x3rtpw" path="res://Fonts/CormorantInfant-Bold.ttf" id="19_s70no"]
 [ext_resource type="PackedScene" uid="uid://b1vyenaxp68bk" path="res://Scenes/fade_black.tscn" id="21_1q7hp"]
+[ext_resource type="PackedScene" uid="uid://2rq2gbna1dn1" path="res://Scenes/text_indicator.tscn" id="21_03wjb"]
 [ext_resource type="AudioStream" uid="uid://bgtekdheq7xpa" path="res://Sounds/SFX Vox Kiyoshi Extended.wav" id="22_1q7hp"]
 [ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="23_51iu1"]
 [ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="24_03wjb"]
@@ -216,10 +217,10 @@ text = "Defend"
 [node name="DialogueBox" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.153
+anchor_left = 0.226
 anchor_top = 0.61
-anchor_right = 0.616
-anchor_bottom = 0.817
+anchor_right = 0.549
+anchor_bottom = 0.756
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1q7hp")
 
@@ -233,9 +234,9 @@ label_settings = SubResource("LabelSettings_iibpd")
 
 [node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
 layout_mode = 0
-offset_top = 32.0
+offset_top = 54.200012
 offset_right = 655.0
-offset_bottom = 129.0
+offset_bottom = 151.20001
 theme_override_fonts/normal_font = ExtResource("18_oh7a1")
 theme_override_font_sizes/normal_font_size = 36
 text = "Where have you been? You're unbelievably late."
@@ -252,6 +253,22 @@ offset_bottom = 10.962961
 scale = Vector2(82.064255, 35.954784)
 focus_mode = 0
 flat = true
+
+[node name="TextIndicator" parent="DialogueBox" instance=ExtResource("21_03wjb")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 278.99997
+offset_top = 55.360046
+offset_right = 278.99997
+offset_bottom = 55.360046
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 
 [node name="Fade" parent="." instance=ExtResource("21_1q7hp")]
 visible = false

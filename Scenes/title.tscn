@@ -4,10 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://jmwuynvx1vho" path="res://Sprites/Title.png" id="1_w31pl"]
 [ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_fp2oq"]
 [ext_resource type="AudioStream" uid="uid://cl3vob7gq7ax6" path="res://Sounds/SFX Vox Kiyoshi One-shot.wav" id="4_2qdx2"]
+[ext_resource type="PackedScene" uid="uid://2rq2gbna1dn1" path="res://Scenes/text_indicator.tscn" id="4_3eqdi"]
 [ext_resource type="AudioStream" uid="uid://b0d8usykt33qs" path="res://Sounds/SFX Select.wav" id="4_yosvi"]
 [ext_resource type="AudioStream" uid="uid://jmguyyfb5uyk" path="res://Sounds/SFX Hover Select.wav" id="5_2qdx2"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_2qdx2"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -82,6 +81,8 @@ theme_override_font_sizes/normal_font_size = 36
 text = "The problem was never me."
 horizontal_alignment = 1
 vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="NextButton" type="Button" parent="."]
 visible = false
@@ -94,11 +95,20 @@ grow_vertical = 2
 focus_mode = 0
 flat = true
 
-[node name="Triangle" type="MeshInstance2D" parent="."]
+[node name="TextIndicator" parent="." instance=ExtResource("4_3eqdi")]
 visible = false
-position = Vector2(1164, 562.00006)
-scale = Vector2(20, 20)
-mesh = SubResource("PrismMesh_2qdx2")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 204.0
+offset_top = 18.0
+offset_right = 204.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Voice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_2qdx2")

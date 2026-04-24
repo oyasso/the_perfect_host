@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://2rq2gbna1dn1"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_2qdx2"]
+
+[sub_resource type="Animation" id="Animation_dm1aj"]
+resource_name = "bob"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextIndicator:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 3), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a7dox"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextIndicator:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_msvp1"]
+_data = {
+&"RESET": SubResource("Animation_a7dox"),
+&"bob": SubResource("Animation_dm1aj")
+}
+
+[node name="TextIndicator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextIndicator" type="MeshInstance2D" parent="."]
+scale = Vector2(15, 15)
+mesh = SubResource("PrismMesh_2qdx2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_msvp1")
+}
+autoplay = "bob"
