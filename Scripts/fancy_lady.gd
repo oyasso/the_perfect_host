@@ -33,6 +33,9 @@ func _process(_delta: float) -> void:
 				dialogue.get_dialogue("allergy3")
 				player.occured_interaction()
 				hide_exclamation()
+				talked_count += 1
+			4:
+				dialogue.get_dialogue("allergy3")
 
 func _on_talk_area_body_entered(_body: Node3D) -> void:
 	talk_ready = true
