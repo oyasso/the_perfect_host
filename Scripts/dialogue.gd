@@ -239,14 +239,6 @@ func _on_end_pressed() -> void:
 		BgMusic.player.stream = load("res://Sounds/Waltz Phase 2 V2.mp3")
 		BgMusic.player.play()
 	
-	if player.interactions == 3 and not three_interactions and uncle_balcony:
-		print("three interactions")
-		fade.show()
-		fade.fade_in(1.0)
-		await get_tree().create_timer(1.0).timeout
-		get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
-		three_interactions = true
-	
 	if fancy_man_drink:
 		fancy_man.drink()
 		fancy_man_drink = false
@@ -266,6 +258,14 @@ func _on_end_pressed() -> void:
 		change_position_script.change_uncle()
 		uncle_balcony = true
 		move_uncle = false
+	
+	if player.interactions == 3 and not three_interactions and uncle_balcony:
+		print("three interactions")
+		fade.show()
+		fade.fade_in(1.0)
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://Scenes/conflict.tscn")
+		three_interactions = true
 	
 	if mother_stop_talking:
 		mother.body_animation.play("idle")

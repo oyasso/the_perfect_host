@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://duw0cwytg3uwf" path="res://Scripts/credits.gd" id="1_r18jl"]
 [ext_resource type="VideoStream" uid="uid://kklqtf1lklkx" path="res://Video/Credits - Copy.ogv" id="2_gryuy"]
-[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_ccovl"]
+[ext_resource type="FontFile" uid="uid://krdj2qn4gji4" path="res://Fonts/CormorantInfant-Regular.ttf" id="3_1bamb"]
 [ext_resource type="Script" uid="uid://1xqpj54nelo5" path="res://Scripts/scroll_text.gd" id="4_1bamb"]
 
 [node name="Credits" type="Control"]
@@ -49,7 +49,7 @@ offset_top = 1080.0
 offset_bottom = 4800.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/normal_font = ExtResource("3_ccovl")
+theme_override_fonts/normal_font = ExtResource("3_1bamb")
 theme_override_font_sizes/normal_font_size = 100
 text = "Director
 Larry Sotingco
