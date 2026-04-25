@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dego2pr7elp6s"]
+[gd_scene load_steps=5 format=3 uid="uid://dego2pr7elp6s"]
 
 [ext_resource type="Script" uid="uid://duw0cwytg3uwf" path="res://Scripts/credits.gd" id="1_r18jl"]
 [ext_resource type="VideoStream" uid="uid://kklqtf1lklkx" path="res://Video/Credits - Copy.ogv" id="2_gryuy"]
+[ext_resource type="FontFile" uid="uid://cr6vfvg4utn46" path="res://Fonts/CormorantInfant-SemiBold.ttf" id="3_ccovl"]
+[ext_resource type="Script" uid="uid://1xqpj54nelo5" path="res://Scripts/scroll_text.gd" id="4_1bamb"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -22,6 +24,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,3 +39,60 @@ grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_gryuy")
 autoplay = true
+
+[node name="ScrollText" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1080.0
+offset_bottom = 4800.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_ccovl")
+theme_override_font_sizes/normal_font_size = 100
+text = "Director
+Larry Sotingco
+
+Writer
+Larry Sotingco
+
+Game Programmer
+Yasson De Vocht
+
+Lead Artists
+Larry Sotingco
+William “Trey” Hamby
+
+Composer
+Sergio Paul
+
+SFX Artist
+Sergio Paul
+
+Animator
+Larry Sotingco
+
+Trailer Editor
+Ana Danger Hawryluk 
+
+Additional 3D Assistance
+Derek Grebis
+
+Special Thanks to
+Zachary Vickers
+Julian Rivera
+All of my friends and family who support 
+me through everything
+
+
+And to you,
+
+
+Thank you for playing :]
+"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1bamb")
+scroll_speed = 85.0
