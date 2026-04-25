@@ -1,11 +1,11 @@
 extends Node
 
-var fast_dialogue = false
+var fast_dialogue = true
 var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue15.json"
+var json_file = "res://Dialogue/perfect_host_dialogue16.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 
@@ -239,7 +239,8 @@ func _on_end_pressed() -> void:
 		BgMusic.player.stream = load("res://Sounds/Waltz Phase 2 V2.mp3")
 		BgMusic.player.play()
 	
-	if player.interactions == 3 and not three_interactions and move_uncle:
+	if player.interactions == 3 and not three_interactions and uncle_balcony:
+		print("three interactions")
 		fade.show()
 		fade.fade_in(1.0)
 		await get_tree().create_timer(1.0).timeout
@@ -263,8 +264,8 @@ func _on_end_pressed() -> void:
 	
 	if move_uncle:
 		change_position_script.change_uncle()
-		move_uncle = false
 		uncle_balcony = true
+		move_uncle = false
 	
 	if mother_stop_talking:
 		mother.body_animation.play("idle")
