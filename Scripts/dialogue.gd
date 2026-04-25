@@ -36,6 +36,8 @@ var mother_stop_talking = false
 var uncle_trips = false
 var uncle_balcony = false
 
+var mouse_pos = null
+
 # references to nodes
 @onready var dialogue_ui : Control = $"."
 @onready var speaker_label : Label = $DialogueBox/SpeakerLabel
@@ -67,11 +69,13 @@ var uncle_balcony = false
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mouse_pos = get_viewport().get_mouse_position()
 	if debug:
 		get_dialogue(debug_line)
 
 func get_dialogue(id: String):
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.warp_mouse(mouse_pos)
 
 	is_talking = true
 	dialogue_ui.show()
@@ -186,18 +190,21 @@ func get_dialogue(id: String):
 
 # if first option is picked get its dialogue
 func _on_option_1_pressed() -> void:
+	mouse_pos = get_viewport().get_mouse_position()
 	select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue[0])
 
 # if second option is picked get its dialogue
 func _on_option_2_pressed() -> void:
+	mouse_pos = get_viewport().get_mouse_position()
 	select.play()
 	hide_continue_buttons()
 	get_dialogue(next_dialogue[1])
 
 # if next button is clicked get next dialogue
 func _on_next_button_pressed() -> void:
+	mouse_pos = get_viewport().get_mouse_position()
 	if next_button.text == "Hand him the drink.":
 		give2.play()
 	else:
@@ -207,6 +214,7 @@ func _on_next_button_pressed() -> void:
 
 func _on_end_pressed() -> void:
 	close.play()
+	mouse_pos = get_viewport().get_mouse_position()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	dialogue_ui.hide()
@@ -218,6 +226,7 @@ func _on_end_pressed() -> void:
 	# show the letter
 	if show_letter:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		Input.warp_mouse(mouse_pos)
 		letter.show()
 		show_letter = false
 	
