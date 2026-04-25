@@ -5,7 +5,7 @@ var debug = false
 var debug_line = "where"
 
 # Path to JSON
-var json_file = "res://Dialogue/perfect_host_dialogue17.json"
+var json_file = "res://Dialogue/perfect_host_dialogue19.json"
 var json_text = FileAccess.get_file_as_string(json_file)
 var json_dict = JSON.parse_string(json_text)[0]
 
@@ -177,7 +177,7 @@ func get_dialogue(id: String):
 		move_uncle = true
 		uncle.hide_exclamation()
 	
-	if id in ["ready5", "fix4", "defend2", "cater", "goingon"]:
+	if id in ["end3", "cater", "goingon"]:
 		mother_stop_talking = true
 	
 	if id == "fake18":
