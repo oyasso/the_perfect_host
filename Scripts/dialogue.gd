@@ -268,7 +268,7 @@ func _on_end_pressed() -> void:
 		uncle_balcony = true
 		move_uncle = false
 	
-	if player.interactions == 3 and not three_interactions and uncle_balcony:
+	if player.interactions >= 3 and not three_interactions and uncle_balcony:
 		print("three interactions")
 		fade.show()
 		fade.fade_in(1.0)
