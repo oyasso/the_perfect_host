@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://e4hkman78d3y"]
+[gd_scene load_steps=27 format=3 uid="uid://e4hkman78d3y"]
 
 [ext_resource type="Script" uid="uid://cywxhkjhh3ndp" path="res://Scripts/main.gd" id="1_gt3je"]
 [ext_resource type="Script" uid="uid://chts087yiwt3d" path="res://Scripts/position_change.gd" id="1_hibaj"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://do3djbhi7egrl" path="res://Scenes/extra_tall_glass.tscn" id="19_fevyy"]
 [ext_resource type="PackedScene" uid="uid://dgjhvndts04u5" path="res://Scenes/ballroom2.tscn" id="19_hibaj"]
 [ext_resource type="PackedScene" uid="uid://bhrtqnsp0nj0b" path="res://Scenes/statue.tscn" id="22_ee4r6"]
+[ext_resource type="AudioStream" uid="uid://btatahu2e0db4" path="res://Sounds/SFX Crowd Ambience.wav" id="23_gt3je"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gt3je"]
 transparency = 1
@@ -141,6 +142,10 @@ mesh = SubResource("BoxMesh_3pmx8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_gt3je")
+
+[node name="Crowd" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_gt3je")
+autoplay = true
 
 [editable path="Extras/extra_wine"]
 [editable path="Extras/extra_wine3"]
